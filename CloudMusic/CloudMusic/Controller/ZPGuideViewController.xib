@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -10,16 +10,71 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZPGuideViewController" customModule="CloudMusic" customModuleProvider="target">
             <connections>
+                <outlet property="goButton" destination="nu9-7r-t4q" id="6Yk-5g-anB"/>
+                <outlet property="loginOrRegisterBtn" destination="NoV-0r-ze6" id="Va1-dc-mlF"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0qX-Iq-HYO" userLabel="Container">
+                    <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tDE-h4-Nvi" userLabel="header">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="634"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P3a-9K-IaA" userLabel="footer">
+                            <rect key="frame" x="0.0" y="634" width="375" height="100"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nu9-7r-t4q">
+                                    <rect key="frame" x="211" y="30" width="130" height="40"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <state key="normal" title="立即体验">
+                                        <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NoV-0r-ze6">
+                                    <rect key="frame" x="40" y="30" width="130" height="40"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <state key="normal" title="登录/注册">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="nkG-YH-egI"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="P3a-9K-IaA" firstAttribute="top" secondItem="tDE-h4-Nvi" secondAttribute="bottom" id="9up-Sm-SRD"/>
+                        <constraint firstAttribute="bottom" secondItem="P3a-9K-IaA" secondAttribute="bottom" id="Eny-6C-be2"/>
+                        <constraint firstItem="P3a-9K-IaA" firstAttribute="leading" secondItem="0qX-Iq-HYO" secondAttribute="leading" id="NIT-3d-grh"/>
+                        <constraint firstAttribute="trailing" secondItem="P3a-9K-IaA" secondAttribute="trailing" id="NQ8-Tg-Z0U"/>
+                        <constraint firstItem="tDE-h4-Nvi" firstAttribute="leading" secondItem="0qX-Iq-HYO" secondAttribute="leading" id="OC1-eN-G7z"/>
+                        <constraint firstAttribute="trailing" secondItem="tDE-h4-Nvi" secondAttribute="trailing" id="hJm-oI-VGd"/>
+                        <constraint firstItem="tDE-h4-Nvi" firstAttribute="top" secondItem="0qX-Iq-HYO" secondAttribute="top" id="nTT-Sq-uB9"/>
+                    </constraints>
+                </view>
+            </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="0qX-Iq-HYO" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="3Jr-ax-i6f"/>
+                <constraint firstItem="0qX-Iq-HYO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="JAl-64-PXo"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0qX-Iq-HYO" secondAttribute="trailing" id="fXA-Uu-0eU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="0qX-Iq-HYO" secondAttribute="bottom" id="zPe-Lx-df3"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="209" y="63"/>
+            <point key="canvasLocation" x="208.63309352517987" y="62.814070351758794"/>
         </view>
     </objects>
 </document>
