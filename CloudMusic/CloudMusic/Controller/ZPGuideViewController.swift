@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ZPGuideViewController.swift
 //  CloudMusic
 //
 //  Created by 张鹏 on 2020/5/28.
@@ -8,13 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ZPGuideViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        view.backgroundColor = .red
     }
 
 
-}
 
+}
