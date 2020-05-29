@@ -8,18 +8,18 @@
 
 import UIKit
 
-class ZPGuideViewController: UIViewController {
+class ZPGuideViewController: UIViewController{
 
+    @IBOutlet weak var bannerView: YJBannerView!
+    
     @IBOutlet weak var loginOrRegisterBtn: UIView!
     @IBOutlet weak var goButton: UIView!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .white
+        initBannerView()
     }
-
 
     override func viewDidLayoutSubviews() {
         
@@ -36,7 +36,20 @@ class ZPGuideViewController: UIViewController {
         
         loginOrRegisterBtn.layer.masksToBounds = true
         goButton.layer.masksToBounds = true
-        
     }
+}
 
+//MARK: - 点击按钮相关
+extension ZPGuideViewController{
+    
+    /// 登录注册点击
+    /// - Parameter sender: 就是登录注册按钮
+    @IBAction func touchLoginOrRegister(_ sender: Any) {
+        AppDelegate.shared.window?.rootViewController = ZPLoginOrRegisterViewController()
+    }
+    
+    @IBAction func touchGo(_ sender: Any) {
+        print("点击立即体验")
+    }
+    
 }

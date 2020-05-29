@@ -13,7 +13,7 @@ class ZPSplashViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
             self.next()
         }
     }

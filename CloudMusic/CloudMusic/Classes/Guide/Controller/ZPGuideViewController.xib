@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZPGuideViewController" customModule="CloudMusic" customModuleProvider="target">
             <connections>
+                <outlet property="bannerView" destination="tDE-h4-Nvi" id="37b-Xj-ddP"/>
                 <outlet property="goButton" destination="nu9-7r-t4q" id="6Yk-5g-anB"/>
                 <outlet property="loginOrRegisterBtn" destination="NoV-0r-ze6" id="Va1-dc-mlF"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -23,7 +24,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0qX-Iq-HYO" userLabel="Container">
                     <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tDE-h4-Nvi" userLabel="header">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tDE-h4-Nvi" userLabel="header" customClass="YJBannerView">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="634"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         </view>
@@ -37,6 +38,9 @@
                                     <state key="normal" title="立即体验">
                                         <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
+                                    <connections>
+                                        <action selector="touchGo:" destination="-1" eventType="touchUpInside" id="Aqe-xr-MJ1"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NoV-0r-ze6">
                                     <rect key="frame" x="40" y="30" width="130" height="40"/>
@@ -46,6 +50,9 @@
                                     <state key="normal" title="登录/注册">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
+                                    <connections>
+                                        <action selector="touchLoginOrRegister:" destination="-1" eventType="touchUpInside" id="eUW-av-dcm"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
