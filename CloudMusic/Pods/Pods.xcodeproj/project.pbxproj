@@ -3,60 +3,150 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		40926876BED1A8DE94412D186DB51967 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		463DE8D4E40F41ABCFD17F82AF43252F /* Pods-CloudMusic-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B276936820B14B03DE28181FBFDC6B6 /* Pods-CloudMusic-dummy.m */; };
-		C42CAE8E7AB3A83D8AB13116A1890A42 /* Pods-CloudMusic-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 18189FC81BCDB66A47B8B75B9E6D8FEF /* Pods-CloudMusic-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20A12EA9574A9F8B42D517AB4AB199BA /* DefaultsSerializable+BuiltIns.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC32BA701E8F097DDB37F9BADA693A21 /* DefaultsSerializable+BuiltIns.swift */; };
+		236D43A29F5257B2B48B8951EEC17F59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		29C51801BAEC276900CF938AD6D4B4BD /* Pods-CloudMusic-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3026D2F5C5A5B07B1CAB86EE0DE9FE01 /* Pods-CloudMusic-dummy.m */; };
+		43241668713311A6AE0D9CF408B90185 /* SwiftyUserDefaults-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E8D9777669B9948A9BEBF69C201CA8FE /* SwiftyUserDefaults-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		64DD527ED048E59968AC7BD7173A7DEE /* DefaultsSerializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D2652E8F7A5F176C3C303BBEB89B0B /* DefaultsSerializable.swift */; };
+		79E38B8FB6C841005A62FE95DAAFA3B3 /* OptionalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9027FEBDF4DDEFA142FD1E9241B1A1 /* OptionalType.swift */; };
+		7F5AD8F79D036A75EA2A3064D2A09BCF /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB70D3A779CF9A1C2291EAAB32F3396 /* Defaults.swift */; };
+		8935CFD9F5938B6582C7A43C5280F2A1 /* DefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23B89F940B995239D95A304E63F51FB /* DefaultsKeys.swift */; };
+		94627DF8A28438FE32BAC51DEC81DCC2 /* Pods-CloudMusic-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EFEC084EA86461DDC06005185B31F09 /* Pods-CloudMusic-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A2858E995F89F48DA4D29728CC5B836B /* Defaults+Subscripts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6106728DCAD15598D88196D5225CE8E4 /* Defaults+Subscripts.swift */; };
+		A8F1813CEF2E5425A7E0542E02E007EA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		F04E81BCEBF2B92CDD22488F632CD156 /* SwiftyUserDefaults-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6237B705796C113A795A94D9553BEE /* SwiftyUserDefaults-dummy.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		EBCC4EE5FDCABF8544FC5E472424E940 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A049F3164EBC335A7982A4E1FB3A5EAA;
+			remoteInfo = SwiftyUserDefaults;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		16B83372ABF6A6CF03D04190864FA510 /* Pods-CloudMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CloudMusic.debug.xcconfig"; sourceTree = "<group>"; };
-		18189FC81BCDB66A47B8B75B9E6D8FEF /* Pods-CloudMusic-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CloudMusic-umbrella.h"; sourceTree = "<group>"; };
-		2B276936820B14B03DE28181FBFDC6B6 /* Pods-CloudMusic-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CloudMusic-dummy.m"; sourceTree = "<group>"; };
+		1EFEC084EA86461DDC06005185B31F09 /* Pods-CloudMusic-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CloudMusic-umbrella.h"; sourceTree = "<group>"; };
+		3026D2F5C5A5B07B1CAB86EE0DE9FE01 /* Pods-CloudMusic-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CloudMusic-dummy.m"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		44BD38E32C0C389E8A5FAB121EDEB803 /* Pods-CloudMusic-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CloudMusic-acknowledgements.markdown"; sourceTree = "<group>"; };
+		45FF04FACFE6A57DE84F00D2A35E1AFE /* Pods-CloudMusic-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CloudMusic-frameworks.sh"; sourceTree = "<group>"; };
 		4C4650503E8C1C84B47C9E5AC4EDD3A8 /* Pods_CloudMusic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CloudMusic.framework; path = "Pods-CloudMusic.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8260F45F41CC3ACC6BEF1206521BE7B8 /* Pods-CloudMusic.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CloudMusic.modulemap"; sourceTree = "<group>"; };
-		887343BF7C9A0DBA90B983279E7C5B7F /* Pods-CloudMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CloudMusic.release.xcconfig"; sourceTree = "<group>"; };
-		8D5C50AF85E622EC6C0576BDE53E7C3F /* Pods-CloudMusic-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CloudMusic-acknowledgements.plist"; sourceTree = "<group>"; };
+		6106728DCAD15598D88196D5225CE8E4 /* Defaults+Subscripts.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Defaults+Subscripts.swift"; path = "Sources/Defaults+Subscripts.swift"; sourceTree = "<group>"; };
+		69EE9820345D2D1C820143103A5D9B58 /* Pods-CloudMusic-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CloudMusic-Info.plist"; sourceTree = "<group>"; };
+		83D2652E8F7A5F176C3C303BBEB89B0B /* DefaultsSerializable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultsSerializable.swift; path = Sources/DefaultsSerializable.swift; sourceTree = "<group>"; };
+		9BB70D3A779CF9A1C2291EAAB32F3396 /* Defaults.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Defaults.swift; path = Sources/Defaults.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BCC3BD6DC4018DBE10A688913116D356 /* Pods-CloudMusic-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CloudMusic-Info.plist"; sourceTree = "<group>"; };
+		9E20EDAE25A7ED81A2CAB84C50BA17CC /* Pods-CloudMusic.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CloudMusic.modulemap"; sourceTree = "<group>"; };
+		A23B89F940B995239D95A304E63F51FB /* DefaultsKeys.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultsKeys.swift; path = Sources/DefaultsKeys.swift; sourceTree = "<group>"; };
+		A7016E6F239AE6BB9204D1051A4317E7 /* SwiftyUserDefaults.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyUserDefaults.modulemap; sourceTree = "<group>"; };
+		B4366BA68E1B25BFCF6B94F3413CF32D /* Pods-CloudMusic-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CloudMusic-acknowledgements.plist"; sourceTree = "<group>"; };
+		B7715718A7E1E513F9BC2E99B977FCA9 /* SwiftyUserDefaults.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyUserDefaults.framework; path = SwiftyUserDefaults.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8DA0013812AB8B965CE8E22439D54BF /* SwiftyUserDefaults-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyUserDefaults-prefix.pch"; sourceTree = "<group>"; };
+		C2C0A19ABA01BDDCD34CE008B10D91FB /* SwiftyUserDefaults.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyUserDefaults.debug.xcconfig; sourceTree = "<group>"; };
+		CC32BA701E8F097DDB37F9BADA693A21 /* DefaultsSerializable+BuiltIns.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DefaultsSerializable+BuiltIns.swift"; path = "Sources/DefaultsSerializable+BuiltIns.swift"; sourceTree = "<group>"; };
+		CF6237B705796C113A795A94D9553BEE /* SwiftyUserDefaults-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyUserDefaults-dummy.m"; sourceTree = "<group>"; };
+		D78776AF957286803A8A5B93CF9380AE /* SwiftyUserDefaults-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftyUserDefaults-Info.plist"; sourceTree = "<group>"; };
+		E1598CFAD01B76DA9F01ADD9599A7241 /* SwiftyUserDefaults.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyUserDefaults.release.xcconfig; sourceTree = "<group>"; };
+		E8D9777669B9948A9BEBF69C201CA8FE /* SwiftyUserDefaults-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyUserDefaults-umbrella.h"; sourceTree = "<group>"; };
+		EF6821BD630D1F3EF164A2B88FAE16D8 /* Pods-CloudMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CloudMusic.debug.xcconfig"; sourceTree = "<group>"; };
+		F0D7F662DBBFEA604D86106B34EE13B1 /* Pods-CloudMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CloudMusic.release.xcconfig"; sourceTree = "<group>"; };
+		FB9027FEBDF4DDEFA142FD1E9241B1A1 /* OptionalType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OptionalType.swift; path = Sources/OptionalType.swift; sourceTree = "<group>"; };
+		FC6CCF1E7B36AA9BABAC7BC909A3DA87 /* Pods-CloudMusic-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CloudMusic-acknowledgements.markdown"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0469806A7517912E343DC3F3D03274FB /* Frameworks */ = {
+		B4BF4B95C49C4AC8784D14F32B5ECF3D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40926876BED1A8DE94412D186DB51967 /* Foundation.framework in Frameworks */,
+				A8F1813CEF2E5425A7E0542E02E007EA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAF26C1EA315642CB15554B16D136D88 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				236D43A29F5257B2B48B8951EEC17F59 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		62D184DE5B5C865B6F8986C90D75C5A7 /* Products */ = {
+		09CA414779EC8B0C556F7EEA4FBF9628 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				4C4650503E8C1C84B47C9E5AC4EDD3A8 /* Pods_CloudMusic.framework */,
+				B7715718A7E1E513F9BC2E99B977FCA9 /* SwiftyUserDefaults.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6B5F08E4554A2A9992961F8DACB114A6 /* Pods-CloudMusic */ = {
+		2363315484F276D0240F6AAE3E6A6075 /* SwiftyUserDefaults */ = {
 			isa = PBXGroup;
 			children = (
-				8260F45F41CC3ACC6BEF1206521BE7B8 /* Pods-CloudMusic.modulemap */,
-				44BD38E32C0C389E8A5FAB121EDEB803 /* Pods-CloudMusic-acknowledgements.markdown */,
-				8D5C50AF85E622EC6C0576BDE53E7C3F /* Pods-CloudMusic-acknowledgements.plist */,
-				2B276936820B14B03DE28181FBFDC6B6 /* Pods-CloudMusic-dummy.m */,
-				BCC3BD6DC4018DBE10A688913116D356 /* Pods-CloudMusic-Info.plist */,
-				18189FC81BCDB66A47B8B75B9E6D8FEF /* Pods-CloudMusic-umbrella.h */,
-				16B83372ABF6A6CF03D04190864FA510 /* Pods-CloudMusic.debug.xcconfig */,
-				887343BF7C9A0DBA90B983279E7C5B7F /* Pods-CloudMusic.release.xcconfig */,
+				9BB70D3A779CF9A1C2291EAAB32F3396 /* Defaults.swift */,
+				6106728DCAD15598D88196D5225CE8E4 /* Defaults+Subscripts.swift */,
+				A23B89F940B995239D95A304E63F51FB /* DefaultsKeys.swift */,
+				83D2652E8F7A5F176C3C303BBEB89B0B /* DefaultsSerializable.swift */,
+				CC32BA701E8F097DDB37F9BADA693A21 /* DefaultsSerializable+BuiltIns.swift */,
+				FB9027FEBDF4DDEFA142FD1E9241B1A1 /* OptionalType.swift */,
+				793F9E4D521FA9781DC4CEA734594703 /* Support Files */,
+			);
+			name = SwiftyUserDefaults;
+			path = SwiftyUserDefaults;
+			sourceTree = "<group>";
+		};
+		60C95FF9277E7E7EA75A251D78013254 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B5D43087C406077C3CB1FF1CEF84CE26 /* Pods-CloudMusic */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		793F9E4D521FA9781DC4CEA734594703 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A7016E6F239AE6BB9204D1051A4317E7 /* SwiftyUserDefaults.modulemap */,
+				CF6237B705796C113A795A94D9553BEE /* SwiftyUserDefaults-dummy.m */,
+				D78776AF957286803A8A5B93CF9380AE /* SwiftyUserDefaults-Info.plist */,
+				B8DA0013812AB8B965CE8E22439D54BF /* SwiftyUserDefaults-prefix.pch */,
+				E8D9777669B9948A9BEBF69C201CA8FE /* SwiftyUserDefaults-umbrella.h */,
+				C2C0A19ABA01BDDCD34CE008B10D91FB /* SwiftyUserDefaults.debug.xcconfig */,
+				E1598CFAD01B76DA9F01ADD9599A7241 /* SwiftyUserDefaults.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyUserDefaults";
+			sourceTree = "<group>";
+		};
+		B195681C952FBEA3EC69AEC58DF1B5A4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2363315484F276D0240F6AAE3E6A6075 /* SwiftyUserDefaults */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B5D43087C406077C3CB1FF1CEF84CE26 /* Pods-CloudMusic */ = {
+			isa = PBXGroup;
+			children = (
+				9E20EDAE25A7ED81A2CAB84C50BA17CC /* Pods-CloudMusic.modulemap */,
+				FC6CCF1E7B36AA9BABAC7BC909A3DA87 /* Pods-CloudMusic-acknowledgements.markdown */,
+				B4366BA68E1B25BFCF6B94F3413CF32D /* Pods-CloudMusic-acknowledgements.plist */,
+				3026D2F5C5A5B07B1CAB86EE0DE9FE01 /* Pods-CloudMusic-dummy.m */,
+				45FF04FACFE6A57DE84F00D2A35E1AFE /* Pods-CloudMusic-frameworks.sh */,
+				69EE9820345D2D1C820143103A5D9B58 /* Pods-CloudMusic-Info.plist */,
+				1EFEC084EA86461DDC06005185B31F09 /* Pods-CloudMusic-umbrella.h */,
+				EF6821BD630D1F3EF164A2B88FAE16D8 /* Pods-CloudMusic.debug.xcconfig */,
+				F0D7F662DBBFEA604D86106B34EE13B1 /* Pods-CloudMusic.release.xcconfig */,
 			);
 			name = "Pods-CloudMusic";
 			path = "Target Support Files/Pods-CloudMusic";
@@ -75,8 +165,9 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				62D184DE5B5C865B6F8986C90D75C5A7 /* Products */,
-				DB93FDD0BEB84CB3634F4B9D397D179D /* Targets Support Files */,
+				B195681C952FBEA3EC69AEC58DF1B5A4 /* Pods */,
+				09CA414779EC8B0C556F7EEA4FBF9628 /* Products */,
+				60C95FF9277E7E7EA75A251D78013254 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,22 +179,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DB93FDD0BEB84CB3634F4B9D397D179D /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				6B5F08E4554A2A9992961F8DACB114A6 /* Pods-CloudMusic */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		E34AF158386338A3D20E19B9DFAB9FC2 /* Headers */ = {
+		D0EACC9D6903AFED9F04222F3FD68358 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C42CAE8E7AB3A83D8AB13116A1890A42 /* Pods-CloudMusic-umbrella.h in Headers */,
+				94627DF8A28438FE32BAC51DEC81DCC2 /* Pods-CloudMusic-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E208FBCCC662501AC934AAC2476F4647 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43241668713311A6AE0D9CF408B90185 /* SwiftyUserDefaults-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,20 +203,39 @@
 /* Begin PBXNativeTarget section */
 		62737037F3378537BEAF0FA1E9C5BEA8 /* Pods-CloudMusic */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8523E64D509A376385995886E8656A7D /* Build configuration list for PBXNativeTarget "Pods-CloudMusic" */;
+			buildConfigurationList = 8A4EEB98D00B94BEFCE4D4D2A3C8051A /* Build configuration list for PBXNativeTarget "Pods-CloudMusic" */;
 			buildPhases = (
-				E34AF158386338A3D20E19B9DFAB9FC2 /* Headers */,
-				69E88893109F4A7C3E7F16399A9B3833 /* Sources */,
-				0469806A7517912E343DC3F3D03274FB /* Frameworks */,
-				4563786E4990D574C908BE452F8BCBDD /* Resources */,
+				D0EACC9D6903AFED9F04222F3FD68358 /* Headers */,
+				F35E7DE0A9284F93105136FCA200517F /* Sources */,
+				EAF26C1EA315642CB15554B16D136D88 /* Frameworks */,
+				518700CBE251F7B76ACB3497B19835F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BC5C483061444F6467A668FF12F24989 /* PBXTargetDependency */,
+			);
+			name = "Pods-CloudMusic";
+			productName = "Pods-CloudMusic";
+			productReference = 4C4650503E8C1C84B47C9E5AC4EDD3A8 /* Pods_CloudMusic.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A049F3164EBC335A7982A4E1FB3A5EAA /* SwiftyUserDefaults */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7178E7E19BA6100C2737E11442534F72 /* Build configuration list for PBXNativeTarget "SwiftyUserDefaults" */;
+			buildPhases = (
+				E208FBCCC662501AC934AAC2476F4647 /* Headers */,
+				AA08612E52697EB8E2DD3C4CF597CCC6 /* Sources */,
+				B4BF4B95C49C4AC8784D14F32B5ECF3D /* Frameworks */,
+				E511F3EB63B8918C8704856070FF239E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Pods-CloudMusic";
-			productName = "Pods-CloudMusic";
-			productReference = 4C4650503E8C1C84B47C9E5AC4EDD3A8 /* Pods_CloudMusic.framework */;
+			name = SwiftyUserDefaults;
+			productName = SwiftyUserDefaults;
+			productReference = B7715718A7E1E513F9BC2E99B977FCA9 /* SwiftyUserDefaults.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -138,7 +248,7 @@
 				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -146,17 +256,25 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 62D184DE5B5C865B6F8986C90D75C5A7 /* Products */;
+			productRefGroup = 09CA414779EC8B0C556F7EEA4FBF9628 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				62737037F3378537BEAF0FA1E9C5BEA8 /* Pods-CloudMusic */,
+				A049F3164EBC335A7982A4E1FB3A5EAA /* SwiftyUserDefaults */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4563786E4990D574C908BE452F8BCBDD /* Resources */ = {
+		518700CBE251F7B76ACB3497B19835F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E511F3EB63B8918C8704856070FF239E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -166,20 +284,43 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		69E88893109F4A7C3E7F16399A9B3833 /* Sources */ = {
+		AA08612E52697EB8E2DD3C4CF597CCC6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				463DE8D4E40F41ABCFD17F82AF43252F /* Pods-CloudMusic-dummy.m in Sources */,
+				A2858E995F89F48DA4D29728CC5B836B /* Defaults+Subscripts.swift in Sources */,
+				7F5AD8F79D036A75EA2A3064D2A09BCF /* Defaults.swift in Sources */,
+				8935CFD9F5938B6582C7A43C5280F2A1 /* DefaultsKeys.swift in Sources */,
+				20A12EA9574A9F8B42D517AB4AB199BA /* DefaultsSerializable+BuiltIns.swift in Sources */,
+				64DD527ED048E59968AC7BD7173A7DEE /* DefaultsSerializable.swift in Sources */,
+				79E38B8FB6C841005A62FE95DAAFA3B3 /* OptionalType.swift in Sources */,
+				F04E81BCEBF2B92CDD22488F632CD156 /* SwiftyUserDefaults-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F35E7DE0A9284F93105136FCA200517F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29C51801BAEC276900CF938AD6D4B4BD /* Pods-CloudMusic-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		BC5C483061444F6467A668FF12F24989 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyUserDefaults;
+			target = A049F3164EBC335A7982A4E1FB3A5EAA /* SwiftyUserDefaults */;
+			targetProxy = EBCC4EE5FDCABF8544FC5E472424E940 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		5613A34C6A4689A052F0665400494B80 /* Release */ = {
+		02430F99478F0AD14F5BA3FEC18CDADF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 887343BF7C9A0DBA90B983279E7C5B7F /* Pods-CloudMusic.release.xcconfig */;
+			baseConfigurationReference = F0D7F662DBBFEA604D86106B34EE13B1 /* Pods-CloudMusic.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -194,7 +335,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-CloudMusic/Pods-CloudMusic-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -216,45 +357,7 @@
 			};
 			name = Release;
 		};
-		C6FE3DFE2B8A781B31D77C47E11F9659 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 16B83372ABF6A6CF03D04190864FA510 /* Pods-CloudMusic.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-CloudMusic/Pods-CloudMusic-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-CloudMusic/Pods-CloudMusic.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		DFD9D19FEEBF98DE271D7FBABCB845B5 /* Debug */ = {
+		196DFA3E4A09A28224918543529A1885 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -305,7 +408,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -318,7 +421,81 @@
 			};
 			name = Debug;
 		};
-		F5F04600F5626DC980F02790D1ED2C19 /* Release */ = {
+		4A80F3B5DE4CD6850214F7E117276748 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1598CFAD01B76DA9F01ADD9599A7241 /* SwiftyUserDefaults.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyUserDefaults/SwiftyUserDefaults-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyUserDefaults/SwiftyUserDefaults-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftyUserDefaults/SwiftyUserDefaults.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyUserDefaults;
+				PRODUCT_NAME = SwiftyUserDefaults;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9B1D9AAB48BA907DF4961553393A716D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF6821BD630D1F3EF164A2B88FAE16D8 /* Pods-CloudMusic.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CloudMusic/Pods-CloudMusic-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CloudMusic/Pods-CloudMusic.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B01D14FDC83DCF9D4BE53066BEA96D05 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -366,7 +543,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -378,23 +555,67 @@
 			};
 			name = Release;
 		};
+		C327D02AACA0AF7CDEC4E049E51BE50A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2C0A19ABA01BDDCD34CE008B10D91FB /* SwiftyUserDefaults.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyUserDefaults/SwiftyUserDefaults-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyUserDefaults/SwiftyUserDefaults-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftyUserDefaults/SwiftyUserDefaults.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyUserDefaults;
+				PRODUCT_NAME = SwiftyUserDefaults;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DFD9D19FEEBF98DE271D7FBABCB845B5 /* Debug */,
-				F5F04600F5626DC980F02790D1ED2C19 /* Release */,
+				196DFA3E4A09A28224918543529A1885 /* Debug */,
+				B01D14FDC83DCF9D4BE53066BEA96D05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8523E64D509A376385995886E8656A7D /* Build configuration list for PBXNativeTarget "Pods-CloudMusic" */ = {
+		7178E7E19BA6100C2737E11442534F72 /* Build configuration list for PBXNativeTarget "SwiftyUserDefaults" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C6FE3DFE2B8A781B31D77C47E11F9659 /* Debug */,
-				5613A34C6A4689A052F0665400494B80 /* Release */,
+				C327D02AACA0AF7CDEC4E049E51BE50A /* Debug */,
+				4A80F3B5DE4CD6850214F7E117276748 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A4EEB98D00B94BEFCE4D4D2A3C8051A /* Build configuration list for PBXNativeTarget "Pods-CloudMusic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B1D9AAB48BA907DF4961553393A716D /* Debug */,
+				02430F99478F0AD14F5BA3FEC18CDADF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

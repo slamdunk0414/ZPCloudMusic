@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E316B912480E63900FEECC4 /* ZPLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E316B8F2480E63900FEECC4 /* ZPLoginViewController.swift */; };
+		6E316B922480E63900FEECC4 /* ZPLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E316B902480E63900FEECC4 /* ZPLoginViewController.xib */; };
+		6E316B952480E69D00FEECC4 /* ZPRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E316B932480E69D00FEECC4 /* ZPRegisterViewController.swift */; };
+		6E316B962480E69D00FEECC4 /* ZPRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E316B942480E69D00FEECC4 /* ZPRegisterViewController.xib */; };
 		6E5857AC24809B4600D5CA04 /* ZPLoginOrRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5857AA24809B4600D5CA04 /* ZPLoginOrRegisterViewController.swift */; };
 		6E5857AD24809B4600D5CA04 /* ZPLoginOrRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E5857AB24809B4600D5CA04 /* ZPLoginOrRegisterViewController.xib */; };
 		6E5857CB2480A6BD00D5CA04 /* UIView+YJBannerViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E5857B62480A6BD00D5CA04 /* UIView+YJBannerViewExt.m */; };
@@ -20,6 +24,9 @@
 		6E5857D32480A6BD00D5CA04 /* YJBannerViewFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E5857C92480A6BD00D5CA04 /* YJBannerViewFooter.m */; };
 		6E5857D52480AAD500D5CA04 /* ColorConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5857D42480AAD500D5CA04 /* ColorConstant.swift */; };
 		6E5857DE2480B13C00D5CA04 /* ZPGuideViewControllerExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5857DD2480B13C00D5CA04 /* ZPGuideViewControllerExtention.swift */; };
+		6E5857E22480B2B800D5CA04 /* PushUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5857E12480B2B800D5CA04 /* PushUtil.swift */; };
+		6E5857E42480B57F00D5CA04 /* DefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5857E32480B57F00D5CA04 /* DefaultKeys.swift */; };
+		6E5857E82480B7C200D5CA04 /* PreferenceUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5857E72480B7C200D5CA04 /* PreferenceUtil.swift */; };
 		6E5E225D247F990900BB79B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5E225C247F990900BB79B5 /* AppDelegate.swift */; };
 		6E5E2264247F990900BB79B5 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E5E2262247F990900BB79B5 /* Splash.storyboard */; };
 		6E5E2266247F990D00BB79B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E5E2265247F990D00BB79B5 /* Assets.xcassets */; };
@@ -30,11 +37,15 @@
 		6E5E227A247FDB9B00BB79B5 /* UIView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5E2279247FDB9B00BB79B5 /* UIView+Extention.swift */; };
 		6E5E227D247FE5D200BB79B5 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5E227C247FE5D200BB79B5 /* Constant.swift */; };
 		6E5E227F247FEBCB00BB79B5 /* UIColor+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5E227E247FEBCB00BB79B5 /* UIColor+Extention.swift */; };
-		7A9F9F2BB33AFBF319C566D0 /* Pods_CloudMusic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D2848F9B18DFDC21AC9858D /* Pods_CloudMusic.framework */; };
+		7A9F9F2BB33AFBF319C566D0 /* Pods_CloudMusic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D2848F9B18DFDC21AC9858D /* Pods_CloudMusic.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5C23224B6663A2816B640918 /* Pods-CloudMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloudMusic.release.xcconfig"; path = "Target Support Files/Pods-CloudMusic/Pods-CloudMusic.release.xcconfig"; sourceTree = "<group>"; };
+		6E316B8F2480E63900FEECC4 /* ZPLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZPLoginViewController.swift; sourceTree = "<group>"; };
+		6E316B902480E63900FEECC4 /* ZPLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZPLoginViewController.xib; sourceTree = "<group>"; };
+		6E316B932480E69D00FEECC4 /* ZPRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZPRegisterViewController.swift; sourceTree = "<group>"; };
+		6E316B942480E69D00FEECC4 /* ZPRegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZPRegisterViewController.xib; sourceTree = "<group>"; };
 		6E5857AA24809B4600D5CA04 /* ZPLoginOrRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZPLoginOrRegisterViewController.swift; sourceTree = "<group>"; };
 		6E5857AB24809B4600D5CA04 /* ZPLoginOrRegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZPLoginOrRegisterViewController.xib; sourceTree = "<group>"; };
 		6E5857AE24809D8100D5CA04 /* CloudMusic-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CloudMusic-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -57,6 +68,9 @@
 		6E5857CA2480A6BD00D5CA04 /* YJBannerViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJBannerViewCell.h; sourceTree = "<group>"; };
 		6E5857D42480AAD500D5CA04 /* ColorConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConstant.swift; sourceTree = "<group>"; };
 		6E5857DD2480B13C00D5CA04 /* ZPGuideViewControllerExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZPGuideViewControllerExtention.swift; sourceTree = "<group>"; };
+		6E5857E12480B2B800D5CA04 /* PushUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushUtil.swift; sourceTree = "<group>"; };
+		6E5857E32480B57F00D5CA04 /* DefaultKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultKeys.swift; sourceTree = "<group>"; };
+		6E5857E72480B7C200D5CA04 /* PreferenceUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceUtil.swift; sourceTree = "<group>"; };
 		6E5E2259247F990900BB79B5 /* CloudMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E5E225C247F990900BB79B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E5E2263247F990900BB79B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Splash.storyboard; sourceTree = "<group>"; };
@@ -92,6 +106,7 @@
 				6E5E225C247F990900BB79B5 /* AppDelegate.swift */,
 				6E5E226A247F990D00BB79B5 /* Info.plist */,
 				6E5857AE24809D8100D5CA04 /* CloudMusic-Bridging-Header.h */,
+				6E5857E32480B57F00D5CA04 /* DefaultKeys.swift */,
 			);
 			path = main;
 			sourceTree = "<group>";
@@ -226,6 +241,10 @@
 			children = (
 				6E5857AA24809B4600D5CA04 /* ZPLoginOrRegisterViewController.swift */,
 				6E5857AB24809B4600D5CA04 /* ZPLoginOrRegisterViewController.xib */,
+				6E316B8F2480E63900FEECC4 /* ZPLoginViewController.swift */,
+				6E316B902480E63900FEECC4 /* ZPLoginViewController.xib */,
+				6E316B932480E69D00FEECC4 /* ZPRegisterViewController.swift */,
+				6E316B942480E69D00FEECC4 /* ZPRegisterViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -255,7 +274,7 @@
 				6E5857B32480A67A00D5CA04 /* Vender */,
 				6E5857B224809DCA00D5CA04 /* main */,
 				6E5E227B247FE5BA00BB79B5 /* Util */,
-				6E5E2278247FDAE300BB79B5 /* Category */,
+				6E5E2278247FDAE300BB79B5 /* Extention */,
 				6E5E2271247FB26300BB79B5 /* Controller */,
 				6E5E2265247F990D00BB79B5 /* Assets.xcassets */,
 			);
@@ -269,13 +288,13 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		6E5E2278247FDAE300BB79B5 /* Category */ = {
+		6E5E2278247FDAE300BB79B5 /* Extention */ = {
 			isa = PBXGroup;
 			children = (
 				6E5E2279247FDB9B00BB79B5 /* UIView+Extention.swift */,
 				6E5E227E247FEBCB00BB79B5 /* UIColor+Extention.swift */,
 			);
-			path = Category;
+			path = Extention;
 			sourceTree = "<group>";
 		};
 		6E5E227B247FE5BA00BB79B5 /* Util */ = {
@@ -283,6 +302,8 @@
 			children = (
 				6E5E227C247FE5D200BB79B5 /* Constant.swift */,
 				6E5857D42480AAD500D5CA04 /* ColorConstant.swift */,
+				6E5857E12480B2B800D5CA04 /* PushUtil.swift */,
+				6E5857E72480B7C200D5CA04 /* PreferenceUtil.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -315,6 +336,7 @@
 				6E5E2255247F990900BB79B5 /* Sources */,
 				6E5E2256247F990900BB79B5 /* Frameworks */,
 				6E5E2257247F990900BB79B5 /* Resources */,
+				E5C010E27B10B114AF2498BB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -367,6 +389,8 @@
 				6E5E2269247F990D00BB79B5 /* LaunchScreen.storyboard in Resources */,
 				6E5857D02480A6BD00D5CA04 /* YJBannerView.bundle in Resources */,
 				6E5857AD24809B4600D5CA04 /* ZPLoginOrRegisterViewController.xib in Resources */,
+				6E316B962480E69D00FEECC4 /* ZPRegisterViewController.xib in Resources */,
+				6E316B922480E63900FEECC4 /* ZPLoginViewController.xib in Resources */,
 				6E5E2277247FB48700BB79B5 /* ZPGuideViewController.xib in Resources */,
 				6E5E2266247F990D00BB79B5 /* Assets.xcassets in Resources */,
 				6E5E2264247F990900BB79B5 /* Splash.storyboard in Resources */,
@@ -398,6 +422,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E5C010E27B10B114AF2498BB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CloudMusic/Pods-CloudMusic-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CloudMusic/Pods-CloudMusic-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CloudMusic/Pods-CloudMusic-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -405,6 +446,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E316B912480E63900FEECC4 /* ZPLoginViewController.swift in Sources */,
 				6E5E227F247FEBCB00BB79B5 /* UIColor+Extention.swift in Sources */,
 				6E5E225D247F990900BB79B5 /* AppDelegate.swift in Sources */,
 				6E5857D12480A6BD00D5CA04 /* YJBannerViewCollectionView.m in Sources */,
@@ -413,6 +455,7 @@
 				6E5857AC24809B4600D5CA04 /* ZPLoginOrRegisterViewController.swift in Sources */,
 				6E5E2273247FB28D00BB79B5 /* ZPSplashViewController.swift in Sources */,
 				6E5857DE2480B13C00D5CA04 /* ZPGuideViewControllerExtention.swift in Sources */,
+				6E5857E82480B7C200D5CA04 /* PreferenceUtil.swift in Sources */,
 				6E5857D52480AAD500D5CA04 /* ColorConstant.swift in Sources */,
 				6E5857CB2480A6BD00D5CA04 /* UIView+YJBannerViewExt.m in Sources */,
 				6E5E227D247FE5D200BB79B5 /* Constant.swift in Sources */,
@@ -420,8 +463,11 @@
 				6E5857CE2480A6BD00D5CA04 /* YJAbstractDotView.m in Sources */,
 				6E5857CC2480A6BD00D5CA04 /* YJBannerView.m in Sources */,
 				6E5E227A247FDB9B00BB79B5 /* UIView+Extention.swift in Sources */,
+				6E316B952480E69D00FEECC4 /* ZPRegisterViewController.swift in Sources */,
+				6E5857E42480B57F00D5CA04 /* DefaultKeys.swift in Sources */,
 				6E5857D32480A6BD00D5CA04 /* YJBannerViewFooter.m in Sources */,
 				6E5857D22480A6BD00D5CA04 /* YJBannerViewCell.m in Sources */,
+				6E5857E22480B2B800D5CA04 /* PushUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

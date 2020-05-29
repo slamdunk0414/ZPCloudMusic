@@ -6,5 +6,7 @@ target 'CloudMusic' do
   use_frameworks!
 
   # Pods for CloudMusic
+  
+  pod 'SwiftyUserDefaults', '4.0.0-alpha.1'
 
 end

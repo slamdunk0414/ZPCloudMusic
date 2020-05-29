@@ -18,6 +18,8 @@ class ZPGuideViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        PreferenceUtil.setShowGuide(hasShowGuide: true)
+        
         initBannerView()
     }
 
@@ -45,7 +47,9 @@ extension ZPGuideViewController{
     /// 登录注册点击
     /// - Parameter sender: 就是登录注册按钮
     @IBAction func touchLoginOrRegister(_ sender: Any) {
-        AppDelegate.shared.window?.rootViewController = ZPLoginOrRegisterViewController()
+        
+        PushUtil.setRootController(controller:ZPLoginOrRegisterViewController())
+        
     }
     
     @IBAction func touchGo(_ sender: Any) {
