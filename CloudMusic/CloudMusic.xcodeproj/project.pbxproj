@@ -11,6 +11,12 @@
 		6E316B922480E63900FEECC4 /* ZPLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E316B902480E63900FEECC4 /* ZPLoginViewController.xib */; };
 		6E316B952480E69D00FEECC4 /* ZPRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E316B932480E69D00FEECC4 /* ZPRegisterViewController.swift */; };
 		6E316B962480E69D00FEECC4 /* ZPRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E316B942480E69D00FEECC4 /* ZPRegisterViewController.xib */; };
+		6E316B9A24810E0B00FEECC4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E316B9924810E0B00FEECC4 /* BaseViewController.swift */; };
+		6E316B9D24810F5A00FEECC4 /* RegexEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E316B9B24810F5A00FEECC4 /* RegexEnum.swift */; };
+		6E316B9E24810F5A00FEECC4 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E316B9C24810F5A00FEECC4 /* Regex.swift */; };
+		6E316BA024810F7E00FEECC4 /* String+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E316B9F24810F7E00FEECC4 /* String+Extention.swift */; };
+		6E316BA22481237400FEECC4 /* ToastUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E316BA12481237400FEECC4 /* ToastUtil.swift */; };
+		6E316BA62481EE0B00FEECC4 /* CustomNetworkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E316BA52481EE0B00FEECC4 /* CustomNetworkAPI.swift */; };
 		6E5857AC24809B4600D5CA04 /* ZPLoginOrRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5857AA24809B4600D5CA04 /* ZPLoginOrRegisterViewController.swift */; };
 		6E5857AD24809B4600D5CA04 /* ZPLoginOrRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E5857AB24809B4600D5CA04 /* ZPLoginOrRegisterViewController.xib */; };
 		6E5857CB2480A6BD00D5CA04 /* UIView+YJBannerViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E5857B62480A6BD00D5CA04 /* UIView+YJBannerViewExt.m */; };
@@ -46,6 +52,12 @@
 		6E316B902480E63900FEECC4 /* ZPLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZPLoginViewController.xib; sourceTree = "<group>"; };
 		6E316B932480E69D00FEECC4 /* ZPRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZPRegisterViewController.swift; sourceTree = "<group>"; };
 		6E316B942480E69D00FEECC4 /* ZPRegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZPRegisterViewController.xib; sourceTree = "<group>"; };
+		6E316B9924810E0B00FEECC4 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		6E316B9B24810F5A00FEECC4 /* RegexEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegexEnum.swift; sourceTree = "<group>"; };
+		6E316B9C24810F5A00FEECC4 /* Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
+		6E316B9F24810F7E00FEECC4 /* String+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extention.swift"; sourceTree = "<group>"; };
+		6E316BA12481237400FEECC4 /* ToastUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastUtil.swift; sourceTree = "<group>"; };
+		6E316BA52481EE0B00FEECC4 /* CustomNetworkAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNetworkAPI.swift; sourceTree = "<group>"; };
 		6E5857AA24809B4600D5CA04 /* ZPLoginOrRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZPLoginOrRegisterViewController.swift; sourceTree = "<group>"; };
 		6E5857AB24809B4600D5CA04 /* ZPLoginOrRegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZPLoginOrRegisterViewController.xib; sourceTree = "<group>"; };
 		6E5857AE24809D8100D5CA04 /* CloudMusic-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CloudMusic-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -99,9 +111,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E316B9724810DF500FEECC4 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				6E316B9824810DFD00FEECC4 /* Controller */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		6E316B9824810DFD00FEECC4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6E316B9924810E0B00FEECC4 /* BaseViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6E316BA42481EDCF00FEECC4 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				6E316BA52481EE0B00FEECC4 /* CustomNetworkAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		6E5857B224809DCA00D5CA04 /* main */ = {
 			isa = PBXGroup;
 			children = (
+				6E316B9724810DF500FEECC4 /* Base */,
 				6E5E2267247F990D00BB79B5 /* LaunchScreen.storyboard */,
 				6E5E225C247F990900BB79B5 /* AppDelegate.swift */,
 				6E5E226A247F990D00BB79B5 /* Info.plist */,
@@ -270,6 +307,7 @@
 		6E5E225B247F990900BB79B5 /* CloudMusic */ = {
 			isa = PBXGroup;
 			children = (
+				6E316BA42481EDCF00FEECC4 /* API */,
 				6E5857D62480B0CF00D5CA04 /* Classes */,
 				6E5857B32480A67A00D5CA04 /* Vender */,
 				6E5857B224809DCA00D5CA04 /* main */,
@@ -293,6 +331,7 @@
 			children = (
 				6E5E2279247FDB9B00BB79B5 /* UIView+Extention.swift */,
 				6E5E227E247FEBCB00BB79B5 /* UIColor+Extention.swift */,
+				6E316B9F24810F7E00FEECC4 /* String+Extention.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -300,6 +339,9 @@
 		6E5E227B247FE5BA00BB79B5 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				6E316BA12481237400FEECC4 /* ToastUtil.swift */,
+				6E316B9C24810F5A00FEECC4 /* Regex.swift */,
+				6E316B9B24810F5A00FEECC4 /* RegexEnum.swift */,
 				6E5E227C247FE5D200BB79B5 /* Constant.swift */,
 				6E5857D42480AAD500D5CA04 /* ColorConstant.swift */,
 				6E5857E12480B2B800D5CA04 /* PushUtil.swift */,
@@ -449,22 +491,28 @@
 				6E316B912480E63900FEECC4 /* ZPLoginViewController.swift in Sources */,
 				6E5E227F247FEBCB00BB79B5 /* UIColor+Extention.swift in Sources */,
 				6E5E225D247F990900BB79B5 /* AppDelegate.swift in Sources */,
+				6E316BA22481237400FEECC4 /* ToastUtil.swift in Sources */,
+				6E316B9A24810E0B00FEECC4 /* BaseViewController.swift in Sources */,
 				6E5857D12480A6BD00D5CA04 /* YJBannerViewCollectionView.m in Sources */,
 				6E5857CF2480A6BD00D5CA04 /* YJAnimatedDotView.m in Sources */,
 				6E5857CD2480A6BD00D5CA04 /* YJHollowPageControl.m in Sources */,
 				6E5857AC24809B4600D5CA04 /* ZPLoginOrRegisterViewController.swift in Sources */,
 				6E5E2273247FB28D00BB79B5 /* ZPSplashViewController.swift in Sources */,
 				6E5857DE2480B13C00D5CA04 /* ZPGuideViewControllerExtention.swift in Sources */,
+				6E316B9D24810F5A00FEECC4 /* RegexEnum.swift in Sources */,
 				6E5857E82480B7C200D5CA04 /* PreferenceUtil.swift in Sources */,
 				6E5857D52480AAD500D5CA04 /* ColorConstant.swift in Sources */,
 				6E5857CB2480A6BD00D5CA04 /* UIView+YJBannerViewExt.m in Sources */,
 				6E5E227D247FE5D200BB79B5 /* Constant.swift in Sources */,
+				6E316BA024810F7E00FEECC4 /* String+Extention.swift in Sources */,
 				6E5E2276247FB48700BB79B5 /* ZPGuideViewController.swift in Sources */,
 				6E5857CE2480A6BD00D5CA04 /* YJAbstractDotView.m in Sources */,
 				6E5857CC2480A6BD00D5CA04 /* YJBannerView.m in Sources */,
+				6E316BA62481EE0B00FEECC4 /* CustomNetworkAPI.swift in Sources */,
 				6E5E227A247FDB9B00BB79B5 /* UIView+Extention.swift in Sources */,
 				6E316B952480E69D00FEECC4 /* ZPRegisterViewController.swift in Sources */,
 				6E5857E42480B57F00D5CA04 /* DefaultKeys.swift in Sources */,
+				6E316B9E24810F5A00FEECC4 /* Regex.swift in Sources */,
 				6E5857D32480A6BD00D5CA04 /* YJBannerViewFooter.m in Sources */,
 				6E5857D22480A6BD00D5CA04 /* YJBannerViewCell.m in Sources */,
 				6E5857E22480B2B800D5CA04 /* PushUtil.swift in Sources */,

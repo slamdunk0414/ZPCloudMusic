@@ -48,7 +48,9 @@ extension ZPGuideViewController{
     /// - Parameter sender: 就是登录注册按钮
     @IBAction func touchLoginOrRegister(_ sender: Any) {
         
-        PushUtil.setRootController(controller:ZPLoginOrRegisterViewController())
+        let navi = UINavigationController(rootViewController: ZPLoginOrRegisterViewController())
+        
+        PushUtil.setRootController(controller:navi)
         
     }
     

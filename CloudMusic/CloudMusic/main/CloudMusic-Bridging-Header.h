@@ -4,3 +4,4 @@
 
 #import "YJBannerView.h"
 #import "YJBannerViewCell.h"
+#import "MBProgressHUD.h"

@@ -24,8 +24,6 @@ class PreferenceUtil{
     
     static func setShowGuide(hasShowGuide:Bool){
         
-        let hasShowGuide = Defaults[.guide_key] ?? false
-        
         let infoDictionary = Bundle.main.infoDictionary
         
         let app_Version:String = infoDictionary?["CFBundleShortVersionString"] as! String

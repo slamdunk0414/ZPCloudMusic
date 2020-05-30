@@ -19,6 +19,8 @@ class ZPLoginOrRegisterViewController: UIViewController {
     
     @IBAction func registerClick(_ sender: UIButton) {
         
+        print("注册点击了")
+        
         let controller =  ZPRegisterViewController()
         navigationController?.pushViewController(controller, animated: true)
     
@@ -27,7 +29,7 @@ class ZPLoginOrRegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .blue
+//        view.backgroundColor = .blue
         
     }
     

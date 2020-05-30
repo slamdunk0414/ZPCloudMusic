@@ -8,5 +8,9 @@ target 'CloudMusic' do
   # Pods for CloudMusic
   
   pod 'SwiftyUserDefaults', '4.0.0-alpha.1'
+  pod 'MBProgressHUD', '1.1.0'
+  pod 'Moya'
+  pod 'RxSwift'
+  pod 'RxCocoa'
 
 end

@@ -7,16 +7,50 @@
 //
 
 import UIKit
+import Moya
+import RxSwift
 
-class ZPRegisterViewController: UIViewController {
+class ZPRegisterViewController: BaseViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+    @IBOutlet weak var nickNameTextField: UITextField!
+    
+    @IBOutlet weak var phoneNumberTextField: UITextField!
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    
+    @IBOutlet weak var passWordTextField: UITextField!
+    
+    @IBOutlet weak var confirmPassWordTextField: UITextField!
+    
+    
+    override func initViews(){
+        super.initViews()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
+    
+    @IBAction func registerClick(_ sender: Any) {
+
+        guard let nickName:String = nickNameTextField?.text?.trim() , nickName =~ .nickname else {
+            
+//            ToastUtil.short("请输入正确的手机号")
+            ToastUtil.showLoading()
+
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                ToastUtil.hideLoading()
+            }
+            
+            return
+        }
+        
+        print("registerClick")
+    }
+    
+    @IBAction func xieyiClick(_ sender: Any) {
+        print("协议Click")
     }
     
 }
