@@ -12,5 +12,7 @@ target 'CloudMusic' do
   pod 'Moya'
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'HandyJSON'
+  pod 'Moya/RxSwift'
 
 end

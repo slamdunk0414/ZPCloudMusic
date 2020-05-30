@@ -9,7 +9,7 @@
 import Foundation
 import Moya
 
-let BASE_URL = "www.baidu.com"
+let BASE_URL = "http://dev-my-cloud-music-api-rails.ixuea.com"
 
 /// 接口列表
 enum CustomNetworkAPI{
@@ -29,12 +29,17 @@ extension CustomNetworkAPI:TargetType{
     
     // MARK: 返回每个请求的路径
     var path: String {
-        return "123/123"
+        switch self {
+        case .sheetDetail(let id):
+            return "/v1/sheets/\(id).json"
+        default:
+            return ""
+        }
     }
     
     // MARK: 请求方式
     var method: Moya.Method {
-        .post
+        .get
     }
     // MARK: 返回测试相关的数据
     var sampleData: Data {
