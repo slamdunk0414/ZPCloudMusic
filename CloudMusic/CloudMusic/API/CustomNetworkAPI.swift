@@ -43,7 +43,7 @@ extension CustomNetworkAPI:TargetType{
     
     // MARK: 请求参数
     var task: Task {
-        return nil
+        return .requestPlain
     }
     
     // MARK: 请求头
