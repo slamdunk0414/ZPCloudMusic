@@ -36,7 +36,12 @@ class ZPSplashViewController: UIViewController {
 //        CustomNetworkUtil.shareProvider.request(CustomNetworkAPI.sheets)
         let _ = CustomNetworkUtil.shareProvider.rx.request(.sheetDetail(id: "1")).mapJSON().subscribe(onSuccess: { (data) in
             
-            print(data)
+            if let json = data as? [String : Any]{
+                let model =  sheetWraper.deserialize(from: json)
+                
+                print(model?.data.title)
+            }
+
             
         }) { (error) in
             
