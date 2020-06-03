@@ -14,10 +14,10 @@ import HandyJSON
 struct CustomNetworkUtil {
     
     /// 单例设计模式
-    /// 饿汉式单例
+    /// 单例
     static let shared = CustomNetworkUtil()
     
-    public let provider = MoyaProvider<CustomNetworkAPI>()
+    private let provider = MoyaProvider<CustomNetworkAPI>()
     
     private init(){
         
@@ -44,5 +44,15 @@ struct CustomNetworkUtil {
             .asObservable()
             .mapString()
             .mapObject(DetailResponse<Sheet>.self)
+    }
+    
+    func createUser(avatar:String?=nil,nickname:String,phone:String,email:String,password:String,qq_id:String?=nil,weibo_id:String?=nil) -> Observable<DetailResponse<BaseModel>?> {
+        return provider
+            .rx
+            .request(.createUser(avatar: avatar, nickname: nickname, phone: phone, email: email, password: password, qq_id: qq_id, weibo_id: weibo_id))
+            .filterSuccessfulStatusCodes()
+            .asObservable()
+            .mapString()
+            .mapObject(DetailResponse<BaseModel>.self)
     }
 }

@@ -31,7 +31,7 @@ class ZPSplashViewController: UIViewController {
         }else{
             PushUtil.setRootController(controller:ZPGuideViewController())
         }
-        
+
     }
 
 }

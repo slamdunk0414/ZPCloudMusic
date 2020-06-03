@@ -199,10 +199,10 @@ public class HttpObserver<Element>: ObserverType {
                     //业务错误
                     if let curError = error as NSError? {
                         let message = curError.domain
-                        ToastUtil.short(message)
+//                        ToastUtil.short(message)
                         
                     }else {
-                        ToastUtil.short("未知错误，请稍后再试！")
+//                        ToastUtil.short("未知错误，请稍后再试！")
                     }
                 }
         

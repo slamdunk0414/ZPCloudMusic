@@ -10,3 +10,6 @@ import Foundation
 
 /// 边框宽度
 let SIZE_BORDER = 1.0
+
+/// 密码格式不正确
+let ERROR_PASSWORD_FORMAT = "密码格式不正确！"

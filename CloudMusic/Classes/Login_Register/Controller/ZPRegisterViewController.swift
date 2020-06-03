@@ -34,32 +34,81 @@ class ZPRegisterViewController: BaseViewController {
     
     @IBAction func registerClick(_ sender: Any) {
 
-//        CustomNetworkUtil.shared.sheets().subscribe({ (response) in
-//            
-//        }) { (error) in
-//            print("error")
-//            ToastUtil.hideLoading()
-//        }
+        let nickName = nickNameTextField.text!.trim()
         
-        CustomNetworkUtil.shared.sheetDetail(id: "100000").subscribe({ (response) in
-            
-        }) { (error) in
-            
+        if nickName.isEmpty {
+            ToastUtil.short("请输入昵称")
         }
         
-//        guard let nickName:String = nickNameTextField?.text?.trim() , nickName =~ .nickname else {
-//
-////            ToastUtil.short("请输入正确的手机号")
-//            ToastUtil.showLoading()
-//
-//            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-//                ToastUtil.hideLoading()
-//            }
-//
-//            return
-//        }
-//
-//        print("registerClick")
+        let phone=phoneNumberTextField.text!.trim()
+        
+        if phone.isEmpty {
+            ToastUtil.short("请输入手机号！")
+            return
+        }
+        
+        guard phone =~ .tel else {
+            ToastUtil.short("请输入正确的手机号")
+            return
+        }
+        
+        //获取邮箱
+        let email=emailTextField.text!.trim()
+
+        //为空判断
+        if email.isEmpty {
+            ToastUtil.short("请输入邮箱！")
+            return
+        }
+
+        //判断邮箱格式
+        guard email =~ .email else {
+            ToastUtil.short("邮箱格式不正确！")
+            return
+        }
+        
+        //密码
+        let password=passWordTextField.text!.trim()
+
+        if password.isEmpty {
+            ToastUtil.short("请输入密码！")
+            return
+        }
+        
+        guard password =~ .password else {
+            ToastUtil.short(ERROR_PASSWORD_FORMAT)
+            return
+        }
+        
+        //确认密码
+        let confirmPassword=confirmPassWordTextField.text!.trim()
+
+        if confirmPassword.isEmpty {
+            ToastUtil.short("请输入确认密码！")
+            return
+        }
+        
+        guard confirmPassword =~ .password else {
+            ToastUtil.short("确认密码格式不正确！")
+            return
+        }
+        
+        //判断确认密码和密码是否一样
+        guard password==confirmPassword else {
+            ToastUtil.short("两次密码不一致！")
+            return
+        }
+        
+        ToastUtil.showLoading("正在注册")
+        
+        CustomNetworkUtil.shared.createUser(nickname: nickName, phone: phone, email: email, password: password).subscribe({ (response) in
+            
+            print(response)
+            ToastUtil.hideLoading()
+        }) { (error) in
+            ToastUtil.hideLoading()
+        }
+        
     }
     
     @IBAction func xieyiClick(_ sender: Any) {
