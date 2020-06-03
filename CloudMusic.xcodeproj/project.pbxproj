@@ -14,11 +14,11 @@
 		6E316B9A24810E0B00FEECC4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E316B9924810E0B00FEECC4 /* BaseViewController.swift */; };
 		6E316B9D24810F5A00FEECC4 /* RegexEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E316B9B24810F5A00FEECC4 /* RegexEnum.swift */; };
 		6E316B9E24810F5A00FEECC4 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E316B9C24810F5A00FEECC4 /* Regex.swift */; };
-		6E316BA024810F7E00FEECC4 /* String+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E316B9F24810F7E00FEECC4 /* String+Extention.swift */; };
+		6E316BA024810F7E00FEECC4 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E316B9F24810F7E00FEECC4 /* String+Extension.swift */; };
 		6E316BA22481237400FEECC4 /* ToastUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E316BA12481237400FEECC4 /* ToastUtil.swift */; };
 		6E316BA62481EE0B00FEECC4 /* CustomNetworkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E316BA52481EE0B00FEECC4 /* CustomNetworkAPI.swift */; };
 		6E316BAC24822B8000FEECC4 /* ZPMusicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E316BAB24822B8000FEECC4 /* ZPMusicModel.swift */; };
-		6E316BC32487489100FEECC4 /* Observable+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E316BC22487488F00FEECC4 /* Observable+Extention.swift */; };
+		6E316BC32487489100FEECC4 /* Observable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E316BC22487488F00FEECC4 /* Observable+Extension.swift */; };
 		6E316BC524874B2E00FEECC4 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E316BC424874B2E00FEECC4 /* BaseResponse.swift */; };
 		6E316BC724874B6400FEECC4 /* DetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E316BC624874B6400FEECC4 /* DetailResponse.swift */; };
 		6E316BC924874B7F00FEECC4 /* ListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E316BC824874B7F00FEECC4 /* ListResponse.swift */; };
@@ -47,9 +47,9 @@
 		6E5E2273247FB28D00BB79B5 /* ZPSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5E2272247FB28D00BB79B5 /* ZPSplashViewController.swift */; };
 		6E5E2276247FB48700BB79B5 /* ZPGuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5E2274247FB48700BB79B5 /* ZPGuideViewController.swift */; };
 		6E5E2277247FB48700BB79B5 /* ZPGuideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E5E2275247FB48700BB79B5 /* ZPGuideViewController.xib */; };
-		6E5E227A247FDB9B00BB79B5 /* UIView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5E2279247FDB9B00BB79B5 /* UIView+Extention.swift */; };
+		6E5E227A247FDB9B00BB79B5 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5E2279247FDB9B00BB79B5 /* UIView+Extension.swift */; };
 		6E5E227D247FE5D200BB79B5 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5E227C247FE5D200BB79B5 /* Constant.swift */; };
-		6E5E227F247FEBCB00BB79B5 /* UIColor+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5E227E247FEBCB00BB79B5 /* UIColor+Extention.swift */; };
+		6E5E227F247FEBCB00BB79B5 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5E227E247FEBCB00BB79B5 /* UIColor+Extension.swift */; };
 		7A9F9F2BB33AFBF319C566D0 /* Pods_CloudMusic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D2848F9B18DFDC21AC9858D /* Pods_CloudMusic.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
@@ -62,11 +62,11 @@
 		6E316B9924810E0B00FEECC4 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		6E316B9B24810F5A00FEECC4 /* RegexEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegexEnum.swift; sourceTree = "<group>"; };
 		6E316B9C24810F5A00FEECC4 /* Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
-		6E316B9F24810F7E00FEECC4 /* String+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extention.swift"; sourceTree = "<group>"; };
+		6E316B9F24810F7E00FEECC4 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		6E316BA12481237400FEECC4 /* ToastUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastUtil.swift; sourceTree = "<group>"; };
 		6E316BA52481EE0B00FEECC4 /* CustomNetworkAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNetworkAPI.swift; sourceTree = "<group>"; };
 		6E316BAB24822B8000FEECC4 /* ZPMusicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZPMusicModel.swift; sourceTree = "<group>"; };
-		6E316BC22487488F00FEECC4 /* Observable+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Extention.swift"; sourceTree = "<group>"; };
+		6E316BC22487488F00FEECC4 /* Observable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Extension.swift"; sourceTree = "<group>"; };
 		6E316BC424874B2E00FEECC4 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 		6E316BC624874B6400FEECC4 /* DetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailResponse.swift; sourceTree = "<group>"; };
 		6E316BC824874B7F00FEECC4 /* ListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListResponse.swift; sourceTree = "<group>"; };
@@ -106,9 +106,9 @@
 		6E5E2272247FB28D00BB79B5 /* ZPSplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZPSplashViewController.swift; sourceTree = "<group>"; };
 		6E5E2274247FB48700BB79B5 /* ZPGuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZPGuideViewController.swift; sourceTree = "<group>"; };
 		6E5E2275247FB48700BB79B5 /* ZPGuideViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZPGuideViewController.xib; sourceTree = "<group>"; };
-		6E5E2279247FDB9B00BB79B5 /* UIView+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extention.swift"; sourceTree = "<group>"; };
+		6E5E2279247FDB9B00BB79B5 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		6E5E227C247FE5D200BB79B5 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		6E5E227E247FEBCB00BB79B5 /* UIColor+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extention.swift"; sourceTree = "<group>"; };
+		6E5E227E247FEBCB00BB79B5 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		7F36F7541C414610088412F5 /* Pods-CloudMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloudMusic.debug.xcconfig"; path = "Target Support Files/Pods-CloudMusic/Pods-CloudMusic.debug.xcconfig"; sourceTree = "<group>"; };
 		8D2848F9B18DFDC21AC9858D /* Pods_CloudMusic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CloudMusic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -348,7 +348,7 @@
 				6E5857B32480A67A00D5CA04 /* Vender */,
 				6E5857B224809DCA00D5CA04 /* main */,
 				6E5E227B247FE5BA00BB79B5 /* Util */,
-				6E5E2278247FDAE300BB79B5 /* Extention */,
+				6E5E2278247FDAE300BB79B5 /* Extension */,
 				6E5E2271247FB26300BB79B5 /* Controller */,
 				6E5E2265247F990D00BB79B5 /* Assets.xcassets */,
 			);
@@ -362,15 +362,15 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		6E5E2278247FDAE300BB79B5 /* Extention */ = {
+		6E5E2278247FDAE300BB79B5 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				6E5E2279247FDB9B00BB79B5 /* UIView+Extention.swift */,
-				6E5E227E247FEBCB00BB79B5 /* UIColor+Extention.swift */,
-				6E316B9F24810F7E00FEECC4 /* String+Extention.swift */,
-				6E316BC22487488F00FEECC4 /* Observable+Extention.swift */,
+				6E5E2279247FDB9B00BB79B5 /* UIView+Extension.swift */,
+				6E5E227E247FEBCB00BB79B5 /* UIColor+Extension.swift */,
+				6E316B9F24810F7E00FEECC4 /* String+Extension.swift */,
+				6E316BC22487488F00FEECC4 /* Observable+Extension.swift */,
 			);
-			path = Extention;
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		6E5E227B247FE5BA00BB79B5 /* Util */ = {
@@ -528,7 +528,7 @@
 				6E316B912480E63900FEECC4 /* ZPLoginViewController.swift in Sources */,
 				6E316BCB24874EBA00FEECC4 /* CustomNetworkUtil.swift in Sources */,
 				6E316BAC24822B8000FEECC4 /* ZPMusicModel.swift in Sources */,
-				6E5E227F247FEBCB00BB79B5 /* UIColor+Extention.swift in Sources */,
+				6E5E227F247FEBCB00BB79B5 /* UIColor+Extension.swift in Sources */,
 				6E5E225D247F990900BB79B5 /* AppDelegate.swift in Sources */,
 				6E316BA22481237400FEECC4 /* ToastUtil.swift in Sources */,
 				6E316B9A24810E0B00FEECC4 /* BaseViewController.swift in Sources */,
@@ -544,16 +544,16 @@
 				6E5857E82480B7C200D5CA04 /* PreferenceUtil.swift in Sources */,
 				6E316BC724874B6400FEECC4 /* DetailResponse.swift in Sources */,
 				6E5857D52480AAD500D5CA04 /* ColorConstant.swift in Sources */,
-				6E316BC32487489100FEECC4 /* Observable+Extention.swift in Sources */,
+				6E316BC32487489100FEECC4 /* Observable+Extension.swift in Sources */,
 				6E5857CB2480A6BD00D5CA04 /* UIView+YJBannerViewExt.m in Sources */,
 				6E5E227D247FE5D200BB79B5 /* Constant.swift in Sources */,
-				6E316BA024810F7E00FEECC4 /* String+Extention.swift in Sources */,
+				6E316BA024810F7E00FEECC4 /* String+Extension.swift in Sources */,
 				6E5E2276247FB48700BB79B5 /* ZPGuideViewController.swift in Sources */,
 				6E5857CE2480A6BD00D5CA04 /* YJAbstractDotView.m in Sources */,
 				6E5857CC2480A6BD00D5CA04 /* YJBannerView.m in Sources */,
 				6E316BC524874B2E00FEECC4 /* BaseResponse.swift in Sources */,
 				6E316BA62481EE0B00FEECC4 /* CustomNetworkAPI.swift in Sources */,
-				6E5E227A247FDB9B00BB79B5 /* UIView+Extention.swift in Sources */,
+				6E5E227A247FDB9B00BB79B5 /* UIView+Extension.swift in Sources */,
 				6E316B952480E69D00FEECC4 /* ZPRegisterViewController.swift in Sources */,
 				6E5857E42480B57F00D5CA04 /* DefaultKeys.swift in Sources */,
 				6E316B9E24810F5A00FEECC4 /* Regex.swift in Sources */,

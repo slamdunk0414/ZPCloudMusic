@@ -54,5 +54,7 @@ struct CustomNetworkUtil {
             .asObservable()
             .mapString()
             .mapObject(DetailResponse<BaseModel>.self)
+        
+        
     }
 }
