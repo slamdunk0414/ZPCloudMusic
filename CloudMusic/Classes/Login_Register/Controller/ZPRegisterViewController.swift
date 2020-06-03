@@ -34,19 +34,32 @@ class ZPRegisterViewController: BaseViewController {
     
     @IBAction func registerClick(_ sender: Any) {
 
-        guard let nickName:String = nickNameTextField?.text?.trim() , nickName =~ .nickname else {
+//        CustomNetworkUtil.shared.sheets().subscribe({ (response) in
+//            
+//        }) { (error) in
+//            print("error")
+//            ToastUtil.hideLoading()
+//        }
+        
+        CustomNetworkUtil.shared.sheetDetail(id: "100000").subscribe({ (response) in
             
-//            ToastUtil.short("请输入正确的手机号")
-            ToastUtil.showLoading()
-
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                ToastUtil.hideLoading()
-            }
+        }) { (error) in
             
-            return
         }
         
-        print("registerClick")
+//        guard let nickName:String = nickNameTextField?.text?.trim() , nickName =~ .nickname else {
+//
+////            ToastUtil.short("请输入正确的手机号")
+//            ToastUtil.showLoading()
+//
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+//                ToastUtil.hideLoading()
+//            }
+//
+//            return
+//        }
+//
+//        print("registerClick")
     }
     
     @IBAction func xieyiClick(_ sender: Any) {

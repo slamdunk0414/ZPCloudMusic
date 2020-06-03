@@ -8,6 +8,7 @@
 
 import Foundation
 import Moya
+import RxSwift
 
 let BASE_URL = "http://dev-my-cloud-music-api-rails.ixuea.com"
 
@@ -32,6 +33,8 @@ extension CustomNetworkAPI:TargetType{
         switch self {
         case .sheetDetail(let id):
             return "/v1/sheets/\(id).json"
+        case .sheets:
+            return "/v1/sheets.json"
         default:
             return ""
         }

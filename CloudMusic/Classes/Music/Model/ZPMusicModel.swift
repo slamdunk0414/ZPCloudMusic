@@ -9,15 +9,8 @@
 import Foundation
 import HandyJSON
 
-struct sheet:HandyJSON{
+struct Sheet:HandyJSON{
     
     var title:String?
-    
-}
-
-struct sheetWraper:HandyJSON{
-    
-    
-    var data:sheet!
     
 }
