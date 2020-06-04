@@ -10,7 +10,7 @@ import UIKit
 import Moya
 import RxSwift
 
-class ZPRegisterViewController: BaseViewController {
+class ZPRegisterViewController: ZPBaseLoginController {
 
     @IBOutlet weak var nickNameTextField: UITextField!
     
@@ -25,6 +25,8 @@ class ZPRegisterViewController: BaseViewController {
     
     override func initViews(){
         super.initViews()
+        
+        self.title = "注册"
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -103,7 +105,9 @@ class ZPRegisterViewController: BaseViewController {
         
         CustomNetworkUtil.shared.createUser(nickname: nickName, phone: phone, email: email, password: password).subscribe({ (response) in
             
-            print(response)
+            //注册成功后自动登录
+            self.login(phone: phone, email: email, password: password)
+            
             ToastUtil.hideLoading()
         }) { (error) in
             ToastUtil.hideLoading()

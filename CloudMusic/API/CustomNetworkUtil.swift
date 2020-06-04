@@ -54,7 +54,15 @@ struct CustomNetworkUtil {
             .asObservable()
             .mapString()
             .mapObject(DetailResponse<BaseModel>.self)
-        
-        
+    }
+    
+    func login(phone:String?=nil,email:String?=nil,password:String?=nil,qq_id:String?=nil,weibo_id:String?=nil) -> Observable<DetailResponse<Session>?> {
+        return provider
+            .rx
+            .request(.login(phone: phone, email: email, password: password, qq_id: qq_id, weibo_id: weibo_id))
+            .filterSuccessfulStatusCodes()
+            .mapString()
+            .asObservable()
+            .mapObject(DetailResponse<Session>.self)
     }
 }

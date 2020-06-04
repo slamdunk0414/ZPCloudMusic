@@ -24,6 +24,10 @@
 		6E316BC924874B7F00FEECC4 /* ListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E316BC824874B7F00FEECC4 /* ListResponse.swift */; };
 		6E316BCB24874EBA00FEECC4 /* CustomNetworkUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E316BCA24874EBA00FEECC4 /* CustomNetworkUtil.swift */; };
 		6E316BCD248796AA00FEECC4 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E316BCC248796AA00FEECC4 /* BaseModel.swift */; };
+		6E44E63E2488EA5100426463 /* ZPBaseLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E44E63D2488EA5100426463 /* ZPBaseLoginController.swift */; };
+		6E44E6412488EC1000426463 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E44E6402488EC1000426463 /* Session.swift */; };
+		6E44E6452488EFB900426463 /* ZPHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E44E6432488EFB900426463 /* ZPHomeViewController.swift */; };
+		6E44E6462488EFB900426463 /* ZPHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E44E6442488EFB900426463 /* ZPHomeViewController.xib */; };
 		6E5857AC24809B4600D5CA04 /* ZPLoginOrRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5857AA24809B4600D5CA04 /* ZPLoginOrRegisterViewController.swift */; };
 		6E5857AD24809B4600D5CA04 /* ZPLoginOrRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E5857AB24809B4600D5CA04 /* ZPLoginOrRegisterViewController.xib */; };
 		6E5857CB2480A6BD00D5CA04 /* UIView+YJBannerViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E5857B62480A6BD00D5CA04 /* UIView+YJBannerViewExt.m */; };
@@ -72,6 +76,10 @@
 		6E316BC824874B7F00FEECC4 /* ListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListResponse.swift; sourceTree = "<group>"; };
 		6E316BCA24874EBA00FEECC4 /* CustomNetworkUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNetworkUtil.swift; sourceTree = "<group>"; };
 		6E316BCC248796AA00FEECC4 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		6E44E63D2488EA5100426463 /* ZPBaseLoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZPBaseLoginController.swift; sourceTree = "<group>"; };
+		6E44E6402488EC1000426463 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		6E44E6432488EFB900426463 /* ZPHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZPHomeViewController.swift; sourceTree = "<group>"; };
+		6E44E6442488EFB900426463 /* ZPHomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZPHomeViewController.xib; sourceTree = "<group>"; };
 		6E5857AA24809B4600D5CA04 /* ZPLoginOrRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZPLoginOrRegisterViewController.swift; sourceTree = "<group>"; };
 		6E5857AB24809B4600D5CA04 /* ZPLoginOrRegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZPLoginOrRegisterViewController.xib; sourceTree = "<group>"; };
 		6E5857AE24809D8100D5CA04 /* CloudMusic-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CloudMusic-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -170,6 +178,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		6E44E63F2488EBFF00426463 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6E44E6402488EC1000426463 /* Session.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6E44E6422488EF9E00426463 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				6E44E6432488EFB900426463 /* ZPHomeViewController.swift */,
+				6E44E6442488EFB900426463 /* ZPHomeViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		6E5857B224809DCA00D5CA04 /* main */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,6 +283,7 @@
 		6E5857D62480B0CF00D5CA04 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				6E44E6422488EF9E00426463 /* Home */,
 				6E316BA924822B6100FEECC4 /* Music */,
 				6E5857DB2480B10A00D5CA04 /* Login_Register */,
 				6E5857D82480B0E700D5CA04 /* Guide */,
@@ -304,6 +330,7 @@
 		6E5857DB2480B10A00D5CA04 /* Login_Register */ = {
 			isa = PBXGroup;
 			children = (
+				6E44E63F2488EBFF00426463 /* Model */,
 				6E5857DC2480B12400D5CA04 /* Controller */,
 			);
 			path = Login_Register;
@@ -318,6 +345,7 @@
 				6E316B902480E63900FEECC4 /* ZPLoginViewController.xib */,
 				6E316B932480E69D00FEECC4 /* ZPRegisterViewController.swift */,
 				6E316B942480E69D00FEECC4 /* ZPRegisterViewController.xib */,
+				6E44E63D2488EA5100426463 /* ZPBaseLoginController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -466,6 +494,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E5E2269247F990D00BB79B5 /* LaunchScreen.storyboard in Resources */,
+				6E44E6462488EFB900426463 /* ZPHomeViewController.xib in Resources */,
 				6E5857D02480A6BD00D5CA04 /* YJBannerView.bundle in Resources */,
 				6E5857AD24809B4600D5CA04 /* ZPLoginOrRegisterViewController.xib in Resources */,
 				6E316B962480E69D00FEECC4 /* ZPRegisterViewController.xib in Resources */,
@@ -533,6 +562,7 @@
 				6E316BA22481237400FEECC4 /* ToastUtil.swift in Sources */,
 				6E316B9A24810E0B00FEECC4 /* BaseViewController.swift in Sources */,
 				6E5857D12480A6BD00D5CA04 /* YJBannerViewCollectionView.m in Sources */,
+				6E44E63E2488EA5100426463 /* ZPBaseLoginController.swift in Sources */,
 				6E5857CF2480A6BD00D5CA04 /* YJAnimatedDotView.m in Sources */,
 				6E316BCD248796AA00FEECC4 /* BaseModel.swift in Sources */,
 				6E5857CD2480A6BD00D5CA04 /* YJHollowPageControl.m in Sources */,
@@ -547,11 +577,13 @@
 				6E316BC32487489100FEECC4 /* Observable+Extension.swift in Sources */,
 				6E5857CB2480A6BD00D5CA04 /* UIView+YJBannerViewExt.m in Sources */,
 				6E5E227D247FE5D200BB79B5 /* Constant.swift in Sources */,
+				6E44E6452488EFB900426463 /* ZPHomeViewController.swift in Sources */,
 				6E316BA024810F7E00FEECC4 /* String+Extension.swift in Sources */,
 				6E5E2276247FB48700BB79B5 /* ZPGuideViewController.swift in Sources */,
 				6E5857CE2480A6BD00D5CA04 /* YJAbstractDotView.m in Sources */,
 				6E5857CC2480A6BD00D5CA04 /* YJBannerView.m in Sources */,
 				6E316BC524874B2E00FEECC4 /* BaseResponse.swift in Sources */,
+				6E44E6412488EC1000426463 /* Session.swift in Sources */,
 				6E316BA62481EE0B00FEECC4 /* CustomNetworkAPI.swift in Sources */,
 				6E5E227A247FDB9B00BB79B5 /* UIView+Extension.swift in Sources */,
 				6E316B952480E69D00FEECC4 /* ZPRegisterViewController.swift in Sources */,

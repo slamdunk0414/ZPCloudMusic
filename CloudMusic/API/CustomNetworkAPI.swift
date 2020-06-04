@@ -19,6 +19,7 @@ enum CustomNetworkAPI{
     
     //创建用户
     case createUser(avatar:String?,nickname:String,phone:String,email:String,password:String,qq_id:String?,weibo_id:String?)
+    case login(phone:String?,email:String?,password:String?,qq_id:String?,weibo_id:String?)
 }
 
 extension CustomNetworkAPI:TargetType{
@@ -40,8 +41,8 @@ extension CustomNetworkAPI:TargetType{
             return "/v1/sheets.json"
         case .createUser:
             return "/v1/users"
-        default:
-            return ""
+        case .login:
+            return "/v1/sessions"
         }
     }
     
@@ -49,7 +50,7 @@ extension CustomNetworkAPI:TargetType{
     var method: Moya.Method {
         
         switch self {
-        case .createUser:
+        case .createUser, .login:
             return .post
         default:
             return .get
@@ -69,10 +70,13 @@ extension CustomNetworkAPI:TargetType{
         //将参数编码
         return .requestParameters(parameters: ["avatar":avatar,"nickname":nickname,"phone":phone,"email":email,"password":password,"qq_id":qq_id,"weibo_id":weibo_id], encoding: JSONEncoding.default)
             
+        case .login(let phone, let email, let password, let qq_id, let weibo_id):
+            return .requestParameters(parameters: ["phone":phone,"email":email,"password":password,"qq_id":qq_id,"weibo_id":weibo_id], encoding: JSONEncoding.default)
         default:
             return .requestPlain
         }
     }
+        
     
     // MARK: 请求头
     var headers: [String : String]? {

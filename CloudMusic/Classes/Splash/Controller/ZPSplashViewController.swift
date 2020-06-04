@@ -25,9 +25,16 @@ class ZPSplashViewController: UIViewController {
         //如果展示了Guide 则直接进入注册登录
         if isShowGuide {
             
-            let navi = UINavigationController(rootViewController: ZPLoginOrRegisterViewController())
+            if PreferenceUtil.isLogin(){
+                let home = ZPHomeViewController()
+                PushUtil.setRootController(controller: home)
+            }else{
+                let navi = UINavigationController(rootViewController: ZPLoginOrRegisterViewController())
+                
+                PushUtil.setRootController(controller:navi)
+            }
             
-            PushUtil.setRootController(controller:navi)
+            
         }else{
             PushUtil.setRootController(controller:ZPGuideViewController())
         }

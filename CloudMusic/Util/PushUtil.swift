@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyUserDefaults
 
 class PushUtil{
     
@@ -14,6 +15,19 @@ class PushUtil{
         
         AppDelegate.shared.window?.rootViewController = controller
         
+    }
+    
+    static func onLogin(session:Session){
+        
+        Defaults[.userid_key] = session.user
+        Defaults[.usertoken_key] = session.session
+
+        //跳转到首页
+        toHome()
+    }
+    
+    static func toHome(){
+        self.setRootController(controller: ZPHomeViewController())
     }
 
 }
