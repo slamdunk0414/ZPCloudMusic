@@ -14,7 +14,7 @@ class ToastUtil {
     /// 显示一个短时间（1秒钟）的提示
     ///
     /// - Parameter message: <#message description#>
-    static func short(_ message:String) {
+    static func short(_ message:String?) {
         //创建一个MBProgressHUD
         let hud=MBProgressHUD.showAdded(to: AppDelegate.shared.window!.rootViewController!.view, animated: true)
         
@@ -25,7 +25,7 @@ class ToastUtil {
         hud.bezelView.color=UIColor.black
         
         //设置细节文本显示的内容
-        hud.detailsLabel.text=message
+        hud.detailsLabel.text=message ?? ""
         
         //设置细节文本颜色
         hud.detailsLabel.textColor=UIColor.white

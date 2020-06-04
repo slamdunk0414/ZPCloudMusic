@@ -76,7 +76,7 @@ public class HttpObserver<Element>: ObserverType {
     var onSuccess: ((E) -> Void)
     
     /// 请求失败回调
-    var onError: ((Error?) -> Void)
+    var onError: ((String?) -> Void)
     
 
     /// 构造方法
@@ -84,7 +84,7 @@ public class HttpObserver<Element>: ObserverType {
     /// - Parameters:
     ///   - onSuccess: 请求成功的回调
     ///   - onError: 请求失败的回调
-    init(_ onSuccess: @escaping ((E) -> Void),_ onError: @escaping ( (Error?) -> Void) ) {
+    init(_ onSuccess: @escaping ((E) -> Void),_ onError: @escaping ( (String?) -> Void) ) {
         self.onSuccess = onSuccess
         self.onError = onError
     }
@@ -115,11 +115,7 @@ public class HttpObserver<Element>: ObserverType {
                 onSuccess(value)
             }
         case .error(let error):
-            //请求失败
-            print("HttpObserver error:\(error)")
-            
-            //处理错误
-            requestErrorHandler(error:error)
+            onError("网络好像不太好")
             
         case .completed:
             //请求完成
@@ -132,80 +128,44 @@ public class HttpObserver<Element>: ObserverType {
     /// - Parameters:
     ///   - baseResponse: 请求返回的对象
     ///   - error: 错误信息
-    func requestErrorHandler(error:Error?=nil) {
+    func requestErrorHandler(error:NSError?=nil) {
         
-        handleError(error:error)
+        let errorMessage = handleError(error:error)
         
-        onError(error)
+        onError(errorMessage)
     }
     
-    func handleError(error:Error?) {
+    func handleError(error:NSError?) ->String {
 
-        if let error = error as? MoyaError {
-                    //有错误
-                    //error类似就是Moya.MoayError
-                    switch error {
-                        
-                    case .imageMapping(let response):
-                        print("HttpUtil handlerRequest imageMapping:\(response)")
-                        
-                    case .stringMapping(let response):
-                        ToastUtil.short("响应转为字符串错误，请稍后再试！")
-                        
-                    case .statusCode(let response):
-                        //响应码
-                        let code=response.statusCode
-                        
-                        switch code {
-                        case 401:
-                            //表示要登录
-                            //弹出提示
-                            ToastUtil.short("登录信息过期，请重新登录！")
-                            
-                        case 403:
-                            ToastUtil.short("你没有权限访问！")
-                        case 404:
-                            ToastUtil.short("你访问的内容不存在！")
-                        case 500...599:
-                            ToastUtil.short("服务器错误，请稍后再试！")
-                            
-                        default:
-                            ToastUtil.short("未知错误，请求稍后再试！")
-                        }
-                        
-                    case .underlying(let networkError,let response):
-
-                        let curError = networkError as! AFError
-                        
-                        switch curError {
-                        case .sessionTaskFailed:
-                            ToastUtil.short("网络好像不太好，请求稍后再试！")
-                        default:
-                            print("123")
-                        }
-                        
-                    case .requestMapping:
-                        ToastUtil.short("请求映射错误，请稍后再试！")
-                        
-                    case .objectMapping(_, _):
-                        ToastUtil.short("对象映射错误，请稍后再试！")
-                    case .parameterEncoding(_):
-                        ToastUtil.short("参数格式错误，请稍后再试！")
-                        
-                    default:
-                        print("HttpUtil handlerRequest other error")
-                    }
-                }else {
-                    //业务错误
-                    if let curError = error as NSError? {
-                        let message = curError.domain
-//                        ToastUtil.short(message)
-                        
-                    }else {
-//                        ToastUtil.short("未知错误，请稍后再试！")
-                    }
-                }
+        //响应码
+        let code:Int=error?.code ?? 1
         
+        var errorMessage:String!
+        
+        switch code {
+        case 401:
+            //表示要登录
+            //弹出提示
+//            ToastUtil.short("登录信息过期，请重新登录！")
+            errorMessage = "登录信息过期，请重新登录！"
+            
+        case 403:
+//            ToastUtil.short("你没有权限访问！")
+            errorMessage = "你没有权限访问！"
+        case 404:
+//            ToastUtil.short("你访问的内容不存在！")
+            errorMessage = "你访问的内容不存在！"
+        case 500...599:
+//            ToastUtil.short("服务器错误，请稍后再试！")
+            errorMessage = "服务器错误，请稍后再试！"
+            
+        default:
+            errorMessage = "未知错误"
+            
+           
+        }
+        
+         return errorMessage
     }
     
 }
@@ -222,11 +182,11 @@ extension ObservableType {
     /// - Parameters:
     ///   - onSuccess: 请求成功的回调
     ///   - onError: 请求失败的回调
-    func subscribe( _ onSuccess: @escaping ((E) -> Void), _ onError: @escaping ((Error?)->Void) ) -> Disposable {
+    func subscribe( _ onSuccess: @escaping ((E) -> Void), _ onError: @escaping ((String?)->Void) ) -> Disposable {
         
         //创建一个Disposable
         let disposable = Disposables.create()
-        
+ 
         //创建一个HttpObserver
         let observer = HttpObserver<E>(onSuccess,onError)
         
