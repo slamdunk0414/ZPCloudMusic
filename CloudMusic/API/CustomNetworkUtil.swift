@@ -64,5 +64,9 @@ struct CustomNetworkUtil {
             .mapString()
             .asObservable()
             .mapObject(DetailResponse<Session>.self)
+        
+        
+        provider.rx.request(.sheets)
+            .customResponse().mapObject(DetailResponse<Session>.self)
     }
 }

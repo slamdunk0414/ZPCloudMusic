@@ -35,7 +35,7 @@ extension Observable {
     /// - Parameter type: 要转为的类
     /// - Returns: 转换后的观察者对象
     public func mapObject<T: HandyJSON>(_ type: T.Type) -> Observable<T?> {
-        
+
         return self.map { data in
             //将参数尝试转为字符串
             guard let dataString = data as? String else {
