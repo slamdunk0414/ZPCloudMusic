@@ -10,21 +10,21 @@ import UIKit
 
 class ZPHomeViewController: BaseViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+    override func initViews() {
+        
+        self.view.backgroundColor = .white
+        
+        let view = UIView(frame: CGRect(x: 0, y: ZNaviationHeight, width: 100, height: 100))
         view.backgroundColor = .red
+        
+        self.view.addSubview(view)
+        
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        let controller = ZPSimpleMusicPlayerController()
+        self.navigationController?.pushViewController(controller, animated: true)
+        
     }
-    */
-
 }

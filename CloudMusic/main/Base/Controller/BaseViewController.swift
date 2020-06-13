@@ -14,9 +14,15 @@ class BaseViewController: UIViewController {
         super.viewDidLoad()
 
         initViews()
+        
+        initDatas()
     }
     
     func initViews(){
+        
+    }
+    
+    func initDatas(){
         
     }
 

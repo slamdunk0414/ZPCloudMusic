@@ -27,7 +27,13 @@ class PushUtil{
     }
     
     static func toHome(){
-        self.setRootController(controller: ZPHomeViewController())
+        self.setRootController(controller: MainViewController())
+    }
+    
+    static func toLogin(){
+        let navi = UINavigationController(rootViewController: ZPLoginOrRegisterViewController())
+        
+        self.setRootController(controller:navi)
     }
 
 }

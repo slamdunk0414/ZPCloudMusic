@@ -54,6 +54,14 @@
 		6E5E227A247FDB9B00BB79B5 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5E2279247FDB9B00BB79B5 /* UIView+Extension.swift */; };
 		6E5E227D247FE5D200BB79B5 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5E227C247FE5D200BB79B5 /* Constant.swift */; };
 		6E5E227F247FEBCB00BB79B5 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5E227E247FEBCB00BB79B5 /* UIColor+Extension.swift */; };
+		6E89FF0924947586006328D0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FF0824947586006328D0 /* MainViewController.swift */; };
+		6E89FF0B24947C5F006328D0 /* SafeFrameUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FF0A24947C5F006328D0 /* SafeFrameUtil.swift */; };
+		6E89FF0D24947EEB006328D0 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FF0C24947EEB006328D0 /* MainNavigationController.swift */; };
+		6E89FF1024948068006328D0 /* MusicPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FF0F24948068006328D0 /* MusicPlayerManager.swift */; };
+		6E89FF1224949DE8006328D0 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FF1124949DE8006328D0 /* Song.swift */; };
+		6E89FF142494A388006328D0 /* ZPSimpleMusicPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FF132494A388006328D0 /* ZPSimpleMusicPlayerController.swift */; };
+		6E89FF172494A3D8006328D0 /* ZPSimpleMusicPlayerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E89FF162494A3D8006328D0 /* ZPSimpleMusicPlayerController.xib */; };
+		6E89FF192494AE70006328D0 /* TimeUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FF182494AE70006328D0 /* TimeUtil.swift */; };
 		6EAFD50A2491DDF900EDEA72 /* Single+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAFD5092491DDF900EDEA72 /* Single+Extension.swift */; };
 		7A9F9F2BB33AFBF319C566D0 /* Pods_CloudMusic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D2848F9B18DFDC21AC9858D /* Pods_CloudMusic.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
@@ -118,6 +126,14 @@
 		6E5E2279247FDB9B00BB79B5 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		6E5E227C247FE5D200BB79B5 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		6E5E227E247FEBCB00BB79B5 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		6E89FF0824947586006328D0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		6E89FF0A24947C5F006328D0 /* SafeFrameUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeFrameUtil.swift; sourceTree = "<group>"; };
+		6E89FF0C24947EEB006328D0 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		6E89FF0F24948068006328D0 /* MusicPlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerManager.swift; sourceTree = "<group>"; };
+		6E89FF1124949DE8006328D0 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		6E89FF132494A388006328D0 /* ZPSimpleMusicPlayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZPSimpleMusicPlayerController.swift; sourceTree = "<group>"; };
+		6E89FF162494A3D8006328D0 /* ZPSimpleMusicPlayerController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZPSimpleMusicPlayerController.xib; sourceTree = "<group>"; };
+		6E89FF182494AE70006328D0 /* TimeUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeUtil.swift; sourceTree = "<group>"; };
 		6EAFD5092491DDF900EDEA72 /* Single+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Single+Extension.swift"; sourceTree = "<group>"; };
 		7F36F7541C414610088412F5 /* Pods-CloudMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloudMusic.debug.xcconfig"; path = "Target Support Files/Pods-CloudMusic/Pods-CloudMusic.debug.xcconfig"; sourceTree = "<group>"; };
 		8D2848F9B18DFDC21AC9858D /* Pods_CloudMusic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CloudMusic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,6 +183,7 @@
 		6E316BA924822B6100FEECC4 /* Music */ = {
 			isa = PBXGroup;
 			children = (
+				6E89FF152494A38C006328D0 /* Controller */,
 				6E316BAA24822B6E00FEECC4 /* Model */,
 			);
 			path = Music;
@@ -285,6 +302,7 @@
 		6E5857D62480B0CF00D5CA04 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				6E89FF062494755B006328D0 /* Main */,
 				6E44E6422488EF9E00426463 /* Home */,
 				6E316BA924822B6100FEECC4 /* Music */,
 				6E5857DB2480B10A00D5CA04 /* Login_Register */,
@@ -373,6 +391,7 @@
 		6E5E225B247F990900BB79B5 /* CloudMusic */ = {
 			isa = PBXGroup;
 			children = (
+				6E89FF0E24948035006328D0 /* MusicPlayer */,
 				6E316BA42481EDCF00FEECC4 /* API */,
 				6E5857D62480B0CF00D5CA04 /* Classes */,
 				6E5857B32480A67A00D5CA04 /* Vender */,
@@ -414,8 +433,45 @@
 				6E5857D42480AAD500D5CA04 /* ColorConstant.swift */,
 				6E5857E12480B2B800D5CA04 /* PushUtil.swift */,
 				6E5857E72480B7C200D5CA04 /* PreferenceUtil.swift */,
+				6E89FF0A24947C5F006328D0 /* SafeFrameUtil.swift */,
+				6E89FF182494AE70006328D0 /* TimeUtil.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		6E89FF062494755B006328D0 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				6E89FF0724947564006328D0 /* Controller */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		6E89FF0724947564006328D0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6E89FF0824947586006328D0 /* MainViewController.swift */,
+				6E89FF0C24947EEB006328D0 /* MainNavigationController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6E89FF0E24948035006328D0 /* MusicPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				6E89FF0F24948068006328D0 /* MusicPlayerManager.swift */,
+				6E89FF1124949DE8006328D0 /* Song.swift */,
+			);
+			path = MusicPlayer;
+			sourceTree = "<group>";
+		};
+		6E89FF152494A38C006328D0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6E89FF132494A388006328D0 /* ZPSimpleMusicPlayerController.swift */,
+				6E89FF162494A3D8006328D0 /* ZPSimpleMusicPlayerController.xib */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		A5902DEC3B93AD9CD91564A5 /* Pods */ = {
@@ -500,6 +556,7 @@
 				6E44E6462488EFB900426463 /* ZPHomeViewController.xib in Resources */,
 				6E5857D02480A6BD00D5CA04 /* YJBannerView.bundle in Resources */,
 				6E5857AD24809B4600D5CA04 /* ZPLoginOrRegisterViewController.xib in Resources */,
+				6E89FF172494A3D8006328D0 /* ZPSimpleMusicPlayerController.xib in Resources */,
 				6E316B962480E69D00FEECC4 /* ZPRegisterViewController.xib in Resources */,
 				6E316B922480E63900FEECC4 /* ZPLoginViewController.xib in Resources */,
 				6E5E2277247FB48700BB79B5 /* ZPGuideViewController.xib in Resources */,
@@ -566,15 +623,19 @@
 				6E316B9A24810E0B00FEECC4 /* BaseViewController.swift in Sources */,
 				6EAFD50A2491DDF900EDEA72 /* Single+Extension.swift in Sources */,
 				6E5857D12480A6BD00D5CA04 /* YJBannerViewCollectionView.m in Sources */,
+				6E89FF1024948068006328D0 /* MusicPlayerManager.swift in Sources */,
 				6E44E63E2488EA5100426463 /* ZPBaseLoginController.swift in Sources */,
 				6E5857CF2480A6BD00D5CA04 /* YJAnimatedDotView.m in Sources */,
 				6E316BCD248796AA00FEECC4 /* BaseModel.swift in Sources */,
 				6E5857CD2480A6BD00D5CA04 /* YJHollowPageControl.m in Sources */,
 				6E5857AC24809B4600D5CA04 /* ZPLoginOrRegisterViewController.swift in Sources */,
 				6E316BC924874B7F00FEECC4 /* ListResponse.swift in Sources */,
+				6E89FF142494A388006328D0 /* ZPSimpleMusicPlayerController.swift in Sources */,
+				6E89FF1224949DE8006328D0 /* Song.swift in Sources */,
 				6E5E2273247FB28D00BB79B5 /* ZPSplashViewController.swift in Sources */,
 				6E5857DE2480B13C00D5CA04 /* ZPGuideViewControllerExtention.swift in Sources */,
 				6E316B9D24810F5A00FEECC4 /* RegexEnum.swift in Sources */,
+				6E89FF0D24947EEB006328D0 /* MainNavigationController.swift in Sources */,
 				6E5857E82480B7C200D5CA04 /* PreferenceUtil.swift in Sources */,
 				6E316BC724874B6400FEECC4 /* DetailResponse.swift in Sources */,
 				6E5857D52480AAD500D5CA04 /* ColorConstant.swift in Sources */,
@@ -588,14 +649,17 @@
 				6E5857CC2480A6BD00D5CA04 /* YJBannerView.m in Sources */,
 				6E316BC524874B2E00FEECC4 /* BaseResponse.swift in Sources */,
 				6E44E6412488EC1000426463 /* Session.swift in Sources */,
+				6E89FF0B24947C5F006328D0 /* SafeFrameUtil.swift in Sources */,
 				6E316BA62481EE0B00FEECC4 /* CustomNetworkAPI.swift in Sources */,
 				6E5E227A247FDB9B00BB79B5 /* UIView+Extension.swift in Sources */,
 				6E316B952480E69D00FEECC4 /* ZPRegisterViewController.swift in Sources */,
 				6E5857E42480B57F00D5CA04 /* DefaultKeys.swift in Sources */,
+				6E89FF192494AE70006328D0 /* TimeUtil.swift in Sources */,
 				6E316B9E24810F5A00FEECC4 /* Regex.swift in Sources */,
 				6E5857D32480A6BD00D5CA04 /* YJBannerViewFooter.m in Sources */,
 				6E5857D22480A6BD00D5CA04 /* YJBannerViewCell.m in Sources */,
 				6E5857E22480B2B800D5CA04 /* PushUtil.swift in Sources */,
+				6E89FF0924947586006328D0 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
