@@ -97,7 +97,10 @@ extension ZPSimpleMusicPlayerController:UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         guard let song = songs?[indexPath.row] else { return}
+        
+        currentSong = song
         
         musicPlayerManager.play(song)
     }
@@ -154,6 +157,21 @@ extension ZPSimpleMusicPlayerController {
     @IBAction func onPreviousClick(_ sender: Any) {
         print("SimplePlayerController onPreviousClick")
         
+        guard let _ = songs else{
+            return
+        }
+        
+        guard let index = songs!.firstIndex(where: {$0===currentSong} ) else { return }
+        
+        var toIndex = Int(index) - 1
+        
+        if toIndex < 0 {
+            toIndex = Int(songs!.count)-1
+        }
+        
+        let indexPath = NSIndexPath(item: toIndex, section: 0)
+        
+        tableView(tableView, didSelectRowAt: indexPath as IndexPath)
     }
     
     
@@ -172,6 +190,22 @@ extension ZPSimpleMusicPlayerController {
     /// - Parameter sender: <#sender description#>
     @IBAction func onNextClick(_ sender: Any) {
         print("SimplePlayerController onNextClick")
+        
+        guard let _ = songs else{
+            return
+        }
+        
+        guard let index = songs!.firstIndex(where: {$0===currentSong} ) else { return }
+        
+        var toIndex = Int(index) + 1
+        
+        if toIndex == Int(songs!.count) {
+            toIndex = 0
+        }
+        
+        let indexPath = NSIndexPath(item: toIndex, section: 0)
+        
+        tableView(tableView, didSelectRowAt: indexPath as IndexPath)
     }
     
     /// 循环模式
