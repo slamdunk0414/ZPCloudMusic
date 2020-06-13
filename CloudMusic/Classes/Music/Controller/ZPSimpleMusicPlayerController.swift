@@ -78,6 +78,8 @@ class ZPSimpleMusicPlayerController: BaseViewController{
         musicPlayerManager = MusicPlayerManager.shared()
         musicPlayerManager.delegate = self
         musicPlayerManager.play(song)
+        
+        confirmCellClick(index: 0)
     }
 }
 
@@ -108,6 +110,16 @@ extension ZPSimpleMusicPlayerController:UITableViewDelegate, UITableViewDataSour
 
 // MARK: - 获取信息后 布局页面
 extension ZPSimpleMusicPlayerController {
+    
+    func confirmCellClick(index: Int){
+        
+        let indexPath = IndexPath(row: index, section: 0)
+        
+        tableView(tableView, didSelectRowAt: indexPath)
+        
+        tableView.selectRow(at: indexPath, animated: true, scrollPosition: .top)
+    }
+    
     /// 显示初始化音乐数据
     func showInitData() {
         let data = currentSong
@@ -168,10 +180,8 @@ extension ZPSimpleMusicPlayerController {
         if toIndex < 0 {
             toIndex = Int(songs!.count)-1
         }
-        
-        let indexPath = NSIndexPath(item: toIndex, section: 0)
-        
-        tableView(tableView, didSelectRowAt: indexPath as IndexPath)
+
+        confirmCellClick(index:toIndex)
     }
     
     
@@ -202,10 +212,7 @@ extension ZPSimpleMusicPlayerController {
         if toIndex == Int(songs!.count) {
             toIndex = 0
         }
-        
-        let indexPath = NSIndexPath(item: toIndex, section: 0)
-        
-        tableView(tableView, didSelectRowAt: indexPath as IndexPath)
+        confirmCellClick(index:toIndex)
     }
     
     /// 循环模式
