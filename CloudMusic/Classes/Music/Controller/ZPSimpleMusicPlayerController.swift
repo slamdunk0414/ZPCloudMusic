@@ -40,15 +40,14 @@ class ZPSimpleMusicPlayerController: BaseViewController{
     var isProgressIng = false
     
     /// 播放管理器
-    var musicPlayerManager:MusicPlayerManager!
+    var playListManager = PlayListManager.shared()
     
-    /// 播放列表
-    var songs:[Song]?
-    
-    var currentSong:Song?
-    
+    var musicPlayerManager = MusicPlayerManager.shared()
+
     /// 初始化页面
     override func initViews() {
+        
+        super.initViews()
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "tableViewCell")
         
@@ -67,71 +66,70 @@ class ZPSimpleMusicPlayerController: BaseViewController{
         label.alpha = 0
         touchProgressHUDLabel = label
         
+        showLoopMode()
+        
+        confirmCellClick()
     }
     
     /// 初始化数据
     override func initDatas(){
-        
-        //测试音乐数据
-        let songUrl = "http://freetyst.nf.migu.cn/public/product4th/product36/2019/09/0623/2018%E5%B9%B409%E6%9C%8823%E6%97%A513%E7%82%B925%E5%88%86%E6%89%B9%E9%87%8F%E9%A1%B9%E7%9B%AE%E5%8D%8E%E7%BA%B343%E9%A6%96-15/%E5%85%A8%E6%9B%B2%E8%AF%95%E5%90%AC/Mp3_64_22_16/6005751F94D.mp3"
 
-        let song = Song()
-        song.uri = songUrl
-        song.title = "逆光 -- 孙燕姿"
         
-        currentSong = song
-        
-        let songUrl2 = "http://freetyst.nf.migu.cn/public/product8th/product40/2020/06/0300/2020%E5%B9%B406%E6%9C%8802%E6%97%A519%E7%82%B904%E5%88%86%E7%B4%A7%E6%80%A5%E5%86%85%E5%AE%B9%E5%87%86%E5%85%A5%E5%8D%8E%E7%BA%B31%E9%A6%96275504/%E5%85%A8%E6%9B%B2%E8%AF%95%E5%90%AC/Mp3_64_22_16/6005752GQ4A003947.mp3"
+    }
+}
 
-        let song2 = Song()
-        song2.uri = songUrl2
-        song2.title = "开始懂了 -- 孙燕姿"
+extension ZPSimpleMusicPlayerController{
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
-        let songUrl3 = "http://freetyst.nf.migu.cn/public/product9th/product41/2020/06/1018/2020%E5%B9%B406%E6%9C%8810%E6%97%A507%E7%82%B913%E5%88%86%E7%B4%A7%E6%80%A5%E5%86%85%E5%AE%B9%E5%87%86%E5%85%A5%E5%8D%8E%E7%BA%B319%E9%A6%96800531/%E5%85%A8%E6%9B%B2%E8%AF%95%E5%90%AC/Mp3_64_22_16/6005752HBA8180907.mp3"
-
-        let song3 = Song()
-        song3.uri = songUrl3
-        song3.title = "遇见 -- 孙燕姿"
-        
-        songs = [song,song2,song3]
-        
-        musicPlayerManager = MusicPlayerManager.shared()
+        print("设置代理")
         musicPlayerManager.delegate = self
-        musicPlayerManager.play(song)
         
-        confirmCellClick(index: 0)
+        if musicPlayerManager.isPlaying() {
+            showPauseStatus()
+        }
+    }
+    
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        musicPlayerManager.delegate = nil
     }
 }
 
 extension ZPSimpleMusicPlayerController:UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return songs?.count ?? 0
+        return playListManager.getPlayList().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell")
         
-        let song = songs?[indexPath.row]
+        let song = playListManager.getPlayList()[indexPath.row]
         
-        cell?.textLabel?.text = song?.title
+        cell?.textLabel?.text = song.title
         
         return cell ?? UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        guard let song = songs?[indexPath.row] else { return}
-        
-        currentSong = song
-        
-        musicPlayerManager.play(song)
+        let song = playListManager.getPlayList()[indexPath.row]
+
+        playListManager.musicPlayerManager.play(song)
     }
 }
 
 // MARK: - 获取信息后 布局页面
 extension ZPSimpleMusicPlayerController {
     
-    func confirmCellClick(index: Int){
+    func confirmCellClick(){
+        
+        let arr = playListManager.datum as NSArray
+        
+        let index = arr.index(of: playListManager.data!)
         
         let indexPath = IndexPath(row: index, section: 0)
         
@@ -142,15 +140,20 @@ extension ZPSimpleMusicPlayerController {
     
     /// 显示初始化音乐数据
     func showInitData() {
-        let data = currentSong
+        let data = playListManager.data
         
         //显示标题
         lbTitle.text = data?.title
+        
+        let time:Float = data?.progress ?? 0
+        
+        sdProgress.value = time
+        lbStart.text = TimeUtil.second2MinuteAndSecond(time)
     }
     
     /// 显示播放总时长
     func showDuration() {
-        if let duration = currentSong?.duration {
+        if let duration = playListManager.data?.duration {
             if duration > 0 {
                 lbEnd.text = TimeUtil.second2MinuteAndSecond(duration)
                 sdProgress.maximumValue = duration
@@ -160,7 +163,7 @@ extension ZPSimpleMusicPlayerController {
     
     /// 显示进度
     func showProgress() {
-        let progress = musicPlayerManager.data!.progress
+        let progress = playListManager.data!.progress
         
         if progress > 0 {
             
@@ -186,9 +189,24 @@ extension ZPSimpleMusicPlayerController {
     
     /// 显示暂停状态
     func showPauseStatus() {
+        print("设置为暂停状态")
         btPlay.setTitle("暂停", for: .normal)
     }
     
+    /// 展示循环模式
+    func showLoopMode(){
+        //获取当前循环模式
+        let mode = playListManager.getLoopModel()
+        
+        switch mode {
+        case .list:
+            btLoopModel.setTitle("列表循环", for: .normal)
+        case .random:
+            btLoopModel.setTitle("随机循环", for: .normal)
+        default:
+            btLoopModel.setTitle("单曲循环", for: .normal)
+        }
+    }
 }
 
 // MARK: - 播放相关的方法
@@ -232,7 +250,7 @@ extension ZPSimpleMusicPlayerController {
             
         isSlideTouch = false
             
-        musicPlayerManager.seekTo(sender.value)
+        playListManager.musicPlayerManager.seekTo(sender.value)
         
         UIView.animate(withDuration: 0.3) {
             self.touchProgressHUDLabel.alpha = 0
@@ -253,21 +271,12 @@ extension ZPSimpleMusicPlayerController {
     @IBAction func onPreviousClick(_ sender: Any) {
         print("SimplePlayerController onPreviousClick")
         
-        guard let _ = songs else{
-            return
-        }
+        playListManager.play(playListManager.previous())
         
-        guard let index = songs!.firstIndex(where: {$0===currentSong} ) else { return }
+        confirmCellClick()
         
-        var toIndex = Int(index) - 1
-        
-        if toIndex < 0 {
-            toIndex = Int(songs!.count)-1
-        }
-
-        confirmCellClick(index:toIndex)
+        showInitData()
     }
-    
     
     /// 播放按钮
     ///
@@ -285,18 +294,11 @@ extension ZPSimpleMusicPlayerController {
     @IBAction func onNextClick(_ sender: Any) {
         print("SimplePlayerController onNextClick")
         
-        guard let _ = songs else{
-            return
-        }
+        playListManager.play(playListManager.next())
         
-        guard let index = songs!.firstIndex(where: {$0===currentSong} ) else { return }
+        confirmCellClick()
         
-        var toIndex = Int(index) + 1
-        
-        if toIndex == Int(songs!.count) {
-            toIndex = 0
-        }
-        confirmCellClick(index:toIndex)
+        showInitData()
     }
     
     /// 循环模式
@@ -304,14 +306,12 @@ extension ZPSimpleMusicPlayerController {
     /// - Parameter sender: <#sender description#>
     @IBAction func onLoopModelClick(_ sender: Any) {
         print("SimplePlayerController onLoopModelClick")
+        playListManager.changeLoopMode()
+        showLoopMode()
     }
     
     func playOrPause(){
-        if musicPlayerManager.isPlaying() {
-            musicPlayerManager.pause()
-        } else {
-            musicPlayerManager.resume()
-        }
+        playListManager.playOrPause()
     }
 }
 
