@@ -69,8 +69,7 @@ class ZPHomeViewController: BaseViewController {
     }
     
     func pushToSimpleController() {
-        let controller = ZPSimpleMusicPlayerController()
-        self.navigationController?.pushViewController(controller, animated: true)
+        ZPSimpleMusicPlayerController.start(self.navigationController!)
     }
     
 }

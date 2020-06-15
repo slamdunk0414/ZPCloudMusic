@@ -352,6 +352,21 @@ extension ZPSimpleMusicPlayerController:MusicPlayerDelegate{
         print("进度回调了 更新进度")
         showProgress()
     }
+    
+    func onComplete(_ data: Song) {
+        
+        //获取当前循环模式
+        let model = playListManager.getLoopModel()
+        
+        switch model {
+        case .one:
+            playListManager.play(playListManager.data!)
+        default:
+            playListManager.play(playListManager.next())
+            confirmCellClick()
+        }
+        
+    }
 }
 
 // MARK: - 启动界面

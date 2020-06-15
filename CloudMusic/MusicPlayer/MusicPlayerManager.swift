@@ -38,9 +38,6 @@ class MusicPlayerManager:NSObject {
     /// 播放状态
     var status:PlayStatus = .none
     
-    /// 播放完成后的回调
-    var onComplete:((_ data:Song) -> Void)!
-    
     /// 播放器
     var player:AVPlayer!
     
@@ -217,8 +214,7 @@ class MusicPlayerManager:NSObject {
     /// - Parameter notification: 通知对象
     @objc func onComplete(notification:Notification) {
         print("MusicPlayerManager onComplete")
-        
-        onComplete?(data)
+        delegate?.onComplete(data)
     }
     
     /// KVO监听回调方法
@@ -298,4 +294,9 @@ protocol MusicPlayerDelegate {
     ///
     /// - Parameter data: 歌曲信息
     func onProgress(_ data:Song)
+    
+    /// 播放完成
+    ///
+    /// - Parameter data: 歌曲信息
+    func onComplete(_ data:Song)
 }
