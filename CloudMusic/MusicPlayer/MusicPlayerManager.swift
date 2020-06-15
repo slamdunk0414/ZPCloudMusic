@@ -76,7 +76,7 @@ class MusicPlayerManager:NSObject {
         
         //1/60
         //16毫秒执行一次
-        playTimeObserve = player.addPeriodicTimeObserver(forInterval: CMTime(value: CMTimeValue(1.0), timescale: 60), queue: DispatchQueue.main, using: { time in
+        playTimeObserve = player.addPeriodicTimeObserver(forInterval: CMTime(value: CMTimeValue(1.0), timescale: 10), queue: DispatchQueue.main, using: { time in
             
             //判断是否有代理
             guard let delegate = self.delegate else {
@@ -85,12 +85,10 @@ class MusicPlayerManager:NSObject {
                 self.stopPublishProgress()
                 return
             }
+            let currentTime = CMTimeGetSeconds(self.player.currentItem?.currentTime() ?? CMTime())
             
             //获取当前音乐播放时间
-            self.data!.progress = Float(CMTimeGetSeconds(time))
-            
-            print("MusicPlayerManager startPublishProgress progress:\(self.data.progress),\(self.data.duration)")
-            
+            self.data!.progress = Float(currentTime)
             //回调代理
             delegate.onProgress(self.data)
         })
@@ -181,6 +179,14 @@ class MusicPlayerManager:NSObject {
 
         //回调代理
         delegate?.onPlaying(data!)
+    }
+    
+    /// 从指定位置开始播放
+    ///
+    /// - Parameter value: 跳转到的时间
+    func seekTo(_ value:Float) {
+        let positionTime = CMTime(seconds: Double(value), preferredTimescale: 1)
+        player.seek(to: positionTime)
     }
     
     /// 设置监听器

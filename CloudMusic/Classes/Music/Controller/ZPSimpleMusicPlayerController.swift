@@ -9,8 +9,8 @@
 import UIKit
 
 class ZPSimpleMusicPlayerController: BaseViewController{
-
-    /// 音乐播放列表
+    
+    ///列表
     @IBOutlet weak var tableView: UITableView!
     
     /// 标题
@@ -31,6 +31,14 @@ class ZPSimpleMusicPlayerController: BaseViewController{
     /// 循环模式
     @IBOutlet weak var btLoopModel: UIButton!
     
+    var touchProgressHUDLabel: UILabel!
+    
+    /// 判断用户手点击了进度条
+    var isSlideTouch = false
+    
+    /// 判断正在缓冲
+    var isProgressIng = false
+    
     /// 播放管理器
     var musicPlayerManager:MusicPlayerManager!
     
@@ -46,6 +54,18 @@ class ZPSimpleMusicPlayerController: BaseViewController{
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 60, height: 20))
+        label.text = "00:00"
+        
+        label.textColor = lbStart.textColor
+        label.font = lbStart.font
+        
+        label.x = sdProgress.x
+        label.y = sdProgress.convert(sdProgress.frame, to: self.view).origin.y
+        self.view.addSubview(label)
+        label.alpha = 0
+        touchProgressHUDLabel = label
         
     }
     
@@ -143,8 +163,19 @@ extension ZPSimpleMusicPlayerController {
         let progress = musicPlayerManager.data!.progress
         
         if progress > 0 {
-            lbStart.text = TimeUtil.second2MinuteAndSecond(progress)
-            sdProgress.value = progress
+            
+            if !isSlideTouch {
+                
+                lbStart.text = TimeUtil.second2MinuteAndSecond(progress)
+                
+                if !isProgressIng{
+                    sdProgress.value = progress
+                }else{
+                    print("正在缓冲 不更新progress位置")
+                }
+            }else{
+                print("正在拖拽 不更新进度条")
+            }
         }
     }
     
@@ -162,6 +193,59 @@ extension ZPSimpleMusicPlayerController {
 
 // MARK: - 播放相关的方法
 extension ZPSimpleMusicPlayerController {
+    
+    // MARK: - 进度条相关
+        
+    /// 进度条拖拽回调
+    ///
+    /// - Parameter sender: <#sender description#>
+    @IBAction func onProgressChanged(_ sender: UISlider) {
+        //将拖拽进度显示到界面
+        //用户就很方便的知道自己拖拽到什么位置
+        touchProgressHUDLabel.text = TimeUtil.second2MinuteAndSecond(sender.value)
+        
+        
+        touchProgressHUDLabel.centerX = 15 + sdProgress.x + CGFloat(sdProgress.value/sdProgress.maximumValue) * (sdProgress.width - 30)
+        
+    }
+        
+    /// 进度条按下
+    ///
+    /// - Parameter sender: <#sender description#>
+    @IBAction func onSlideTouchDown(_ sender: UISlider) {
+        print("SimplePlayerController onSlideTouchDown")
+            
+        isSlideTouch=true
+        
+        UIView.animate(withDuration: 0.3) {
+            self.touchProgressHUDLabel.alpha = 1
+        }
+        
+    }
+        
+    /// 进度条抬起
+    ///
+    /// - Parameter sender: <#sender description#>
+    @IBAction func onTouchUpInsideSlide(_ sender: UISlider) {
+        
+        print("SimplePlayerController onSlideTouchUpInside")
+            
+        isSlideTouch = false
+            
+        musicPlayerManager.seekTo(sender.value)
+        
+        UIView.animate(withDuration: 0.3) {
+            self.touchProgressHUDLabel.alpha = 0
+        }
+    }
+    
+    @IBAction func onTouchUpOutsideSlide(_ sender: Any) {
+        isSlideTouch = false
+        
+        UIView.animate(withDuration: 0.3) {
+            self.touchProgressHUDLabel.alpha = 0
+        }
+    }
     
     /// 上一曲
     ///
@@ -235,12 +319,14 @@ extension ZPSimpleMusicPlayerController:MusicPlayerDelegate{
     
     /// 播放器正在缓冲
     func onLoading(_ data: Song) {
-        
+        print("正在缓冲")
+        isProgressIng = true
     }
     
     /// 播放器缓冲完毕
     func onLoadingSuccess(_ data: Song) {
-        
+        print("结束缓冲")
+        isProgressIng = false
     }
     
     /// 播放器准备完毕了
@@ -263,7 +349,7 @@ extension ZPSimpleMusicPlayerController:MusicPlayerDelegate{
     
     /// 进度回调
     func onProgress(_ data: Song) {
-        print("SimplePlayerController onProgress:\(data.progress),\(data.duration)")
+        print("进度回调了 更新进度")
         showProgress()
     }
 }

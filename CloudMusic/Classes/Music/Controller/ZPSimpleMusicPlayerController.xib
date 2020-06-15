@@ -52,6 +52,12 @@
                                         </label>
                                         <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="qU6-9S-gqh">
                                             <rect key="frame" x="136" y="0.0" width="142" height="69"/>
+                                            <connections>
+                                                <action selector="onProgressChanged:" destination="-1" eventType="valueChanged" id="7sm-zT-dku"/>
+                                                <action selector="onSlideTouchDown:" destination="-1" eventType="valueChanged" id="mZz-jO-zdP"/>
+                                                <action selector="onTouchUpInsideSlide:" destination="-1" eventType="touchUpInside" id="Pr0-Su-1iv"/>
+                                                <action selector="onTouchUpOutsideSlide:" destination="-1" eventType="touchUpOutside" id="L7A-EZ-BcX"/>
+                                            </connections>
                                         </slider>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5CT-XE-Ppe">
                                             <rect key="frame" x="276" y="0.0" width="138" height="68"/>
@@ -110,7 +116,7 @@
                 <constraint firstItem="wLf-re-vcu" firstAttribute="leading" secondItem="kgS-7l-faB" secondAttribute="leading" id="zFL-HZ-MQz"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="kgS-7l-faB"/>
-            <point key="canvasLocation" x="130" y="794"/>
+            <point key="canvasLocation" x="-352" y="800"/>
         </view>
     </objects>
 </document>
