@@ -7,9 +7,14 @@
 //
 
 import UIKit
+//导入RxSwift框架
+import RxSwift
+
 
 class BaseViewController: UIViewController {
 
+    var disposeBag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

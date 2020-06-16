@@ -114,6 +114,10 @@ class MusicPlayerManager:NSObject {
     }
     
     func play(_ song: Song){
+        
+        //初始化设置
+        initMedia()
+        
         //保存音乐对象
         self.data = song
         
@@ -149,6 +153,21 @@ class MusicPlayerManager:NSObject {
         //因为监听器是针对PlayerItem的
         //所以说播放了音乐在这里设置
         initListeners()
+        
+
+    }
+    
+    func initMedia(){
+        //获取到音频会话
+        let session = AVAudioSession.sharedInstance()
+        
+        //设置category
+        //可以简单理解为：category就是预定好的一些模式
+        //playback:可以后台播放；独占；音量可以控制音量
+        try! session.setCategory(.playback, mode: .default, options: [])
+        
+        //激活音频会话
+        try! session.setActive(true, options: [])
     }
     
     /// 暂停

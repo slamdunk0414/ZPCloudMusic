@@ -38,6 +38,6 @@ class ZPBaseLoginController: BaseViewController {
             
             print("登录失败")
             
-        }
+        }.disposed(by: disposeBag)
     }
 }

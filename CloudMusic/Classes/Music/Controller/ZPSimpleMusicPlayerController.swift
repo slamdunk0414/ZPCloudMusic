@@ -250,7 +250,7 @@ extension ZPSimpleMusicPlayerController {
             
         isSlideTouch = false
             
-        playListManager.musicPlayerManager.seekTo(sender.value)
+        playListManager.seekTo(sender.value)
         
         UIView.animate(withDuration: 0.3) {
             self.touchProgressHUDLabel.alpha = 0
@@ -280,7 +280,7 @@ extension ZPSimpleMusicPlayerController {
     
     /// 播放按钮
     ///
-    /// - Parameter sender: <#sender description#>
+    /// - Parameter sender: 按钮
     @IBAction func onPlayClick(_ sender: Any) {
         print("SimplePlayerController onPlayClick")
         
@@ -290,7 +290,7 @@ extension ZPSimpleMusicPlayerController {
     
     /// 下一曲
     ///
-    /// - Parameter sender: <#sender description#>
+    /// - Parameter sender: 按钮
     @IBAction func onNextClick(_ sender: Any) {
         print("SimplePlayerController onNextClick")
         
@@ -303,10 +303,10 @@ extension ZPSimpleMusicPlayerController {
     
     /// 循环模式
     ///
-    /// - Parameter sender: <#sender description#>
+    /// - Parameter sender: 按钮
     @IBAction func onLoopModelClick(_ sender: Any) {
         print("SimplePlayerController onLoopModelClick")
-        playListManager.changeLoopMode()
+        let _ = playListManager.changeLoopMode()
         showLoopMode()
     }
     

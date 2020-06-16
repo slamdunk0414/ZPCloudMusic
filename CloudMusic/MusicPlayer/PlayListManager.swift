@@ -120,6 +120,18 @@ class PlayListManager: NSObject {
         }
     }
     
+    /// 从指定位置开始播放
+    ///
+    /// - Parameter value: <#value description#>
+    func seekTo(_ value:Float) {
+        musicPlayerManager.seekTo(value)
+        
+        //如果暂停了就继续播放
+        if !musicPlayerManager.isPlaying() {
+            resume()
+        }
+    }
+    
     /// 上一曲
     ///
     /// - Returns: <#return value description#>
