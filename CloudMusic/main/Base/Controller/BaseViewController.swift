@@ -21,6 +21,8 @@ class BaseViewController: UIViewController {
         initDatas()
         
         initViews()
+        
+        initListener()
     }
     
     func initViews(){
@@ -28,6 +30,10 @@ class BaseViewController: UIViewController {
     }
     
     func initDatas(){
+        
+    }
+    
+    func initListener(){
         
     }
 

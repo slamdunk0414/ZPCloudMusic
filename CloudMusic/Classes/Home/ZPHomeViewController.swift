@@ -23,18 +23,27 @@ class ZPHomeViewController: BaseViewController {
         let song = Song()
         song.uri = songUrl
         song.title = "逆光 -- 孙燕姿"
+        song.banner = "http://cdnmusic.migu.cn/picture/2019/1029/1507/AL53a8b2cdf90a44449bbf554ecd85b331.jpg"
+        
         let songUrl2 = "http://freetyst.nf.migu.cn/public/product8th/product40/2020/06/0300/2020%E5%B9%B406%E6%9C%8802%E6%97%A519%E7%82%B904%E5%88%86%E7%B4%A7%E6%80%A5%E5%86%85%E5%AE%B9%E5%87%86%E5%85%A5%E5%8D%8E%E7%BA%B31%E9%A6%96275504/%E5%85%A8%E6%9B%B2%E8%AF%95%E5%90%AC/Mp3_64_22_16/6005752GQ4A003947.mp3"
         let song2 = Song()
         song2.uri = songUrl2
         song2.title = "开始懂了 -- 孙燕姿"
-
+        song2.banner = "http://cdnmusic.migu.cn/picture/2020/0324/0007/AL94526fc9e31d7dd0d87ec946ae6ed6d0.jpg"
         let songUrl3 = "http://freetyst.nf.migu.cn/public/product9th/product41/2020/06/1018/2020%E5%B9%B406%E6%9C%8810%E6%97%A507%E7%82%B913%E5%88%86%E7%B4%A7%E6%80%A5%E5%86%85%E5%AE%B9%E5%87%86%E5%85%A5%E5%8D%8E%E7%BA%B319%E9%A6%96800531/%E5%85%A8%E6%9B%B2%E8%AF%95%E5%90%AC/Mp3_64_22_16/6005752HBA8180907.mp3"
 
-          
         let song3 = Song()
         song3.uri = songUrl3
         song3.title = "遇见 -- 孙燕姿"
+        song3.banner = "http://cdnmusic.migu.cn/picture/2019/1227/0914/ALfe993337f19d436b85d6d4dd67266672.jpg"
         let songs = [song,song2,song3]
+        
+        let songSinger = SongUser()
+        songSinger.nickname = "孙燕姿"
+
+        song.singer = songSinger
+        song2.singer = songSinger
+        song3.singer = songSinger
         
         PlayListManager.shared().setPlayList(songs)
         PlayListManager.shared().play(song)

@@ -25,4 +25,18 @@ class Song{
     
     /// 播放进度
     var progress:Float = 0
+    
+    /// 歌手
+    var singer:SongUser!
+}
+
+class SongUser{
+    /// 昵称
+    var nickname:String!
+    
+    /// 头像
+    var avatar:String?
+    
+    /// 描述
+    var description:String?
 }

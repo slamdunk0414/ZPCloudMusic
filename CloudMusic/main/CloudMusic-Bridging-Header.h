@@ -5,3 +5,6 @@
 #import "YJBannerView.h"
 #import "YJBannerViewCell.h"
 #import "MBProgressHUD.h"
+
+//图片加载框架
+#import "SDWebImage/UIImageView+WebCache.h"

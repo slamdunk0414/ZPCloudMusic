@@ -44,6 +44,9 @@ class MusicPlayerManager:NSObject {
     /// 当前音乐
     var data:Song!
     
+    /// 跳转时间
+    var seekTime:Float?
+    
     /// 代理对象
     var delegate:MusicPlayerDelegate?{
         didSet {
@@ -83,6 +86,19 @@ class MusicPlayerManager:NSObject {
                 return
             }
             let currentTime = CMTimeGetSeconds(self.player.currentItem?.currentTime() ?? CMTime())
+            
+            guard self.seekTime == nil else{
+                let value = abs(Float(currentTime) - self.seekTime!)
+                
+                if value < 0.1{
+                    self.seekTime = nil
+                    //获取当前音乐播放时间
+                    self.data!.progress = Float(currentTime)
+                    //回调代理
+                    delegate.onProgress(self.data)
+                }
+                return
+            }
             
             //获取当前音乐播放时间
             self.data!.progress = Float(currentTime)
@@ -143,6 +159,8 @@ class MusicPlayerManager:NSObject {
         //播放
         player.play()
         
+        seekTime = nil
+        
         //回调代理
         delegate?.onPlaying(data!)
         
@@ -154,7 +172,75 @@ class MusicPlayerManager:NSObject {
         //所以说播放了音乐在这里设置
         initListeners()
         
+    }
+    
+    
+    func updateMediaInfo(){
+        //下载图片
+        let manager = SDWebImageDownloader.shared
 
+//        self.setMediaInfo()
+        
+        //获取图片地址
+        guard let imageUrl = data.banner else { return }
+        
+        //下载图片
+        manager.downloadImage(with: URL(string: imageUrl)) { (image, data, error, finished) in
+            if let image = image {
+                //图片下载完成
+                self.setMediaInfo(image)
+            }
+        }
+
+    }
+    
+    /// 设置媒体信息到系统的媒体控制中心
+    ///
+    /// - Parameter image: <#image description#>
+    func setMediaInfo(_ image:UIImage? = nil) {
+        //初始化一个可变字典
+        var songInfo:[String:Any] = [:]
+        
+        var currentImage = image
+        if currentImage == nil {
+            currentImage = UIImage(named: "LoginLogo")
+        }
+        
+        //初始化封面
+        let albumArt = MPMediaItemArtwork(boundsSize: CGSize(width: 100, height: 100)) { size -> UIImage in
+            return currentImage!
+        }
+        
+        //设置封面
+        songInfo[MPMediaItemPropertyArtwork]=albumArt
+        
+        //设置歌曲名称
+        songInfo[MPMediaItemPropertyTitle] = data.title
+        
+        //歌手
+        songInfo[MPMediaItemPropertyArtist]=data.singer.nickname
+        
+        //专辑名称
+        //由于服务端没有返回专辑的数据
+        //所以这里就写死数据就行了
+        songInfo[MPMediaItemPropertyAlbumTitle]="这是专辑名称"
+        
+        //流派
+        songInfo[MPMediaItemPropertyGenre]="这是流派"
+        
+        //设置音乐的总时长
+        songInfo[MPMediaItemPropertyPlaybackDuration]=data.duration
+        
+        //设置已经播放的时长
+        songInfo[MPNowPlayingInfoPropertyElapsedPlaybackTime]=data.progress
+        
+        //设置歌词
+        songInfo[MPMediaItemPropertyLyrics]="这是歌词"
+        
+        //设置到系统
+        print("设置到系统")
+        MPNowPlayingInfoCenter.default().nowPlayingInfo = songInfo
+        
     }
     
     func initMedia(){
@@ -203,6 +289,7 @@ class MusicPlayerManager:NSObject {
     func seekTo(_ value:Float) {
         let positionTime = CMTime(seconds: Double(value), preferredTimescale: 1)
         player.seek(to: positionTime)
+        seekTime = value
     }
     
     /// 设置监听器
@@ -251,6 +338,9 @@ class MusicPlayerManager:NSObject {
                 print("MusicPlayerManager observeValue duration:\(self.data!.duration)")
                 //回调代理
                 delegate?.onPrepared(data)
+                
+                //更新媒体控制中心信息
+                updateMediaInfo()
 
             case .failed:
                 //播放失败了

@@ -61,23 +61,55 @@ class ZPSimpleMusicPlayerController: BaseViewController{
         label.font = lbStart.font
         
         label.x = sdProgress.x
-        label.y = sdProgress.convert(sdProgress.frame, to: self.view).origin.y
+        label.y = sdProgress.convert(sdProgress.frame, to: self.view).origin.y - ZNaviationHeight - 30
         self.view.addSubview(label)
         label.alpha = 0
         touchProgressHUDLabel = label
         
+        //初始化播放数据
+        initPlayData()
+        
+        //展示播放循环
         showLoopMode()
         
+        //确认哪个列表点击
         confirmCellClick()
     }
     
-    /// 初始化数据
-    override func initDatas(){
-
+    override func initListener() {
         
+        //监听应用进入前台了
+        NotificationCenter.default.addObserver(self, selector: #selector(onEnterForeground), name: UIApplication.didBecomeActiveNotification, object: nil)
+        
+        //监听应用进入后台了
+        NotificationCenter.default.addObserver(self, selector: #selector(onEnterBackground), name: UIApplication.willResignActiveNotification, object: nil)
+        
+    }
+    
+    /// 进入前台了
+    @objc func onEnterForeground() {
+        print("SimplePlayerController onEnterForeground")
+        
+        //显示播放数据
+        initPlayData()
+        
+        //选中当前播放的音乐
+        confirmCellClick()
+        
+        //设置播放代理
+        musicPlayerManager.delegate = self
+    }
+    
+    /// 进入前台了
+    @objc func onEnterBackground() {
+        print("SimplePlayerController onEnterBackground")
+        
+        //取消播放代理
+        musicPlayerManager.delegate = nil
     }
 }
 
+// MARK: - 试图的生命周期
 extension ZPSimpleMusicPlayerController{
     
     override func viewWillAppear(_ animated: Bool) {
@@ -85,12 +117,8 @@ extension ZPSimpleMusicPlayerController{
         
         print("设置代理")
         musicPlayerManager.delegate = self
-        
-        if musicPlayerManager.isPlaying() {
-            showPauseStatus()
-        }
+
     }
-    
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -118,7 +146,9 @@ extension ZPSimpleMusicPlayerController:UITableViewDelegate, UITableViewDataSour
         
         let song = playListManager.getPlayList()[indexPath.row]
 
-        playListManager.musicPlayerManager.play(song)
+        playListManager.play(song)
+
+        showInitData()
     }
 }
 
@@ -127,15 +157,31 @@ extension ZPSimpleMusicPlayerController {
     
     func confirmCellClick(){
         
-        let arr = playListManager.datum as NSArray
+        //获取当前音乐在播放列表中的索引
+        let data = playListManager.data!
         
-        let index = arr.index(of: playListManager.data!)
+        let playListOC = playListManager.getPlayList() as NSArray
         
-        let indexPath = IndexPath(row: index, section: 0)
+        let index = playListOC.index(of: data)
         
-        tableView(tableView, didSelectRowAt: indexPath)
+        if index != -1 {
+            //创建indexPath
+            let indexPath = IndexPath(item: index, section: 0)
+            
+            //选中
+            self.tableView.selectRow(at: indexPath, animated: false, scrollPosition: .middle)
+        }
+    }
+    
+    func initPlayData(){
+        //显示初始化数据
+        showInitData()
         
-        tableView.selectRow(at: indexPath, animated: true, scrollPosition: .top)
+        //显示播放状态
+        showMusicPlayStatus()
+        
+        //展示进度
+        showProgress()
     }
     
     /// 显示初始化音乐数据
@@ -191,6 +237,15 @@ extension ZPSimpleMusicPlayerController {
     func showPauseStatus() {
         print("设置为暂停状态")
         btPlay.setTitle("暂停", for: .normal)
+    }
+    
+    /// 显示播放状态
+    func showMusicPlayStatus() {
+        if musicPlayerManager.isPlaying() {
+            showPauseStatus()
+        } else {
+            showPlayStatus()
+        }
     }
     
     /// 展示循环模式
@@ -315,6 +370,7 @@ extension ZPSimpleMusicPlayerController {
     }
 }
 
+// MARK: - 播放状态
 extension ZPSimpleMusicPlayerController:MusicPlayerDelegate{
     
     /// 播放器正在缓冲
