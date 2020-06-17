@@ -66,41 +66,44 @@ class ZPSimpleMusicPlayerController: BaseViewController{
         label.alpha = 0
         touchProgressHUDLabel = label
         
-        //初始化播放数据
-        initPlayData()
+        onSongChanged()
         
         //展示播放循环
         showLoopMode()
-        
-        //确认哪个列表点击
-        confirmCellClick()
     }
     
     override func initListener() {
+        super.initListener()
         
         //监听应用进入前台了
-        NotificationCenter.default.addObserver(self, selector: #selector(onEnterForeground), name: UIApplication.didBecomeActiveNotification, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(onEnterForeground), name: UIApplication.didBecomeActiveNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(willEnterForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
         
         //监听应用进入后台了
         NotificationCenter.default.addObserver(self, selector: #selector(onEnterBackground), name: UIApplication.willResignActiveNotification, object: nil)
         
     }
     
-    /// 进入前台了
-    @objc func onEnterForeground() {
-        print("SimplePlayerController onEnterForeground")
+    @objc func willEnterForeground(){
         
-        //显示播放数据
-        initPlayData()
-        
-        //选中当前播放的音乐
-        confirmCellClick()
+        print("SimplePlayerController willEnterForeground")
         
         //设置播放代理
         musicPlayerManager.delegate = self
+        
+        onSongChanged()
+        
     }
-    
-    /// 进入前台了
+//
+//    /// 进入前台了
+//    @objc func onEnterForeground() {
+//        print("SimplePlayerController onEnterForeground")
+//
+//
+//    }
+//
+    /// 进入后台了
     @objc func onEnterBackground() {
         print("SimplePlayerController onEnterBackground")
         
@@ -148,7 +151,7 @@ extension ZPSimpleMusicPlayerController:UITableViewDelegate, UITableViewDataSour
 
         playListManager.play(song)
 
-        showInitData()
+        initPlayData()
     }
 }
 
@@ -182,6 +185,9 @@ extension ZPSimpleMusicPlayerController {
         
         //展示进度
         showProgress()
+        
+        //展示时长
+        showDuration()
     }
     
     /// 显示初始化音乐数据
@@ -190,11 +196,7 @@ extension ZPSimpleMusicPlayerController {
         
         //显示标题
         lbTitle.text = data?.title
-        
-        let time:Float = data?.progress ?? 0
-        
-        sdProgress.value = time
-        lbStart.text = TimeUtil.second2MinuteAndSecond(time)
+
     }
     
     /// 显示播放总时长
@@ -211,7 +213,7 @@ extension ZPSimpleMusicPlayerController {
     func showProgress() {
         let progress = playListManager.data!.progress
         
-        if progress > 0 {
+        if progress >= 0 {
             
             if !isSlideTouch {
                 
@@ -327,10 +329,6 @@ extension ZPSimpleMusicPlayerController {
         print("SimplePlayerController onPreviousClick")
         
         playListManager.play(playListManager.previous())
-        
-        confirmCellClick()
-        
-        showInitData()
     }
     
     /// 播放按钮
@@ -350,10 +348,6 @@ extension ZPSimpleMusicPlayerController {
         print("SimplePlayerController onNextClick")
         
         playListManager.play(playListManager.next())
-        
-        confirmCellClick()
-        
-        showInitData()
     }
     
     /// 循环模式
@@ -422,6 +416,15 @@ extension ZPSimpleMusicPlayerController:MusicPlayerDelegate{
             confirmCellClick()
         }
         
+    }
+    
+    /// 切换了歌曲 重新设置展示信息
+    func onSongChanged() {
+        
+        print("歌曲改变了")
+        
+        initPlayData()
+        confirmCellClick()
     }
 }
 

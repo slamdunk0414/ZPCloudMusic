@@ -78,13 +78,22 @@ class MusicPlayerManager:NSObject {
         //16毫秒执行一次
         playTimeObserve = player.addPeriodicTimeObserver(forInterval: CMTime(value: CMTimeValue(1.0), timescale: 10), queue: DispatchQueue.main, using: { time in
             
-            //判断是否有代理
-            guard let delegate = self.delegate else {
-                //没有回调
-                //停止定时器
-                self.stopPublishProgress()
-                return
+            var dict = MPNowPlayingInfoCenter.default().nowPlayingInfo
+            if dict != nil {
+                
+                //设置已经播放的时长
+                dict![MPNowPlayingInfoPropertyElapsedPlaybackTime]=self.data.progress
+                MPNowPlayingInfoCenter.default().nowPlayingInfo = dict
+                
             }
+            
+//            //判断是否有代理
+//            guard let delegate = self.delegate else {
+//                //没有回调
+//                //停止定时器
+//                self.stopPublishProgress()
+//                return
+//            }
             let currentTime = CMTimeGetSeconds(self.player.currentItem?.currentTime() ?? CMTime())
             
             guard self.seekTime == nil else{
@@ -95,7 +104,7 @@ class MusicPlayerManager:NSObject {
                     //获取当前音乐播放时间
                     self.data!.progress = Float(currentTime)
                     //回调代理
-                    delegate.onProgress(self.data)
+                    self.delegate?.onProgress(self.data)
                 }
                 return
             }
@@ -103,7 +112,7 @@ class MusicPlayerManager:NSObject {
             //获取当前音乐播放时间
             self.data!.progress = Float(currentTime)
             //回调代理
-            delegate.onProgress(self.data)
+            self.delegate?.onProgress(self.data)
         })
     }
     
@@ -133,6 +142,14 @@ class MusicPlayerManager:NSObject {
         
         //初始化设置
         initMedia()
+        
+        //如果不是同一首音乐
+        if let currentData = self.data{
+            //播放的不是同一首歌曲
+            if (song.uri != currentData.uri) {
+                delegate?.onSongChanged()
+            }
+        }
         
         //保存音乐对象
         self.data = song
@@ -338,9 +355,6 @@ class MusicPlayerManager:NSObject {
                 print("MusicPlayerManager observeValue duration:\(self.data!.duration)")
                 //回调代理
                 delegate?.onPrepared(data)
-                
-                //更新媒体控制中心信息
-                updateMediaInfo()
 
             case .failed:
                 //播放失败了
@@ -358,6 +372,9 @@ class MusicPlayerManager:NSObject {
             if player.currentItem?.isPlaybackLikelyToKeepUp ?? false {
                 print("结束缓冲")
                 delegate?.onLoadingSuccess(data)
+                
+                //更新媒体控制中心信息
+                updateMediaInfo()
             }
         }
     }
@@ -408,4 +425,9 @@ protocol MusicPlayerDelegate {
     ///
     /// - Parameter data: 歌曲信息
     func onComplete(_ data:Song)
+    
+    /// 切换了歌曲
+    ///
+    /// - Parameter data: 歌曲信息
+    func onSongChanged()
 }

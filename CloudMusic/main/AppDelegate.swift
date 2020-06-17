@@ -14,6 +14,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     
+    var playListManager: PlayListManager!
+    
+    var musicPlayerManager: MusicPlayerManager!
+    
     static var shared :AppDelegate{
         return UIApplication.shared.delegate as! AppDelegate
     }
@@ -25,6 +29,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
-
 }
 

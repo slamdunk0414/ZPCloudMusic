@@ -76,6 +76,7 @@ class PlayListManager: NSObject {
     ///
     /// - Parameter data: <#data description#>
     func play(_ data:Song) {
+        
         self.data = data
         
         musicPlayerManager.play(data)
