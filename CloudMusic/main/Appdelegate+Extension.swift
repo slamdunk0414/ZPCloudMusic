@@ -196,4 +196,8 @@ extension AppDelegate{
         }
     }
     
+    func saveLastMusic(){
+        playListManager?.saveSong()
+    }
+    
 }

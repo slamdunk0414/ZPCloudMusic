@@ -30,9 +30,7 @@ struct CustomNetworkUtil {
         return provider
             .rx
             .request(.sheets)
-            .filterSuccessfulStatusCodes()
-            .asObservable()
-            .mapString()
+            .customResponse()
             .mapObject(ListResponse<Sheet>.self)
     }
     
@@ -40,9 +38,7 @@ struct CustomNetworkUtil {
         return provider
             .rx
             .request(.sheetDetail(id: id))
-            .filterSuccessfulStatusCodes()
-            .asObservable()
-            .mapString()
+            .customResponse()
             .mapObject(DetailResponse<Sheet>.self)
     }
     

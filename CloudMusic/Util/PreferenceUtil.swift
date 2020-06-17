@@ -98,6 +98,24 @@ class PreferenceUtil{
         UserDefaults.standard.set(isStopMusic, forKey: KEY_REMOVE_HEADSET_STOP_MUSIC)
     }
     
+    /// 保存最后播放音乐的Id
+    ///
+    /// - Parameter id: <#id description#>
+    static func setLastPlaySongId(_ value:String)  {
+        UserDefaults.standard.set(value, forKey: KEY_LAST_SONG_ID)
+    }
+    
+    /// 获取最后播放音乐的Id
+    ///
+    /// - Returns: <#return value description#>
+    static func lastPlaySongId() -> String? {
+        return UserDefaults.standard.string(forKey: KEY_LAST_SONG_ID)
+    }
+    
+    
+    /// 最后播放音乐的Id
+    private static let KEY_LAST_SONG_ID = "KEY_LAST_SONG_ID"
+    
     /// 移除耳机后停止音乐播放Key
     private static let KEY_REMOVE_HEADSET_STOP_MUSIC="KEY_REMOVE_HEADSET_STOP_MUSIC"
 }

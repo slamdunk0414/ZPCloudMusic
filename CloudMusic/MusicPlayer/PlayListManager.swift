@@ -15,6 +15,9 @@ class PlayListManager: NSObject {
     /// 播放管理器
     var musicPlayerManager:MusicPlayerManager!
     
+    /// 数据库
+    var orm:ORMUtil = ORMUtil.shared()
+    
     //播放列表
     var datum:[Song] = []
     
@@ -31,6 +34,63 @@ class PlayListManager: NSObject {
         super.init()
         //初始化播放管理器
         musicPlayerManager = MusicPlayerManager.shared()
+        
+        initPlayList()
+    }
+    
+   /// 初始化播放列表
+   func initPlayList()  {
+       //从数据库中查询当前用户的播放列表
+       let songs = orm.queryPlayList()
+       
+       //判断有没有播放列表
+       if songs.count > 0 {
+           //有播放列表
+           
+           //添加到播放列表
+           datum = datum + songs
+           
+           //获取上一次播放的这首音乐
+           let songId = PreferenceUtil.lastPlaySongId()
+           
+           if let songId = songId {
+               //上一次有播放音乐
+               
+               //找到上一次播放的音乐
+               for song in songs {
+                   if song.id == songId {
+                       data = song
+                       break
+                   }
+
+               }
+               
+               if let data = data {
+                   //找到了
+                   setMusicPlayerManagerData(data)
+               }else {
+                   //没找到
+                   //可能各种原因
+                   defaultPlaySong()
+               }
+           }else {
+               //设置默认音乐
+               defaultPlaySong()
+           }
+       }
+   }
+    /// 设置默认播放的音乐
+    func defaultPlaySong() {
+        data = datum[0]
+        
+        setMusicPlayerManagerData(data!)
+    }
+    
+    /// 设置音乐对象到播放管理器
+    ///
+    /// - Parameter data: <#data description#>
+    func setMusicPlayerManagerData(_ data:Song) {
+        musicPlayerManager.data = data
     }
     
     static func shared() -> PlayListManager {
@@ -57,11 +117,25 @@ class PlayListManager: NSObject {
     func setPlayList(_ datum:[Song]) {
         print("PlayListManager setPlayList")
 
+        //将原来的播放列表数据中的playList标记清除
+        DataUtil.changePlayListFlag(self.datum, false)
+        saveAll()
+        
         //清空原来的数据
         self.datum.removeAll()
         
         //添加新的数据
         self.datum = self.datum+datum
+        
+        DataUtil.changePlayListFlag(self.datum, true)
+        saveAll()
+    }
+    
+    /// 保存播放列表
+    func saveAll() {
+        for song in datum {
+            orm.saveSong(song)
+        }
     }
     
     /// 获取播放列表
@@ -234,6 +308,18 @@ class PlayListManager: NSObject {
     /// - Returns: <#return value description#>
     func getLoopModel() -> MusicPlayerRepeatMode {
         return model
+    }
+    
+    func saveSong(){
+        if let data = data {
+            //有音乐才保存
+            
+            //保存当前音乐信息到数据库
+            orm.saveSong(data)
+            
+            //保存当前音乐的Id到配置文件
+            PreferenceUtil.setLastPlaySongId(data.id)
+        }
     }
 }
 

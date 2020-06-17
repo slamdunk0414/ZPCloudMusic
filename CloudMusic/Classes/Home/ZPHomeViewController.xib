@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZPHomeViewController" customModule="CloudMusic" customModuleProvider="target">
             <connections>
+                <outlet property="replayButton" destination="gLk-aC-ZBA" id="g7U-TJ-Lp1"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="Im3-Z0-aVz"/>
             </connections>
         </placeholder>
