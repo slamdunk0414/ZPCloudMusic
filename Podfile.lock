@@ -15,9 +15,9 @@ PODS:
   - RxRelay (5.1.1):
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
-  - SDWebImage (5.8.0):
-    - SDWebImage/Core (= 5.8.0)
-  - SDWebImage/Core (5.8.0)
+  - SDWebImage (5.7.4):
+    - SDWebImage/Core (= 5.7.4)
+  - SDWebImage/Core (5.7.4)
   - SwiftyUserDefaults (4.0.0-alpha.1)
 
 DEPENDENCIES:
@@ -50,7 +50,7 @@ SPEC CHECKSUMS:
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
-  SDWebImage: 84000f962cbfa70c07f19d2234cbfcf5d779b5dc
+  SDWebImage: 48b88379b798fd1e4298f95bb25d2cdabbf4deb3
   SwiftyUserDefaults: cebe0ff9472f52699772a514b6f7155861d8069b
 
 PODFILE CHECKSUM: 29f7733b520082499d85702821a7c5bbb8cc8d8f

@@ -72,43 +72,33 @@ class ZPSimpleMusicPlayerController: BaseViewController{
         showLoopMode()
     }
     
+    override func initDatas() {
+        musicPlayerManager.delegate = self
+    }
+    
     override func initListener() {
         super.initListener()
         
-        //监听应用进入前台了
-//        NotificationCenter.default.addObserver(self, selector: #selector(onEnterForeground), name: UIApplication.didBecomeActiveNotification, object: nil)
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(willEnterForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(onEnterForeground), name: UIApplication.didBecomeActiveNotification, object: nil)
+
         //监听应用进入后台了
         NotificationCenter.default.addObserver(self, selector: #selector(onEnterBackground), name: UIApplication.willResignActiveNotification, object: nil)
         
     }
-    
-    @objc func willEnterForeground(){
-        
-        print("SimplePlayerController willEnterForeground")
-        
-        //设置播放代理
-        musicPlayerManager.delegate = self
-        
-        onSongChanged()
-        
-    }
-//
-//    /// 进入前台了
-//    @objc func onEnterForeground() {
-//        print("SimplePlayerController onEnterForeground")
-//
-//
-//    }
-//
+
     /// 进入后台了
     @objc func onEnterBackground() {
         print("SimplePlayerController onEnterBackground")
         
         //取消播放代理
-        musicPlayerManager.delegate = nil
+        musicPlayerManager.dontNeedProgressBlock = true
+    }
+    
+    @objc func onEnterForeground(){
+        print("SimplePlayerController onEnterForeground")
+        //设置播放代理
+        musicPlayerManager.dontNeedProgressBlock = false
+        onSongChanged()
     }
 }
 
@@ -119,14 +109,14 @@ extension ZPSimpleMusicPlayerController{
         super.viewWillAppear(animated)
         
         print("设置代理")
-        musicPlayerManager.delegate = self
+        musicPlayerManager.dontNeedProgressBlock = false
 
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        musicPlayerManager.delegate = nil
+        musicPlayerManager.dontNeedProgressBlock = true
     }
 }
 
@@ -421,9 +411,10 @@ extension ZPSimpleMusicPlayerController:MusicPlayerDelegate{
     /// 切换了歌曲 重新设置展示信息
     func onSongChanged() {
         
-        print("歌曲改变了")
+        print("歌曲改变了/或者前后台切换了 重新设置页面的属性")
         
         initPlayData()
+        
         confirmCellClick()
     }
 }

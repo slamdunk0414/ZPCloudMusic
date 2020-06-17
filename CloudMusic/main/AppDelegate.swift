@@ -18,6 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var musicPlayerManager: MusicPlayerManager!
     
+    /// 是否自动恢复播放
+    var isRsumePlay = false
+    
     static var shared :AppDelegate{
         return UIApplication.shared.delegate as! AppDelegate
     }

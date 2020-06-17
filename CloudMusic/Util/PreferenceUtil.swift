@@ -83,4 +83,21 @@ class PreferenceUtil{
         
         return false
     }
+    
+    /// 移除耳机（包括蓝牙耳机，音响）是否暂停音乐播放
+    ///
+    /// - Returns: <#return value description#>
+    static func isRemoveHeadsetStopMusic() -> Bool {
+        return UserDefaults.standard.bool(forKey: KEY_REMOVE_HEADSET_STOP_MUSIC)
+    }
+    
+    /// 设置移除耳机（包括蓝牙耳机，音响）是否暂停音乐播放
+    ///
+    /// - Parameter isStopMusic: <#isStopMusic description#>
+    static func setRemoveHeadsetStopMusic(_ isStopMusic:Bool) {
+        UserDefaults.standard.set(isStopMusic, forKey: KEY_REMOVE_HEADSET_STOP_MUSIC)
+    }
+    
+    /// 移除耳机后停止音乐播放Key
+    private static let KEY_REMOVE_HEADSET_STOP_MUSIC="KEY_REMOVE_HEADSET_STOP_MUSIC"
 }
