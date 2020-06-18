@@ -49,6 +49,8 @@ class ZPSimpleMusicPlayerController: BaseViewController{
         
         super.initViews()
         
+        setTitle("简单列表播放器")
+        
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "tableViewCell")
         
         tableView.delegate = self

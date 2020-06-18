@@ -18,6 +18,15 @@ class ZPHomeViewController: BaseViewController {
 
         replayButton.addTarget(self, action:#selector(pushToSimpleController), for: .touchUpInside)
         
+        //去掉导航栏下面的阴影
+        //这个导航栏有层次感
+        navigationController?.navigationBar.shadowImage = UIImage()
+        
+        //导航栏透明
+        //这里设置导航透明后
+        //就没有上面的灰色了
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
