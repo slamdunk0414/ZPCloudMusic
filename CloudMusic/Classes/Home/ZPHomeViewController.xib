@@ -26,27 +26,36 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="136.5"/>
                             <state key="normal" title="孙燕姿 简单列表"/>
                             <connections>
-                                <action selector="clickYanZi" destination="-1" eventType="touchUpInside" id="SWy-RI-fxT"/>
+                                <action selector="clickYanZiSimple" destination="-1" eventType="touchUpInside" id="UA5-nv-ePO"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GkV-Vx-yHJ">
                             <rect key="frame" x="0.0" y="136.5" width="414" height="136"/>
                             <state key="normal" title="杰克逊 简单列表"/>
                             <connections>
-                                <action selector="clickJackson" destination="-1" eventType="touchUpInside" id="OED-6B-5wa"/>
+                                <action selector="clickJacksonSimple" destination="-1" eventType="touchUpInside" id="tou-d8-a8U"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bv8-BZ-yFZ">
                             <rect key="frame" x="0.0" y="272.5" width="414" height="136.5"/>
-                            <state key="normal" title="Button"/>
+                            <state key="normal" title="孙燕姿 黑胶唱片"/>
+                            <connections>
+                                <action selector="clickYanZiPlayer:" destination="-1" eventType="touchUpInside" id="kRU-M5-woW"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YyH-xv-6ts">
                             <rect key="frame" x="0.0" y="409" width="414" height="136.5"/>
-                            <state key="normal" title="Button"/>
+                            <state key="normal" title="杰克逊 黑胶唱片"/>
+                            <connections>
+                                <action selector="clickJacksonPlayer:" destination="-1" eventType="touchUpInside" id="2A3-QE-GLU"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cIS-GH-YcL">
                             <rect key="frame" x="0.0" y="545.5" width="414" height="136"/>
-                            <state key="normal" title="Button"/>
+                            <state key="normal" title="再谈记忆 黑胶唱片"/>
+                            <connections>
+                                <action selector="clickMemory:" destination="-1" eventType="touchUpInside" id="tbJ-Qj-lXs"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLk-aC-ZBA">
                             <rect key="frame" x="0.0" y="681.5" width="414" height="136.5"/>

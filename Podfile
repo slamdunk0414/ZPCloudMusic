@@ -18,5 +18,9 @@ target 'CloudMusic' do
   pod 'Moya/RxSwift'
   pod 'SDWebImage'
   pod 'RealmSwift'
+  
+  pod 'GKCover'
+  
+  pod 'SwiftEventBus'
 
 end

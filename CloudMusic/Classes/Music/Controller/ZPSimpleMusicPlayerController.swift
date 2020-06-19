@@ -48,7 +48,7 @@ class ZPSimpleMusicPlayerController: BaseViewController{
     override func initViews() {
         
         super.initViews()
-        
+
         setTitle("简单列表播放器")
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "tableViewCell")
@@ -72,6 +72,9 @@ class ZPSimpleMusicPlayerController: BaseViewController{
         
         //展示播放循环
         showLoopMode()
+        
+        //滚动到对应的歌曲
+        confirmCellClick()
     }
     
     override func initDatas() {
@@ -93,13 +96,13 @@ class ZPSimpleMusicPlayerController: BaseViewController{
         print("SimplePlayerController onEnterBackground")
         
         //取消播放代理
-        musicPlayerManager.dontNeedProgressBlock = true
+        musicPlayerManager.delegate = self
     }
     
     @objc func onEnterForeground(){
         print("SimplePlayerController onEnterForeground")
         //设置播放代理
-        musicPlayerManager.dontNeedProgressBlock = false
+        musicPlayerManager.delegate = nil
         onSongChanged()
     }
 }
@@ -111,14 +114,15 @@ extension ZPSimpleMusicPlayerController{
         super.viewWillAppear(animated)
         
         print("设置代理")
-        musicPlayerManager.dontNeedProgressBlock = false
+        musicPlayerManager.delegate = self
 
+        setTitleBarDefault()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        musicPlayerManager.dontNeedProgressBlock = true
+        musicPlayerManager.delegate = nil
     }
 }
 
@@ -271,7 +275,6 @@ extension ZPSimpleMusicPlayerController {
         //用户就很方便的知道自己拖拽到什么位置
         touchProgressHUDLabel.text = TimeUtil.second2MinuteAndSecond(sender.value)
         
-        
         touchProgressHUDLabel.centerX = 15 + sdProgress.x + CGFloat(sdProgress.value/sdProgress.maximumValue) * (sdProgress.width - 30)
         
     }
@@ -391,7 +394,7 @@ extension ZPSimpleMusicPlayerController:MusicPlayerDelegate{
     
     /// 进度回调
     func onProgress(_ data: Song) {
-        print("进度回调了 更新进度")
+
         showProgress()
     }
     

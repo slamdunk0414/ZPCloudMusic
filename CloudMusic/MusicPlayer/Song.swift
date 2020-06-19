@@ -59,6 +59,18 @@ class Song:BaseModel{
     }
 }
 
+extension Song:Equatable{
+    static func == (lhs: Song, rhs: Song) -> Bool {
+        
+        return lhs.id == rhs.id
+        
+    }
+    
+    
+    
+    
+}
+
 class SongUser:BaseModel{
     /// 昵称
     var nickname:String!
@@ -67,5 +79,5 @@ class SongUser:BaseModel{
     var avatar:String?
     
     /// 描述
-    var description:String?
+    var desc:String?
 }

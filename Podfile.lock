@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (5.2.1)
+  - GKCover (2.5.5)
   - HandyJSON (5.0.1)
   - MBProgressHUD (1.1.0)
   - Moya (14.0.0):
@@ -23,9 +24,11 @@ PODS:
   - SDWebImage (5.7.4):
     - SDWebImage/Core (= 5.7.4)
   - SDWebImage/Core (5.7.4)
+  - SwiftEventBus (5.0.0)
   - SwiftyUserDefaults (4.0.0-alpha.1)
 
 DEPENDENCIES:
+  - GKCover
   - HandyJSON
   - MBProgressHUD (= 1.1.0)
   - Moya
@@ -34,12 +37,15 @@ DEPENDENCIES:
   - RxCocoa
   - RxSwift
   - SDWebImage
+  - SwiftEventBus
   - SwiftyUserDefaults (= 4.0.0-alpha.1)
 
 SPEC REPOS:
   https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
+    - GKCover
     - Realm
     - RealmSwift
+    - SwiftEventBus
   trunk:
     - Alamofire
     - HandyJSON
@@ -53,6 +59,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
+  GKCover: 54663b6ee16ea0b4c0e203a0ffd5a0622223af6e
   HandyJSON: d45b8415c501e3affc59ca9762c1197ff0feb646
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
@@ -62,8 +69,9 @@ SPEC CHECKSUMS:
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   SDWebImage: 48b88379b798fd1e4298f95bb25d2cdabbf4deb3
+  SwiftEventBus: b30f617a6aca5a9336464b4d3f5931034762f2d5
   SwiftyUserDefaults: cebe0ff9472f52699772a514b6f7155861d8069b
 
-PODFILE CHECKSUM: 2c6c6512bf1a67d4b64fdade362b8c0221103606
+PODFILE CHECKSUM: f243b2548fe5d8e6987b10c991e9d3630f09aae2
 
 COCOAPODS: 1.9.1

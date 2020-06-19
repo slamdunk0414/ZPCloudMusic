@@ -20,8 +20,6 @@ class ORMUtil {
     
     
     /// 单例设计模式
-    ///
-    /// - Returns: <#return value description#>
     static func shared() -> ORMUtil {
         if instance == nil {
             instance = ORMUtil()
@@ -38,8 +36,6 @@ class ORMUtil {
     /// 保存歌曲
     ///
     /// - Parameters:
-    ///   - data: <#data description#>
-    ///   - userId: <#userId description#>
     func saveSong(_ data:Song) {
         //将Song转为SongLocal
         let songLocal = data.toSongLocal()
@@ -50,16 +46,10 @@ class ORMUtil {
         }
         
         let arr = database.objects(SongLocal.self)
-        print(arr.count)
         
-        //打印日志是为了方便调试
-        print("ORMUtil saveSong:\(songLocal.id),\(songLocal.progress),\(songLocal.duration)")
     }
     
     /// 查询指定用户的播放列表
-    ///
-    /// - Parameter userId: <#userId description#>
-    /// - Returns: <#return value description#>
     func queryPlayList() -> [Song] {
         //创建一个查询条件字符串
         let whereString = String(format: "playList = 1")
@@ -84,9 +74,6 @@ class ORMUtil {
     }
     
     /// 根据Id查询音乐对象
-    ///
-    /// - Parameter id: <#id description#>
-    /// - Returns: <#return value description#>
     func findSongById(_ id:String) -> Song? {
         //创建一个查询条件字符串
         let whereString = String(format: "sid = '%@'", id)
@@ -101,8 +88,6 @@ class ORMUtil {
     }
     
     /// 从数据库中删除该音乐
-    ///
-    /// - Parameter data: <#data description#>
     func deleteSong(_ data:Song) {
         //删除
 //        try! database.write {

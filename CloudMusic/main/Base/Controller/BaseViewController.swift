@@ -78,6 +78,8 @@ class BaseViewController: UIViewController {
         if hideNavigationBar() {
             //隐藏导航栏
             navigationController!.setNavigationBarHidden(true, animated: true)
+        }else{
+            setTitleBarDefault()
         }
     }
     
@@ -119,6 +121,8 @@ class BaseViewController: UIViewController {
             
             //设置返回按钮为白色
             setNavigationBarTintColor(.white)
+            
+            setTitleTextColor(.white)
         }
         
         /// 设置标题为黑色

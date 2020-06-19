@@ -10,7 +10,7 @@ import Foundation
 //导入JSON解析框架
 import HandyJSON
 
-class BaseModel: HandyJSON {
+class BaseModel: HandyJSON{
     
     /// Id
     var id:String!

@@ -152,9 +152,8 @@ class PlayListManager: NSObject {
     func play(_ data:Song) {
         
         self.data = data
-        
         musicPlayerManager.play(data)
-        
+    
         //标记为播放了
         isPlay = true
         
@@ -217,6 +216,16 @@ class PlayListManager: NSObject {
         case .random:
             //随机循环
             index = Int(arc4random()) % datum.count
+            
+        case .one:
+            //其他模式
+            let datumOC = datum as NSArray
+            index = datumOC.index(of: data!)
+            print("PlayListManager previous index:\(index)")
+            datum[index].progress = 0
+            
+            return datum[index]
+            
         default:
             //其他模式
             let datumOC = datum as NSArray
@@ -255,11 +264,21 @@ class PlayListManager: NSObject {
         case .random:
             //随机循环
             index = Int(arc4random()) % datum.count
-
+        case .one:
+            //列表循环
+            let datumOC = datum as NSArray
+            index = datumOC.index(of: data!)
+            
+            print("PlayListManager next index:\(index)")
+            datum[index].progress = 0
+            
+            return datum[index]
+            
         default:
             //列表循环
             let datumOC = datum as NSArray
             index = datumOC.index(of: data!)
+            
             if index != -1 {
                 //找到了
                 

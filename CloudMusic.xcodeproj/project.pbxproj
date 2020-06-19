@@ -10,6 +10,16 @@
 		6E1589D4249A48F4007C1BC0 /* DataUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1589D3249A48F4007C1BC0 /* DataUtil.swift */; };
 		6E1589D6249A494E007C1BC0 /* ORMUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1589D5249A494E007C1BC0 /* ORMUtil.swift */; };
 		6E1589D8249A4994007C1BC0 /* SongLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1589D7249A4994007C1BC0 /* SongLocal.swift */; };
+		6E1589DB249B7D37007C1BC0 /* ZPPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1589D9249B7D37007C1BC0 /* ZPPlayerController.swift */; };
+		6E1589DC249B7D37007C1BC0 /* ZPPlayerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E1589DA249B7D37007C1BC0 /* ZPPlayerController.xib */; };
+		6E1589DF249B81B6007C1BC0 /* ZPSongRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1589DE249B81B6007C1BC0 /* ZPSongRecordCell.swift */; };
+		6E1589E1249B8347007C1BC0 /* ImageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1589E0249B8347007C1BC0 /* ImageUtil.swift */; };
+		6E1589E3249B9BD1007C1BC0 /* ZPSongRecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E1589E2249B9BD1007C1BC0 /* ZPSongRecordCell.xib */; };
+		6E1589E7249C55E4007C1BC0 /* MusicPlayListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1589E6249C55E4007C1BC0 /* MusicPlayListView.swift */; };
+		6E1589E9249C55F0007C1BC0 /* MusicPlayListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E1589E8249C55F0007C1BC0 /* MusicPlayListView.xib */; };
+		6E1589EC249C56DD007C1BC0 /* SongListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E1589EA249C56DD007C1BC0 /* SongListCell.xib */; };
+		6E1589ED249C56DD007C1BC0 /* SongListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1589EB249C56DD007C1BC0 /* SongListCell.swift */; };
+		6E1589EF249C5B00007C1BC0 /* UIKit+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1589EE249C5B00007C1BC0 /* UIKit+Extension.swift */; };
 		6E316B912480E63900FEECC4 /* ZPLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E316B8F2480E63900FEECC4 /* ZPLoginViewController.swift */; };
 		6E316B922480E63900FEECC4 /* ZPLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E316B902480E63900FEECC4 /* ZPLoginViewController.xib */; };
 		6E316B952480E69D00FEECC4 /* ZPRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E316B932480E69D00FEECC4 /* ZPRegisterViewController.swift */; };
@@ -76,6 +86,16 @@
 		6E1589D3249A48F4007C1BC0 /* DataUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUtil.swift; sourceTree = "<group>"; };
 		6E1589D5249A494E007C1BC0 /* ORMUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ORMUtil.swift; sourceTree = "<group>"; };
 		6E1589D7249A4994007C1BC0 /* SongLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongLocal.swift; sourceTree = "<group>"; };
+		6E1589D9249B7D37007C1BC0 /* ZPPlayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZPPlayerController.swift; sourceTree = "<group>"; };
+		6E1589DA249B7D37007C1BC0 /* ZPPlayerController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZPPlayerController.xib; sourceTree = "<group>"; };
+		6E1589DE249B81B6007C1BC0 /* ZPSongRecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZPSongRecordCell.swift; sourceTree = "<group>"; };
+		6E1589E0249B8347007C1BC0 /* ImageUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUtil.swift; sourceTree = "<group>"; };
+		6E1589E2249B9BD1007C1BC0 /* ZPSongRecordCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZPSongRecordCell.xib; sourceTree = "<group>"; };
+		6E1589E6249C55E4007C1BC0 /* MusicPlayListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayListView.swift; sourceTree = "<group>"; };
+		6E1589E8249C55F0007C1BC0 /* MusicPlayListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicPlayListView.xib; sourceTree = "<group>"; };
+		6E1589EA249C56DD007C1BC0 /* SongListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SongListCell.xib; sourceTree = "<group>"; };
+		6E1589EB249C56DD007C1BC0 /* SongListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongListCell.swift; sourceTree = "<group>"; };
+		6E1589EE249C5B00007C1BC0 /* UIKit+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+Extension.swift"; sourceTree = "<group>"; };
 		6E316B8F2480E63900FEECC4 /* ZPLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZPLoginViewController.swift; sourceTree = "<group>"; };
 		6E316B902480E63900FEECC4 /* ZPLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZPLoginViewController.xib; sourceTree = "<group>"; };
 		6E316B932480E69D00FEECC4 /* ZPRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZPRegisterViewController.swift; sourceTree = "<group>"; };
@@ -161,6 +181,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E1589DD249B813C007C1BC0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6E1589EB249C56DD007C1BC0 /* SongListCell.swift */,
+				6E1589EA249C56DD007C1BC0 /* SongListCell.xib */,
+				6E1589DE249B81B6007C1BC0 /* ZPSongRecordCell.swift */,
+				6E1589E2249B9BD1007C1BC0 /* ZPSongRecordCell.xib */,
+				6E1589E6249C55E4007C1BC0 /* MusicPlayListView.swift */,
+				6E1589E8249C55F0007C1BC0 /* MusicPlayListView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		6E316B9724810DF500FEECC4 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +226,7 @@
 		6E316BA924822B6100FEECC4 /* Music */ = {
 			isa = PBXGroup;
 			children = (
+				6E1589DD249B813C007C1BC0 /* View */,
 				6E89FF152494A38C006328D0 /* Controller */,
 				6E316BAA24822B6E00FEECC4 /* Model */,
 			);
@@ -430,6 +464,7 @@
 				6E316B9F24810F7E00FEECC4 /* String+Extension.swift */,
 				6E316BC22487488F00FEECC4 /* Observable+Extension.swift */,
 				6EAFD5092491DDF900EDEA72 /* Single+Extension.swift */,
+				6E1589EE249C5B00007C1BC0 /* UIKit+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -448,6 +483,7 @@
 				6E89FF182494AE70006328D0 /* TimeUtil.swift */,
 				6E1589D3249A48F4007C1BC0 /* DataUtil.swift */,
 				6E1589D5249A494E007C1BC0 /* ORMUtil.swift */,
+				6E1589E0249B8347007C1BC0 /* ImageUtil.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -485,6 +521,8 @@
 			children = (
 				6E89FF132494A388006328D0 /* ZPSimpleMusicPlayerController.swift */,
 				6E89FF162494A3D8006328D0 /* ZPSimpleMusicPlayerController.xib */,
+				6E1589D9249B7D37007C1BC0 /* ZPPlayerController.swift */,
+				6E1589DA249B7D37007C1BC0 /* ZPPlayerController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -568,10 +606,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E5E2269247F990D00BB79B5 /* LaunchScreen.storyboard in Resources */,
+				6E1589E3249B9BD1007C1BC0 /* ZPSongRecordCell.xib in Resources */,
 				6E44E6462488EFB900426463 /* ZPHomeViewController.xib in Resources */,
+				6E1589E9249C55F0007C1BC0 /* MusicPlayListView.xib in Resources */,
 				6E5857D02480A6BD00D5CA04 /* YJBannerView.bundle in Resources */,
+				6E1589DC249B7D37007C1BC0 /* ZPPlayerController.xib in Resources */,
 				6E5857AD24809B4600D5CA04 /* ZPLoginOrRegisterViewController.xib in Resources */,
 				6E89FF172494A3D8006328D0 /* ZPSimpleMusicPlayerController.xib in Resources */,
+				6E1589EC249C56DD007C1BC0 /* SongListCell.xib in Resources */,
 				6E316B962480E69D00FEECC4 /* ZPRegisterViewController.xib in Resources */,
 				6E316B922480E63900FEECC4 /* ZPLoginViewController.xib in Resources */,
 				6E5E2277247FB48700BB79B5 /* ZPGuideViewController.xib in Resources */,
@@ -638,6 +680,7 @@
 				6EAFD50A2491DDF900EDEA72 /* Single+Extension.swift in Sources */,
 				6E5857D12480A6BD00D5CA04 /* YJBannerViewCollectionView.m in Sources */,
 				6E1589D6249A494E007C1BC0 /* ORMUtil.swift in Sources */,
+				6E1589E1249B8347007C1BC0 /* ImageUtil.swift in Sources */,
 				6E89FF1024948068006328D0 /* MusicPlayerManager.swift in Sources */,
 				6E44E63E2488EA5100426463 /* ZPBaseLoginController.swift in Sources */,
 				6E5857CF2480A6BD00D5CA04 /* YJAnimatedDotView.m in Sources */,
@@ -653,6 +696,7 @@
 				6E89FF0D24947EEB006328D0 /* MainNavigationController.swift in Sources */,
 				6E1589D8249A4994007C1BC0 /* SongLocal.swift in Sources */,
 				6E5857E82480B7C200D5CA04 /* PreferenceUtil.swift in Sources */,
+				6E1589DF249B81B6007C1BC0 /* ZPSongRecordCell.swift in Sources */,
 				6E316BC724874B6400FEECC4 /* DetailResponse.swift in Sources */,
 				6E5857D52480AAD500D5CA04 /* ColorConstant.swift in Sources */,
 				6E980F4E2498E2AA001D6F1E /* ZPMusicModel.swift in Sources */,
@@ -664,13 +708,16 @@
 				6E1589D4249A48F4007C1BC0 /* DataUtil.swift in Sources */,
 				6E5E2276247FB48700BB79B5 /* ZPGuideViewController.swift in Sources */,
 				6E5857CE2480A6BD00D5CA04 /* YJAbstractDotView.m in Sources */,
+				6E1589EF249C5B00007C1BC0 /* UIKit+Extension.swift in Sources */,
 				6E5857CC2480A6BD00D5CA04 /* YJBannerView.m in Sources */,
 				6E316BC524874B2E00FEECC4 /* BaseResponse.swift in Sources */,
 				6E44E6412488EC1000426463 /* Session.swift in Sources */,
+				6E1589ED249C56DD007C1BC0 /* SongListCell.swift in Sources */,
 				6E89FF0B24947C5F006328D0 /* SafeFrameUtil.swift in Sources */,
 				6E316BA62481EE0B00FEECC4 /* CustomNetworkAPI.swift in Sources */,
 				6E5E227A247FDB9B00BB79B5 /* UIView+Extension.swift in Sources */,
 				6E316B952480E69D00FEECC4 /* ZPRegisterViewController.swift in Sources */,
+				6E1589DB249B7D37007C1BC0 /* ZPPlayerController.swift in Sources */,
 				6E5857E42480B57F00D5CA04 /* DefaultKeys.swift in Sources */,
 				6E89FF192494AE70006328D0 /* TimeUtil.swift in Sources */,
 				6E316B9E24810F5A00FEECC4 /* Regex.swift in Sources */,
@@ -679,6 +726,7 @@
 				6E5857D22480A6BD00D5CA04 /* YJBannerViewCell.m in Sources */,
 				6E5857E22480B2B800D5CA04 /* PushUtil.swift in Sources */,
 				6E89FF0924947586006328D0 /* MainViewController.swift in Sources */,
+				6E1589E7249C55E4007C1BC0 /* MusicPlayListView.swift in Sources */,
 				6E980F4C24975ED2001D6F1E /* PlayListManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

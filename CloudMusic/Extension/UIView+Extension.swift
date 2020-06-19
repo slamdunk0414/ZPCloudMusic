@@ -150,4 +150,33 @@ extension UIView{
         
         self.layer.borderColor=color.cgColor
     }
+    
+    func setRaduis(_ raduis:CGFloat){
+        
+        self.layer.cornerRadius = raduis
+        self.layer.masksToBounds = true
+        
+    }
+    
+    /// 更改View锚点
+    /// 会自动修正位置的偏移
+    ///
+    /// - Parameter anchorPoint:
+    func setViewAnchorPoint(_ anchorPoint:CGPoint) {
+        //原来的锚点
+        let originAnchorPoint = layer.anchorPoint
+        
+        //要偏移的锚点
+        let offetPoint = CGPoint(x: anchorPoint.x - originAnchorPoint.x, y: anchorPoint.y - originAnchorPoint.y)
+        
+        //要偏移的距离
+        let offetX=(offetPoint.x) * frame.size.width
+        let offetY=(offetPoint.y) * frame.size.height
+        
+        //设置这个值 说明已经改变了偏移量
+        layer.anchorPoint = anchorPoint
+        
+        //将指定的偏宜量更改回来
+        layer.position = CGPoint(x: layer.position.x + offetX, y: layer.position.y + offetY)
+    }
 }

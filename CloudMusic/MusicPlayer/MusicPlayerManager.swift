@@ -48,27 +48,25 @@ class MusicPlayerManager:NSObject {
     var seekTime:Float?
     
     /// 代理对象
-    var delegate:MusicPlayerDelegate?
-//    {
-//        didSet {
-//             if let _ = self.delegate {
-//                 //有代理
-//                 //判断是否有音乐在播放
-//                 if isPlaying() {
-//                     //有音乐在播放
-//                     //启动定时器
-//                     startPublishProgress()
-//                 }
-//             }else {
-//                 //没有代理
-//                 //停止定时器
-//                 stopPublishProgress()
-//             }
-//         }
-//    }
-    
-    var dontNeedProgressBlock = false
-    
+    weak var delegate:MusicPlayerDelegate?
+    {
+        didSet {
+             if let _ = self.delegate {
+                 //有代理
+                 //判断是否有音乐在播放
+                 if isPlaying() {
+                     //有音乐在播放
+                     //启动定时器
+                     startPublishProgress()
+                 }
+             }else {
+                 //没有代理
+                 //停止定时器
+                 stopPublishProgress()
+             }
+         }
+    }
+
     /// 开启进度回调通知
     func startPublishProgress() {
         //判断是否启动了
@@ -79,18 +77,27 @@ class MusicPlayerManager:NSObject {
         
         //1/60
         //16毫秒执行一次
-        playTimeObserve = player.addPeriodicTimeObserver(forInterval: CMTime(value: CMTimeValue(1.0), timescale: 10), queue: DispatchQueue.main, using: { time in
+        playTimeObserve = player.addPeriodicTimeObserver(forInterval: CMTime(value: CMTimeValue(1.0), timescale: 3), queue: DispatchQueue.main, using: { time in
 
             //更新媒体控制中心信息
-            print("更新媒体控制中心信息")
+
             self.updateMediaProgress()
+
+            //判断是否有代理
+            guard self.delegate != nil else {
+                 //没有回调
+                 //停止定时器
+                 self.stopPublishProgress()
+
+                 return
+             }
 
             let currentTime = CMTimeGetSeconds(self.player.currentItem?.currentTime() ?? CMTime())
             
             guard self.seekTime == nil else{
                 let value = abs(Float(currentTime) - self.seekTime!)
                 
-                if value < 0.1{
+                if value < 2{
                     self.seekTime = nil
                     //获取当前音乐播放时间
                     self.data!.progress = Float(currentTime)
@@ -102,11 +109,6 @@ class MusicPlayerManager:NSObject {
 
             //获取当前音乐播放时间
             self.data!.progress = Float(currentTime)
-            
-            guard self.dontNeedProgressBlock == false else{
-//                print("不需要进度告知页面")
-                return
-            }
             
             //回调代理
             self.delegate?.onProgress(self.data)
@@ -272,7 +274,7 @@ class MusicPlayerManager:NSObject {
     func updateMediaProgress(){
          
         //设置进度
-        print("progress is \(data.progress)")
+
         MPNowPlayingInfoCenter.default().nowPlayingInfo?[MPNowPlayingInfoPropertyElapsedPlaybackTime] = data.progress
         
     }
@@ -407,7 +409,7 @@ class MusicPlayerManager:NSObject {
 }
 
 /// 播放代理
-protocol MusicPlayerDelegate {
+protocol MusicPlayerDelegate : NSObjectProtocol {
     
     /// 播放器准备完毕了
     /// 可以获取到音乐总时长
