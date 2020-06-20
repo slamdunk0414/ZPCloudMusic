@@ -26,7 +26,7 @@
                 <outlet property="lbStart" destination="Yhh-ea-3QI" id="Rky-Tl-nWb"/>
                 <outlet property="recordBackgroundBorder" destination="6ZA-Ks-GQt" id="rhz-gY-Sf0"/>
                 <outlet property="recordThumb" destination="lIs-vw-Sat" id="Jna-hh-Gyc"/>
-                <outlet property="sdProgress" destination="Mgg-c6-nNv" id="hMR-gp-x2w"/>
+                <outlet property="sdProgress" destination="Mgg-c6-nNv" id="jVN-lN-kPZ"/>
                 <outlet property="view" destination="yg0-Xg-PJO" id="ncV-Ry-CS8"/>
             </connections>
         </placeholder>
@@ -227,7 +227,7 @@
                                         <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Mgg-c6-nNv">
                                             <rect key="frame" x="68" y="0.0" width="238" height="31"/>
                                             <connections>
-                                                <action selector="onPorgressTouchUpInside:" destination="-1" eventType="valueChanged" id="gVE-5m-B7y"/>
+                                                <action selector="onPorgressTouchUpInside:" destination="-1" eventType="touchUpInside" id="78J-ne-EAp"/>
                                                 <action selector="onProgressTouchDown:" destination="-1" eventType="touchDown" id="8xn-9C-Ge0"/>
                                                 <action selector="onProgressTouchUp:" destination="-1" eventType="touchUpOutside" id="bj7-ac-T5c"/>
                                             </connections>
@@ -381,7 +381,7 @@
                 <constraint firstItem="FHj-oA-LJN" firstAttribute="trailing" secondItem="RtV-kG-mBJ" secondAttribute="trailing" id="sFr-uF-zKy"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="FHj-oA-LJN"/>
-            <point key="canvasLocation" x="-252" y="-520"/>
+            <point key="canvasLocation" x="-786" y="-608"/>
         </view>
     </objects>
     <resources>

@@ -113,7 +113,17 @@ class MusicPlayerManager:NSObject {
             //回调代理
             self.delegate?.onProgress(self.data)
             
+            if self.data.duration == 0{
 
+                self.data.duration = Float(CMTimeGetSeconds(self.player.currentItem!.asset.duration))
+                //回调代理
+                self.delegate?.onPrepared(self.data)
+                //设置系统信息
+                self.setMediaInfo()
+
+            }
+
+            
         })
     }
     
@@ -144,18 +154,21 @@ class MusicPlayerManager:NSObject {
         //初始化设置
         initMedia()
         
+        var isSameSong = true
+        
         //如果不是同一首音乐
         if let currentData = self.data{
             //播放的不是同一首歌曲
             if (song.uri != currentData.uri) {
-                delegate?.onSongChanged()
+                
+                isSameSong = false
             }
         }
         
         //保存音乐对象
         self.data = song
         
-        self.status = .playing
+        
         
         let uri = song.uri!
         
@@ -168,14 +181,36 @@ class MusicPlayerManager:NSObject {
             url = URL(fileURLWithPath: uri)
         }
         
-        //创建一个播放Item
-        let playerItem = AVPlayerItem(url: url)
-        
-        //替换掉原来的播放Item
-        player.replaceCurrentItem(with: playerItem)
+        if !isSameSong {
+            delegate?.onSongChanged()
+            
+            //创建一个播放Item
+            let playerItem = AVPlayerItem(url: url)
+            
+            //替换掉原来的播放Item
+            player.replaceCurrentItem(with: playerItem)
 
-        //播放
-        player.play()
+            //播放
+            player.play()
+            
+            self.status = .playing
+        }else{
+            
+            let currentTime = CMTimeGetSeconds(self.player.currentItem?.currentTime() ?? CMTime())
+            data.progress = Float(currentTime)
+
+            if self.data.duration == 0{
+                self.data.duration = Float(CMTimeGetSeconds(self.player.currentItem!.asset.duration))
+                //回调代理
+                self.delegate?.onPrepared(self.data)
+                //设置系统信息
+                self.setMediaInfo()
+                
+                //设置进度
+                self.delegate?.onProgress(data)
+            }
+            
+        }
         
         seekTime = nil
         

@@ -125,8 +125,8 @@ extension ZPHomeViewController{
         
         PlayListManager.shared().setPlayList(songs)
         
-        PlayListManager.shared().play(1)
-        
+        PlayListManager.shared().play(song2)
+
     }
     
     func setJacksonList(){

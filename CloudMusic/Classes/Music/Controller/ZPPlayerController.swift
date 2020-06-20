@@ -256,11 +256,11 @@ extension ZPPlayerController{
         //显示播放状态
         showMusicPlayStatus()
         
-        //展示进度
-        showProgress()
-        
         //展示时长
         showDuration()
+        
+        //展示进度
+        showProgress()
     }
     
     func showMusicData(){
@@ -294,14 +294,15 @@ extension ZPPlayerController{
     func showProgress(){
         let progress = playListManager.data!.progress
         
-        if progress >= 0 {
+        if progress > 0 {
             
             if !isSlideTouch {
                 
                 lbStart.text = TimeUtil.second2MinuteAndSecond(progress)
                 
                 if !isProgressIng{
-                    sdProgress.value = progress
+                    print("更新progress位置")
+                    sdProgress?.value = progress
                 }else{
                     print("正在缓冲 不更新progress位置")
                 }
@@ -408,10 +409,16 @@ extension ZPPlayerController: MusicPlayerDelegate{
             //滚动到当前黑胶唱片
             self.collectionView.scrollToItem(at: indexPath, at: .left, animated: currentAnimated)
             
-            DispatchQueue.main.async {
-                self.startRecordRotate()
+            if self.musicPlayerManager.isPlaying(){
+                print("正在播放中 开始旋转")
+                
+                DispatchQueue.main.async {
+                    self.startRecordRotate()
+                }
             }
             
+            
+
         }
     }
     
