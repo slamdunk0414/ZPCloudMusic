@@ -89,6 +89,9 @@ class ZPPlayerController: BaseViewController {
     var musicPlayerManager = MusicPlayerManager.shared()
     
     override func initViews() {
+        
+        print("初始化视图")
+        
         initPlayData()
         
         //进度条
@@ -100,12 +103,21 @@ class ZPPlayerController: BaseViewController {
         
         self.collectionView.register(UINib(nibName: "ZPSongRecordCell", bundle: nil), forCellWithReuseIdentifier: "SongRecordCell")
         
+
+        
         //设置recordThumb的锚点
         DispatchQueue.main.async {
-            //根据黑胶唱片指针图片计算
-            //锚点为0.181，0.120
+            
+            self.recordThumb.x = ZScreenWidth/2.0 - 15
+            self.recordThumb.y = 20
+            
             self.recordThumb.setViewAnchorPoint(CGPoint(x:0.181,y:0.12))
             self.recordThumb.transform=CGAffineTransform(rotationAngle: -0.4363323)
+            
+//            //根据黑胶唱片指针图片计算
+//            //锚点为0.181，0.120
+//            self.recordThumb.setViewAnchorPoint(CGPoint(x:0.181,y:0.12))
+//            self.recordThumb.transform=CGAffineTransform(rotationAngle: -0.4363323)
         }
     }
 
@@ -294,8 +306,6 @@ extension ZPPlayerController{
     func showProgress(){
         let progress = playListManager.data!.progress
         
-        if progress > 0 {
-            
             if !isSlideTouch {
                 
                 lbStart.text = TimeUtil.second2MinuteAndSecond(progress)
@@ -309,7 +319,7 @@ extension ZPPlayerController{
             }else{
                 print("正在拖拽 不更新进度条")
             }
-        }
+        
     }
     
     func showDuration(){
@@ -377,7 +387,7 @@ extension ZPPlayerController: MusicPlayerDelegate{
     func onSongChanged() {
         
         print("歌曲改变了/或者前后台切换了 重新设置页面的属性")
-        
+
         initPlayData()
         
         confirmCellClick()
@@ -538,10 +548,7 @@ extension ZPPlayerController{
         UIView.animate(withDuration: 0.5, delay: 0.5, options: .curveEaseInOut , animations: {
             self.recordThumb.transform = CGAffineTransform.identity
         }, completion: nil)
-        
-//         UIView.animate(withDuration: 0.5) {
-//             self.recordThumb.transform = CGAffineTransform.identity
-//         }
+
      }
      
      /// 黑胶唱片指针旋转-25度（暂停状态）
@@ -603,7 +610,7 @@ extension ZPPlayerController{
     
     @objc func onEnterForeground(){
         initPlayData()
-        confirmCellClick()
+        confirmCellClickNoAnimate()
     }
 
 }

@@ -168,8 +168,6 @@ class MusicPlayerManager:NSObject {
         //保存音乐对象
         self.data = song
         
-        
-        
         let uri = song.uri!
         
         var url:URL!
@@ -192,6 +190,8 @@ class MusicPlayerManager:NSObject {
 
             //播放
             player.play()
+
+            self.data.progress = 0
             
             self.status = .playing
         }else{
@@ -360,6 +360,11 @@ class MusicPlayerManager:NSObject {
     func seekTo(_ value:Float) {
         let positionTime = CMTime(seconds: Double(value), preferredTimescale: 1)
         player.seek(to: positionTime)
+        
+        if player.status != .readyToPlay {
+            player.play()
+        }
+        
         seekTime = value
     }
     

@@ -176,7 +176,16 @@ extension UIView{
         //设置这个值 说明已经改变了偏移量
         layer.anchorPoint = anchorPoint
         
-        //将指定的偏宜量更改回来
+//        //将指定的偏宜量更改回来
         layer.position = CGPoint(x: layer.position.x + offetX, y: layer.position.y + offetY)
+        
+//        var bounds = self.frame
+//        
+//        let toBounds = CGRect(x: x + offetX , y: y + offetY , width: width, height: height)
+//        
+//        self.frame = toBounds
+        
+//        x =  -offetX
+//        y =  -offetY
     }
 }
