@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E07866524A0551900EC8658 /* 逆光.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 6E07866424A0551900EC8658 /* 逆光.lrc */; };
+		6E07866724A0554000EC8658 /* 开始懂了.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 6E07866624A0554000EC8658 /* 开始懂了.lrc */; };
+		6E07866924A0556400EC8658 /* 遇见.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 6E07866824A0556400EC8658 /* 遇见.lrc */; };
+		6E07866B24A0561000EC8658 /* ZPPlayerLyricView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E07866A24A0561000EC8658 /* ZPPlayerLyricView.swift */; };
+		6E07866D24A0563B00EC8658 /* ZPPlayerLyricView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E07866C24A0563B00EC8658 /* ZPPlayerLyricView.xib */; };
+		6E07867424A057D800EC8658 /* ZPPlayerLyricLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E07867224A057D800EC8658 /* ZPPlayerLyricLineCell.swift */; };
+		6E07867524A057D800EC8658 /* ZPPlayerLyricLineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E07867324A057D800EC8658 /* ZPPlayerLyricLineCell.xib */; };
+		6E07867724A05F7B00EC8658 /* Lyric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E07867624A05F7B00EC8658 /* Lyric.swift */; };
+		6E07867924A05F9500EC8658 /* LyricLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E07867824A05F9500EC8658 /* LyricLine.swift */; };
+		6E07867E24A05FDC00EC8658 /* LyricParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E07867B24A05FDC00EC8658 /* LyricParser.swift */; };
+		6E07867F24A05FDC00EC8658 /* LRCLyricParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E07867C24A05FDC00EC8658 /* LRCLyricParser.swift */; };
+		6E07868024A05FDC00EC8658 /* KSCLyricParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E07867D24A05FDC00EC8658 /* KSCLyricParser.swift */; };
+		6E07868224A082CB00EC8658 /* 生活因你而火热.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 6E07868124A082CB00EC8658 /* 生活因你而火热.lrc */; };
 		6E1589D4249A48F4007C1BC0 /* DataUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1589D3249A48F4007C1BC0 /* DataUtil.swift */; };
 		6E1589D6249A494E007C1BC0 /* ORMUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1589D5249A494E007C1BC0 /* ORMUtil.swift */; };
 		6E1589D8249A4994007C1BC0 /* SongLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1589D7249A4994007C1BC0 /* SongLocal.swift */; };
@@ -66,6 +79,7 @@
 		6E5E227A247FDB9B00BB79B5 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5E2279247FDB9B00BB79B5 /* UIView+Extension.swift */; };
 		6E5E227D247FE5D200BB79B5 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5E227C247FE5D200BB79B5 /* Constant.swift */; };
 		6E5E227F247FEBCB00BB79B5 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5E227E247FEBCB00BB79B5 /* UIColor+Extension.swift */; };
+		6E76B2FB24A0B1410031D9CD /* LyricUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E76B2FA24A0B1410031D9CD /* LyricUtil.swift */; };
 		6E89FF0924947586006328D0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FF0824947586006328D0 /* MainViewController.swift */; };
 		6E89FF0B24947C5F006328D0 /* SafeFrameUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FF0A24947C5F006328D0 /* SafeFrameUtil.swift */; };
 		6E89FF0D24947EEB006328D0 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E89FF0C24947EEB006328D0 /* MainNavigationController.swift */; };
@@ -83,6 +97,19 @@
 
 /* Begin PBXFileReference section */
 		5C23224B6663A2816B640918 /* Pods-CloudMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloudMusic.release.xcconfig"; path = "Target Support Files/Pods-CloudMusic/Pods-CloudMusic.release.xcconfig"; sourceTree = "<group>"; };
+		6E07866424A0551900EC8658 /* 逆光.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "逆光.lrc"; sourceTree = "<group>"; };
+		6E07866624A0554000EC8658 /* 开始懂了.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "开始懂了.lrc"; sourceTree = "<group>"; };
+		6E07866824A0556400EC8658 /* 遇见.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "遇见.lrc"; sourceTree = "<group>"; };
+		6E07866A24A0561000EC8658 /* ZPPlayerLyricView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZPPlayerLyricView.swift; sourceTree = "<group>"; };
+		6E07866C24A0563B00EC8658 /* ZPPlayerLyricView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZPPlayerLyricView.xib; sourceTree = "<group>"; };
+		6E07867224A057D800EC8658 /* ZPPlayerLyricLineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZPPlayerLyricLineCell.swift; sourceTree = "<group>"; };
+		6E07867324A057D800EC8658 /* ZPPlayerLyricLineCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZPPlayerLyricLineCell.xib; sourceTree = "<group>"; };
+		6E07867624A05F7B00EC8658 /* Lyric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lyric.swift; sourceTree = "<group>"; };
+		6E07867824A05F9500EC8658 /* LyricLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricLine.swift; sourceTree = "<group>"; };
+		6E07867B24A05FDC00EC8658 /* LyricParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LyricParser.swift; sourceTree = "<group>"; };
+		6E07867C24A05FDC00EC8658 /* LRCLyricParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LRCLyricParser.swift; sourceTree = "<group>"; };
+		6E07867D24A05FDC00EC8658 /* KSCLyricParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KSCLyricParser.swift; sourceTree = "<group>"; };
+		6E07868124A082CB00EC8658 /* 生活因你而火热.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "生活因你而火热.lrc"; sourceTree = "<group>"; };
 		6E1589D3249A48F4007C1BC0 /* DataUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUtil.swift; sourceTree = "<group>"; };
 		6E1589D5249A494E007C1BC0 /* ORMUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ORMUtil.swift; sourceTree = "<group>"; };
 		6E1589D7249A4994007C1BC0 /* SongLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongLocal.swift; sourceTree = "<group>"; };
@@ -153,6 +180,7 @@
 		6E5E2279247FDB9B00BB79B5 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		6E5E227C247FE5D200BB79B5 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		6E5E227E247FEBCB00BB79B5 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		6E76B2FA24A0B1410031D9CD /* LyricUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricUtil.swift; sourceTree = "<group>"; };
 		6E89FF0824947586006328D0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		6E89FF0A24947C5F006328D0 /* SafeFrameUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeFrameUtil.swift; sourceTree = "<group>"; };
 		6E89FF0C24947EEB006328D0 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
@@ -181,6 +209,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E07866324A0550800EC8658 /* Lrcs */ = {
+			isa = PBXGroup;
+			children = (
+				6E07868124A082CB00EC8658 /* 生活因你而火热.lrc */,
+				6E07866824A0556400EC8658 /* 遇见.lrc */,
+				6E07866424A0551900EC8658 /* 逆光.lrc */,
+				6E07866624A0554000EC8658 /* 开始懂了.lrc */,
+			);
+			path = Lrcs;
+			sourceTree = "<group>";
+		};
+		6E07867A24A05FCD00EC8658 /* MusicUtil */ = {
+			isa = PBXGroup;
+			children = (
+				6E07867D24A05FDC00EC8658 /* KSCLyricParser.swift */,
+				6E07867C24A05FDC00EC8658 /* LRCLyricParser.swift */,
+				6E07867B24A05FDC00EC8658 /* LyricParser.swift */,
+			);
+			path = MusicUtil;
+			sourceTree = "<group>";
+		};
 		6E1589DD249B813C007C1BC0 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +239,10 @@
 				6E1589E2249B9BD1007C1BC0 /* ZPSongRecordCell.xib */,
 				6E1589E6249C55E4007C1BC0 /* MusicPlayListView.swift */,
 				6E1589E8249C55F0007C1BC0 /* MusicPlayListView.xib */,
+				6E07866A24A0561000EC8658 /* ZPPlayerLyricView.swift */,
+				6E07866C24A0563B00EC8658 /* ZPPlayerLyricView.xib */,
+				6E07867224A057D800EC8658 /* ZPPlayerLyricLineCell.swift */,
+				6E07867324A057D800EC8658 /* ZPPlayerLyricLineCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -226,6 +279,7 @@
 		6E316BA924822B6100FEECC4 /* Music */ = {
 			isa = PBXGroup;
 			children = (
+				6E07867A24A05FCD00EC8658 /* MusicUtil */,
 				6E1589DD249B813C007C1BC0 /* View */,
 				6E89FF152494A38C006328D0 /* Controller */,
 				6E316BAA24822B6E00FEECC4 /* Model */,
@@ -237,6 +291,8 @@
 			isa = PBXGroup;
 			children = (
 				6E980F4D2498E2A9001D6F1E /* ZPMusicModel.swift */,
+				6E07867624A05F7B00EC8658 /* Lyric.swift */,
+				6E07867824A05F9500EC8658 /* LyricLine.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -436,6 +492,7 @@
 		6E5E225B247F990900BB79B5 /* CloudMusic */ = {
 			isa = PBXGroup;
 			children = (
+				6E07866324A0550800EC8658 /* Lrcs */,
 				6E89FF0E24948035006328D0 /* MusicPlayer */,
 				6E316BA42481EDCF00FEECC4 /* API */,
 				6E5857D62480B0CF00D5CA04 /* Classes */,
@@ -484,6 +541,7 @@
 				6E1589D3249A48F4007C1BC0 /* DataUtil.swift */,
 				6E1589D5249A494E007C1BC0 /* ORMUtil.swift */,
 				6E1589E0249B8347007C1BC0 /* ImageUtil.swift */,
+				6E76B2FA24A0B1410031D9CD /* LyricUtil.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -610,13 +668,19 @@
 				6E44E6462488EFB900426463 /* ZPHomeViewController.xib in Resources */,
 				6E1589E9249C55F0007C1BC0 /* MusicPlayListView.xib in Resources */,
 				6E5857D02480A6BD00D5CA04 /* YJBannerView.bundle in Resources */,
+				6E07868224A082CB00EC8658 /* 生活因你而火热.lrc in Resources */,
+				6E07866524A0551900EC8658 /* 逆光.lrc in Resources */,
+				6E07867524A057D800EC8658 /* ZPPlayerLyricLineCell.xib in Resources */,
 				6E1589DC249B7D37007C1BC0 /* ZPPlayerController.xib in Resources */,
+				6E07866D24A0563B00EC8658 /* ZPPlayerLyricView.xib in Resources */,
 				6E5857AD24809B4600D5CA04 /* ZPLoginOrRegisterViewController.xib in Resources */,
+				6E07866724A0554000EC8658 /* 开始懂了.lrc in Resources */,
 				6E89FF172494A3D8006328D0 /* ZPSimpleMusicPlayerController.xib in Resources */,
 				6E1589EC249C56DD007C1BC0 /* SongListCell.xib in Resources */,
 				6E316B962480E69D00FEECC4 /* ZPRegisterViewController.xib in Resources */,
 				6E316B922480E63900FEECC4 /* ZPLoginViewController.xib in Resources */,
 				6E5E2277247FB48700BB79B5 /* ZPGuideViewController.xib in Resources */,
+				6E07866924A0556400EC8658 /* 遇见.lrc in Resources */,
 				6E5E2266247F990D00BB79B5 /* Assets.xcassets in Resources */,
 				6E5E2264247F990900BB79B5 /* Splash.storyboard in Resources */,
 			);
@@ -671,8 +735,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E07868024A05FDC00EC8658 /* KSCLyricParser.swift in Sources */,
 				6E316B912480E63900FEECC4 /* ZPLoginViewController.swift in Sources */,
 				6E316BCB24874EBA00FEECC4 /* CustomNetworkUtil.swift in Sources */,
+				6E76B2FB24A0B1410031D9CD /* LyricUtil.swift in Sources */,
 				6E5E227F247FEBCB00BB79B5 /* UIColor+Extension.swift in Sources */,
 				6E5E225D247F990900BB79B5 /* AppDelegate.swift in Sources */,
 				6E316BA22481237400FEECC4 /* ToastUtil.swift in Sources */,
@@ -690,6 +756,7 @@
 				6E316BC924874B7F00FEECC4 /* ListResponse.swift in Sources */,
 				6E89FF142494A388006328D0 /* ZPSimpleMusicPlayerController.swift in Sources */,
 				6E89FF1224949DE8006328D0 /* Song.swift in Sources */,
+				6E07867924A05F9500EC8658 /* LyricLine.swift in Sources */,
 				6E5E2273247FB28D00BB79B5 /* ZPSplashViewController.swift in Sources */,
 				6E5857DE2480B13C00D5CA04 /* ZPGuideViewControllerExtention.swift in Sources */,
 				6E316B9D24810F5A00FEECC4 /* RegexEnum.swift in Sources */,
@@ -708,24 +775,29 @@
 				6E1589D4249A48F4007C1BC0 /* DataUtil.swift in Sources */,
 				6E5E2276247FB48700BB79B5 /* ZPGuideViewController.swift in Sources */,
 				6E5857CE2480A6BD00D5CA04 /* YJAbstractDotView.m in Sources */,
+				6E07867E24A05FDC00EC8658 /* LyricParser.swift in Sources */,
 				6E1589EF249C5B00007C1BC0 /* UIKit+Extension.swift in Sources */,
 				6E5857CC2480A6BD00D5CA04 /* YJBannerView.m in Sources */,
 				6E316BC524874B2E00FEECC4 /* BaseResponse.swift in Sources */,
 				6E44E6412488EC1000426463 /* Session.swift in Sources */,
+				6E07867724A05F7B00EC8658 /* Lyric.swift in Sources */,
 				6E1589ED249C56DD007C1BC0 /* SongListCell.swift in Sources */,
 				6E89FF0B24947C5F006328D0 /* SafeFrameUtil.swift in Sources */,
 				6E316BA62481EE0B00FEECC4 /* CustomNetworkAPI.swift in Sources */,
 				6E5E227A247FDB9B00BB79B5 /* UIView+Extension.swift in Sources */,
+				6E07867F24A05FDC00EC8658 /* LRCLyricParser.swift in Sources */,
 				6E316B952480E69D00FEECC4 /* ZPRegisterViewController.swift in Sources */,
 				6E1589DB249B7D37007C1BC0 /* ZPPlayerController.swift in Sources */,
 				6E5857E42480B57F00D5CA04 /* DefaultKeys.swift in Sources */,
 				6E89FF192494AE70006328D0 /* TimeUtil.swift in Sources */,
 				6E316B9E24810F5A00FEECC4 /* Regex.swift in Sources */,
 				6E980F502498F87F001D6F1E /* Appdelegate+Extension.swift in Sources */,
+				6E07866B24A0561000EC8658 /* ZPPlayerLyricView.swift in Sources */,
 				6E5857D32480A6BD00D5CA04 /* YJBannerViewFooter.m in Sources */,
 				6E5857D22480A6BD00D5CA04 /* YJBannerViewCell.m in Sources */,
 				6E5857E22480B2B800D5CA04 /* PushUtil.swift in Sources */,
 				6E89FF0924947586006328D0 /* MainViewController.swift in Sources */,
+				6E07867424A057D800EC8658 /* ZPPlayerLyricLineCell.swift in Sources */,
 				6E1589E7249C55E4007C1BC0 /* MusicPlayListView.swift in Sources */,
 				6E980F4C24975ED2001D6F1E /* PlayListManager.swift in Sources */,
 			);

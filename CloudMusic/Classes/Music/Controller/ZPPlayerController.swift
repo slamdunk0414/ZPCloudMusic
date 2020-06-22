@@ -88,11 +88,12 @@ class ZPPlayerController: BaseViewController {
     /// 播放管理器
     var musicPlayerManager = MusicPlayerManager.shared()
     
+    /// 歌词管理器
+    var lyricView:ZPPlayerLyricView!
+    
     override func initViews() {
         
-        print("初始化视图")
-        
-        initPlayData()
+        super.initViews()
         
         //进度条
         //设置进度条颜色
@@ -103,8 +104,6 @@ class ZPPlayerController: BaseViewController {
         
         self.collectionView.register(UINib(nibName: "ZPSongRecordCell", bundle: nil), forCellWithReuseIdentifier: "SongRecordCell")
         
-
-        
         //设置recordThumb的锚点
         DispatchQueue.main.async {
             
@@ -113,12 +112,40 @@ class ZPPlayerController: BaseViewController {
             
             self.recordThumb.setViewAnchorPoint(CGPoint(x:0.181,y:0.12))
             self.recordThumb.transform=CGAffineTransform(rotationAngle: -0.4363323)
-            
-//            //根据黑胶唱片指针图片计算
-//            //锚点为0.181，0.120
-//            self.recordThumb.setViewAnchorPoint(CGPoint(x:0.181,y:0.12))
-//            self.recordThumb.transform=CGAffineTransform(rotationAngle: -0.4363323)
         }
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tapRecordView))
+        
+        self.collectionView.addGestureRecognizer(tap)
+        
+        lyricView = ZPPlayerLyricView.loadViewFromNib()
+        
+        lyricView.lrcUrl = playListManager.data?.lrcUrl
+        
+        view.addSubview(lyricView)
+        
+        lyricView.isHidden = true
+        
+        let tapLyric = UITapGestureRecognizer(target: self, action: #selector(tapLyricView))
+        
+        lyricView.addGestureRecognizer(tapLyric)
+        
+        lyricView.onClickDragPlayBlock = { [weak self] progress in
+            guard let `self` = self else { return }
+            
+            self.sdProgress.value = Float(progress)
+            self.onPorgressTouchUpInside(self.sdProgress)
+        }
+        
+        print("初始化视图")
+        initPlayData()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        lyricView.frame = CGRect(x: 0, y: ZNaviationHeight, width: ZScreenWidth, height: collectionView.height)
+        
     }
 
     override func initListener() {
@@ -251,6 +278,68 @@ class ZPPlayerController: BaseViewController {
         navigationController.pushViewController(controller, animated: true)
     }
     
+    ///点击了黑胶唱片
+    @objc func tapRecordView(){
+        
+        print("PlayerController tapRecordView")
+        
+        //显示歌词控件
+        lyricView.isHidden = false
+        
+        //使用动画
+        UIView.animate(withDuration: 0.5, animations: {
+            //动画执行的逻辑
+            
+            //将歌词控件透明度改为1
+            self.lyricView.alpha=1.0
+            
+            //将黑胶唱片相关控件透明度改为0
+            self.collectionView.alpha=0
+            self.recordBackgroundBorder.alpha=0
+            self.recordThumb.alpha=0
+            
+        }) { finished in
+            //动画执行完成后
+            
+            //将黑胶唱片完全隐藏
+            self.collectionView.isHidden = true
+            self.recordThumb.isHidden = true
+            self.recordBackgroundBorder.isHidden = true
+        }
+        
+    }
+    
+    /// 点击了歌词
+    @objc func tapLyricView(){
+        
+        print("PlayerController tapLyricView")
+         
+         //显示出黑胶唱片相关功能
+         collectionView.isHidden=false
+         recordBackgroundBorder.isHidden=false
+         recordThumb.isHidden=false
+         
+         //使用动画
+         UIView.animate(withDuration: 0.5, animations: {
+             //动画执行的逻辑
+             
+             //将黑胶唱片相关控件透明度设置为1
+             self.collectionView.alpha=1
+             self.recordBackgroundBorder.alpha=1
+             self.recordThumb.alpha=1
+             
+             //将歌词控件透明度设置0
+             self.lyricView.alpha=0
+             
+         }) { finished in
+             //动画执行完成后的逻辑
+             
+             //将歌词控件完全隐藏
+             self.lyricView.isHidden=true
+         }
+        
+    }
+    
     deinit {
         print("将要销毁了")
         
@@ -262,6 +351,9 @@ class ZPPlayerController: BaseViewController {
 extension ZPPlayerController{
     
     func initPlayData(){
+        
+        lyricView.lrcUrl = playListManager.data?.lrcUrl
+        
         //显示初始化数据
         showMusicData()
         
@@ -311,8 +403,11 @@ extension ZPPlayerController{
                 lbStart.text = TimeUtil.second2MinuteAndSecond(progress)
                 
                 if !isProgressIng{
-                    print("更新progress位置")
+//                    print("更新progress位置")
                     sdProgress?.value = progress
+                    
+                    lyricView.progress = progress
+                    
                 }else{
                     print("正在缓冲 不更新progress位置")
                 }
@@ -326,7 +421,7 @@ extension ZPPlayerController{
         //获取当前音乐总时长
         let duration = musicPlayerManager.data.duration
         
-        if duration > 0 {
+        if duration >= 0 {
             //格式化后显示文本
             lbEnd.text = TimeUtil.second2MinuteAndSecond(duration)
             
@@ -372,6 +467,8 @@ extension ZPPlayerController: MusicPlayerDelegate{
     /// 进度回调
     func onProgress(_ data: Song) {
 
+        print("回调的时间是\(data.progress)")
+        
         showProgress()
     }
     

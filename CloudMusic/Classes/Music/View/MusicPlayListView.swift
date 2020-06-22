@@ -20,8 +20,7 @@ class MusicPlayListView: UIView,NibLoadable{
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        //注册Cell
-//
+
         print("代码创建")
     }
 

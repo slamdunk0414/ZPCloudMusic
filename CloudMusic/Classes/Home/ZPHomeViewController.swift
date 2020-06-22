@@ -98,6 +98,7 @@ extension ZPHomeViewController{
         let song = Song()
         song.id = "1"
         song.uri = songUrl
+        song.lrcUrl = "逆光"
         song.title = "逆光"
         song.banner = "http://cdnmusic.migu.cn/picture/2019/1029/1507/AL53a8b2cdf90a44449bbf554ecd85b331.jpg"
         
@@ -106,6 +107,7 @@ extension ZPHomeViewController{
         song2.id = "2"
         song2.uri = songUrl2
         song2.title = "开始懂了"
+        song2.lrcUrl = "开始懂了"
         song2.banner = "http://cdnmusic.migu.cn/picture/2020/0324/0007/AL94526fc9e31d7dd0d87ec946ae6ed6d0.jpg"
         let songUrl3 = "http://freetyst.nf.migu.cn/public/product9th/product41/2020/06/1018/2020%E5%B9%B406%E6%9C%8810%E6%97%A507%E7%82%B913%E5%88%86%E7%B4%A7%E6%80%A5%E5%86%85%E5%AE%B9%E5%87%86%E5%85%A5%E5%8D%8E%E7%BA%B319%E9%A6%96800531/%E5%85%A8%E6%9B%B2%E8%AF%95%E5%90%AC/Mp3_64_22_16/6005752HBA8180907.mp3"
 
@@ -113,6 +115,7 @@ extension ZPHomeViewController{
         song3.uri = songUrl3
         song3.id = "3"
         song3.title = "遇见"
+        song3.lrcUrl = "遇见"
         song3.banner = "http://cdnmusic.migu.cn/picture/2019/1227/0914/ALfe993337f19d436b85d6d4dd67266672.jpg"
         let songs = [song,song2,song3]
         
@@ -164,14 +167,15 @@ extension ZPHomeViewController{
     }
     
     func setSingle(){
-        let songUrl = "http://freetyst.nf.migu.cn/public/product5th/product35/2019/08/2923/2017%E5%B9%B409%E6%9C%8814%E6%97%A516%E7%82%B907%E5%88%86%E5%86%85%E5%AE%B9%E5%87%86%E5%85%A5%E4%B8%AD%E5%8A%B2%E8%BF%9C%E4%B8%9C965%E9%A6%96/%E5%85%A8%E6%9B%B2%E8%AF%95%E5%90%AC/Mp3_64_22_16/69906702638.mp3?channelid=03&k=5efed957e3a8f839&t=1592534717&msisdn=e8e4542c-a765-4994-ab30-d8824a08c0e6"
+        let songUrl = "http://freetyst.nf.migu.cn/public/product07/2018/01/25/2017%E5%B9%B409%E6%9C%8811%E6%97%A514%E7%82%B929%E5%88%86%E5%86%85%E5%AE%B9%E5%87%86%E5%85%A5%E5%8D%8E%E5%AE%87%E4%B8%96%E5%8D%9A993%E9%A6%96/%E5%85%A8%E6%9B%B2%E8%AF%95%E5%90%AC/Mp3_64_22_16/%E7%94%9F%E6%B4%BB%E5%9B%A0%E4%BD%A0%E8%80%8C%E7%81%AB%E7%83%AD-%E6%96%B0%E8%A3%A4%E5%AD%90.mp3"
         let song = Song()
         song.uri = songUrl
         song.id = "21"
-        song.title = "再谈记忆"
-        song.banner = "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2043589999,1565153090&fm=26&gp=0.jpg"
+        song.title = "生活因你而火热"
+        song.lrcUrl = "生活因你而火热"
+        song.banner = "http://cdnmusic.migu.cn/picture/2017/1214/0856/AL96cb741205af4cd19cae67755180a1d7.jpg"
         let songSinger = SongUser()
-        songSinger.nickname = "盘尼西林"
+        songSinger.nickname = "新裤子乐队"
         
         song.singer = songSinger
         

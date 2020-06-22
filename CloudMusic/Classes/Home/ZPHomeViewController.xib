@@ -52,7 +52,7 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cIS-GH-YcL">
                             <rect key="frame" x="0.0" y="545.5" width="414" height="136"/>
-                            <state key="normal" title="再谈记忆 黑胶唱片"/>
+                            <state key="normal" title="生活因你而火热"/>
                             <connections>
                                 <action selector="clickMemory:" destination="-1" eventType="touchUpInside" id="tbJ-Qj-lXs"/>
                             </connections>

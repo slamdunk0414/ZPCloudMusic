@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import HandyJSON
 
 class Song:BaseModel{
 
@@ -25,6 +26,12 @@ class Song:BaseModel{
     
     /// 播放进度
     var progress:Float = 0
+    
+    /// 歌词地址
+    var lrcUrl:String?
+    
+    /// 歌词类型
+    var lyricType:LyricType!
     
     /// 歌手
     var singer:SongUser!
@@ -61,14 +68,8 @@ class Song:BaseModel{
 
 extension Song:Equatable{
     static func == (lhs: Song, rhs: Song) -> Bool {
-        
         return lhs.id == rhs.id
-        
     }
-    
-    
-    
-    
 }
 
 class SongUser:BaseModel{
@@ -80,4 +81,13 @@ class SongUser:BaseModel{
     
     /// 描述
     var desc:String?
+}
+
+/// 歌词类型
+///
+/// - lrc: LRC歌词
+/// - ksc: KSC歌词
+enum LyricType:Int,HandyJSONEnum{
+    case lrc=0
+    case ksc=10
 }

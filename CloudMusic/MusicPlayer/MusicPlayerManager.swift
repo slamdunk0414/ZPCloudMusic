@@ -154,14 +154,16 @@ class MusicPlayerManager:NSObject {
         //初始化设置
         initMedia()
         
-        var isSameSong = true
+        var isSameSong = false
         
         //如果不是同一首音乐
         if let currentData = self.data{
             //播放的不是同一首歌曲
-            if (song.uri != currentData.uri) {
+            if (song.id != currentData.id) {
                 
                 isSameSong = false
+            }else{
+                isSameSong = true
             }
         }
         
@@ -178,7 +180,7 @@ class MusicPlayerManager:NSObject {
             //本地地址
             url = URL(fileURLWithPath: uri)
         }
-        
+
         if !isSameSong {
             delegate?.onSongChanged()
             
@@ -190,28 +192,47 @@ class MusicPlayerManager:NSObject {
 
             //播放
             player.play()
-
+            
             self.data.progress = 0
             
+            self.delegate?.onLoadingSuccess(data)
+            
             self.status = .playing
+            
+            self.delegate?.onProgress(data)
         }else{
             
             let currentTime = CMTimeGetSeconds(self.player.currentItem?.currentTime() ?? CMTime())
             data.progress = Float(currentTime)
 
             if self.data.duration == 0{
-                self.data.duration = Float(CMTimeGetSeconds(self.player.currentItem!.asset.duration))
-                //回调代理
-                self.delegate?.onPrepared(self.data)
-                //设置系统信息
-                self.setMediaInfo()
                 
-                //设置进度
-                self.delegate?.onProgress(data)
+                if self.player.currentItem != nil {
+                    self.data.duration = Float(CMTimeGetSeconds(self.player.currentItem!.asset.duration))
+                    //设置系统信息
+                    self.setMediaInfo()
+                    
+                    //设置进度
+                    self.delegate?.onProgress(data)
+                }else{
+                    
+                    delegate?.onSongChanged()
+                    
+                    //创建一个播放Item
+                    let playerItem = AVPlayerItem(url: url)
+                    
+                    //替换掉原来的播放Item
+                    player.replaceCurrentItem(with: playerItem)
+
+                    //播放
+                    player.play()
+
+                    self.data.progress = 0
+                    
+                    self.status = .playing
+                }
             }
-            
         }
-        
         seekTime = nil
         
         //回调代理
@@ -358,7 +379,10 @@ class MusicPlayerManager:NSObject {
     ///
     /// - Parameter value: 跳转到的时间
     func seekTo(_ value:Float) {
-        let positionTime = CMTime(seconds: Double(value), preferredTimescale: 1)
+        let positionTime = CMTime(seconds: Double(value), preferredTimescale: 100)
+ 
+        print("musicplayerManager 去跳转的时间是\(positionTime)")
+        
         player.seek(to: positionTime)
         
         if player.status != .readyToPlay {
