@@ -190,16 +190,18 @@ class MusicPlayerManager:NSObject {
             //替换掉原来的播放Item
             player.replaceCurrentItem(with: playerItem)
 
-            //播放
-            player.play()
-            
             self.data.progress = 0
             
+            //因为正在读取时不会变更进度 所以需要手动将进度变为0
             self.delegate?.onLoadingSuccess(data)
             
             self.status = .playing
             
             self.delegate?.onProgress(data)
+            
+            //播放
+            player.play()
+            
         }else{
             
             let currentTime = CMTimeGetSeconds(self.player.currentItem?.currentTime() ?? CMTime())
@@ -223,13 +225,22 @@ class MusicPlayerManager:NSObject {
                     
                     //替换掉原来的播放Item
                     player.replaceCurrentItem(with: playerItem)
-
+                    
+                    self.data.progress = 0
+                    //因为正在读取时不会变更进度 所以需要手动将进度变为0
+                    self.delegate?.onLoadingSuccess(data)
+                    
+                    self.status = .playing
+                    
+                    //手动传回一个进度为0的值
+                    self.delegate?.onProgress(data)
+                    
                     //播放
                     player.play()
 
-                    self.data.progress = 0
                     
-                    self.status = .playing
+                    
+                    
                 }
             }
         }
