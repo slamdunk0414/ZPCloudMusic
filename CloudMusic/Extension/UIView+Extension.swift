@@ -179,4 +179,9 @@ extension UIView{
         //将指定的偏宜量更改回来
         layer.position = CGPoint(x: layer.position.x + offetX, y: layer.position.y + offetY)
     }
+    
+    /// 显示主色调默认宽度的边框
+    func showColorPrimaryBorder() {
+        showBorder(UIColor(hexColor: COLOR_PRIMARY))
+    }
 }

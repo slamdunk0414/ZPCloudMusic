@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SelectLyricCell" id="Oad-kq-zOp" customClass="SelectLyricCell" customModule="CloudMusic" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Oad-kq-zOp" id="NP4-mR-0f9">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rQl-qE-DxS" userLabel="Container">
+                        <rect key="frame" x="20" y="0.0" width="374" height="44"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LyricSelected" translatesAutoresizingMaskIntoConstraints="NO" id="ujm-bT-q7v">
+                                <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="K1h-rB-I1y"/>
+                                    <constraint firstAttribute="width" constant="44" id="y1L-CU-XmU"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4pN-o9-b5x">
+                                <rect key="frame" x="166" y="12" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4pN-o9-b5x" firstAttribute="centerY" secondItem="rQl-qE-DxS" secondAttribute="centerY" id="acS-FP-cUV"/>
+                            <constraint firstItem="4pN-o9-b5x" firstAttribute="centerX" secondItem="rQl-qE-DxS" secondAttribute="centerX" id="fZ3-C9-yxz"/>
+                            <constraint firstItem="ujm-bT-q7v" firstAttribute="leading" secondItem="rQl-qE-DxS" secondAttribute="leading" id="weT-z9-IsJ"/>
+                            <constraint firstItem="ujm-bT-q7v" firstAttribute="centerY" secondItem="rQl-qE-DxS" secondAttribute="centerY" id="zHU-ry-HFE"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="rQl-qE-DxS" secondAttribute="bottom" id="5ya-jN-Sej"/>
+                    <constraint firstItem="rQl-qE-DxS" firstAttribute="leading" secondItem="NP4-mR-0f9" secondAttribute="leading" constant="20" id="8bp-p9-CSU"/>
+                    <constraint firstAttribute="trailing" secondItem="rQl-qE-DxS" secondAttribute="trailing" constant="20" id="DWs-cK-3S1"/>
+                    <constraint firstItem="rQl-qE-DxS" firstAttribute="top" secondItem="NP4-mR-0f9" secondAttribute="top" id="L7r-WJ-KHZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="ivSelected" destination="ujm-bT-q7v" id="OTV-0V-mOo"/>
+                <outlet property="lbTitle" destination="4pN-o9-b5x" id="o0F-K7-aNr"/>
+            </connections>
+            <point key="canvasLocation" x="132" y="-230"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="LyricSelected" width="21.333333969116211" height="21.333333969116211"/>
+    </resources>
+</document>

@@ -4,6 +4,12 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>需要访问你的相册，请同意！</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>需要访问你的相册，请同意！</string>
+	<key>NSCameraUsageDescription</key>
+	<string>需要访问你的相机，请同意！</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>

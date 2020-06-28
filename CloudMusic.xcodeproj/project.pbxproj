@@ -92,6 +92,15 @@
 		6E980F4E2498E2AA001D6F1E /* ZPMusicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E980F4D2498E2A9001D6F1E /* ZPMusicModel.swift */; };
 		6E980F502498F87F001D6F1E /* Appdelegate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E980F4F2498F87F001D6F1E /* Appdelegate+Extension.swift */; };
 		6EAFD50A2491DDF900EDEA72 /* Single+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAFD5092491DDF900EDEA72 /* Single+Extension.swift */; };
+		6EBC81CF24A86FAA0016154D /* ImagePreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBC81CE24A86FAA0016154D /* ImagePreviewController.swift */; };
+		6EBC81D124A86FBF0016154D /* ImagePreviewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EBC81D024A86FBF0016154D /* ImagePreviewController.xib */; };
+		6EBC81D424A873C90016154D /* SelectLyricController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBC81D224A873C90016154D /* SelectLyricController.swift */; };
+		6EBC81D524A873C90016154D /* SelectLyricController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EBC81D324A873C90016154D /* SelectLyricController.xib */; };
+		6EBC81D724A8782F0016154D /* SelectLyricCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBC81D624A8782F0016154D /* SelectLyricCell.swift */; };
+		6EBC81D924A8798E0016154D /* SelectLyricCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EBC81D824A8798E0016154D /* SelectLyricCell.xib */; };
+		6EBC81E024A87BB40016154D /* ShareLyricImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBC81DE24A87BB40016154D /* ShareLyricImageController.swift */; };
+		6EBC81E124A87BB40016154D /* ShareLyricImageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EBC81DF24A87BB40016154D /* ShareLyricImageController.xib */; };
+		6EBC81E324A87D0E0016154D /* ViewUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBC81E224A87D0E0016154D /* ViewUtil.swift */; };
 		7A9F9F2BB33AFBF319C566D0 /* Pods_CloudMusic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D2848F9B18DFDC21AC9858D /* Pods_CloudMusic.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
@@ -193,6 +202,15 @@
 		6E980F4D2498E2A9001D6F1E /* ZPMusicModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPMusicModel.swift; sourceTree = "<group>"; };
 		6E980F4F2498F87F001D6F1E /* Appdelegate+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Appdelegate+Extension.swift"; sourceTree = "<group>"; };
 		6EAFD5092491DDF900EDEA72 /* Single+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Single+Extension.swift"; sourceTree = "<group>"; };
+		6EBC81CE24A86FAA0016154D /* ImagePreviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePreviewController.swift; sourceTree = "<group>"; };
+		6EBC81D024A86FBF0016154D /* ImagePreviewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImagePreviewController.xib; sourceTree = "<group>"; };
+		6EBC81D224A873C90016154D /* SelectLyricController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLyricController.swift; sourceTree = "<group>"; };
+		6EBC81D324A873C90016154D /* SelectLyricController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectLyricController.xib; sourceTree = "<group>"; };
+		6EBC81D624A8782F0016154D /* SelectLyricCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLyricCell.swift; sourceTree = "<group>"; };
+		6EBC81D824A8798E0016154D /* SelectLyricCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectLyricCell.xib; sourceTree = "<group>"; };
+		6EBC81DE24A87BB40016154D /* ShareLyricImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareLyricImageController.swift; sourceTree = "<group>"; };
+		6EBC81DF24A87BB40016154D /* ShareLyricImageController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShareLyricImageController.xib; sourceTree = "<group>"; };
+		6EBC81E224A87D0E0016154D /* ViewUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUtil.swift; sourceTree = "<group>"; };
 		7F36F7541C414610088412F5 /* Pods-CloudMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloudMusic.debug.xcconfig"; path = "Target Support Files/Pods-CloudMusic/Pods-CloudMusic.debug.xcconfig"; sourceTree = "<group>"; };
 		8D2848F9B18DFDC21AC9858D /* Pods_CloudMusic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CloudMusic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -243,6 +261,8 @@
 				6E07866C24A0563B00EC8658 /* ZPPlayerLyricView.xib */,
 				6E07867224A057D800EC8658 /* ZPPlayerLyricLineCell.swift */,
 				6E07867324A057D800EC8658 /* ZPPlayerLyricLineCell.xib */,
+				6EBC81D624A8782F0016154D /* SelectLyricCell.swift */,
+				6EBC81D824A8798E0016154D /* SelectLyricCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -542,6 +562,7 @@
 				6E1589D5249A494E007C1BC0 /* ORMUtil.swift */,
 				6E1589E0249B8347007C1BC0 /* ImageUtil.swift */,
 				6E76B2FA24A0B1410031D9CD /* LyricUtil.swift */,
+				6EBC81E224A87D0E0016154D /* ViewUtil.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -581,6 +602,12 @@
 				6E89FF162494A3D8006328D0 /* ZPSimpleMusicPlayerController.xib */,
 				6E1589D9249B7D37007C1BC0 /* ZPPlayerController.swift */,
 				6E1589DA249B7D37007C1BC0 /* ZPPlayerController.xib */,
+				6EBC81CE24A86FAA0016154D /* ImagePreviewController.swift */,
+				6EBC81D024A86FBF0016154D /* ImagePreviewController.xib */,
+				6EBC81D224A873C90016154D /* SelectLyricController.swift */,
+				6EBC81D324A873C90016154D /* SelectLyricController.xib */,
+				6EBC81DE24A87BB40016154D /* ShareLyricImageController.swift */,
+				6EBC81DF24A87BB40016154D /* ShareLyricImageController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -665,6 +692,7 @@
 			files = (
 				6E5E2269247F990D00BB79B5 /* LaunchScreen.storyboard in Resources */,
 				6E1589E3249B9BD1007C1BC0 /* ZPSongRecordCell.xib in Resources */,
+				6EBC81D124A86FBF0016154D /* ImagePreviewController.xib in Resources */,
 				6E44E6462488EFB900426463 /* ZPHomeViewController.xib in Resources */,
 				6E1589E9249C55F0007C1BC0 /* MusicPlayListView.xib in Resources */,
 				6E5857D02480A6BD00D5CA04 /* YJBannerView.bundle in Resources */,
@@ -679,9 +707,12 @@
 				6E1589EC249C56DD007C1BC0 /* SongListCell.xib in Resources */,
 				6E316B962480E69D00FEECC4 /* ZPRegisterViewController.xib in Resources */,
 				6E316B922480E63900FEECC4 /* ZPLoginViewController.xib in Resources */,
+				6EBC81D524A873C90016154D /* SelectLyricController.xib in Resources */,
 				6E5E2277247FB48700BB79B5 /* ZPGuideViewController.xib in Resources */,
+				6EBC81E124A87BB40016154D /* ShareLyricImageController.xib in Resources */,
 				6E07866924A0556400EC8658 /* 遇见.lrc in Resources */,
 				6E5E2266247F990D00BB79B5 /* Assets.xcassets in Resources */,
+				6EBC81D924A8798E0016154D /* SelectLyricCell.xib in Resources */,
 				6E5E2264247F990900BB79B5 /* Splash.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -754,6 +785,7 @@
 				6E5857CD2480A6BD00D5CA04 /* YJHollowPageControl.m in Sources */,
 				6E5857AC24809B4600D5CA04 /* ZPLoginOrRegisterViewController.swift in Sources */,
 				6E316BC924874B7F00FEECC4 /* ListResponse.swift in Sources */,
+				6EBC81D424A873C90016154D /* SelectLyricController.swift in Sources */,
 				6E89FF142494A388006328D0 /* ZPSimpleMusicPlayerController.swift in Sources */,
 				6E89FF1224949DE8006328D0 /* Song.swift in Sources */,
 				6E07867924A05F9500EC8658 /* LyricLine.swift in Sources */,
@@ -773,6 +805,8 @@
 				6E44E6452488EFB900426463 /* ZPHomeViewController.swift in Sources */,
 				6E316BA024810F7E00FEECC4 /* String+Extension.swift in Sources */,
 				6E1589D4249A48F4007C1BC0 /* DataUtil.swift in Sources */,
+				6EBC81D724A8782F0016154D /* SelectLyricCell.swift in Sources */,
+				6EBC81CF24A86FAA0016154D /* ImagePreviewController.swift in Sources */,
 				6E5E2276247FB48700BB79B5 /* ZPGuideViewController.swift in Sources */,
 				6E5857CE2480A6BD00D5CA04 /* YJAbstractDotView.m in Sources */,
 				6E07867E24A05FDC00EC8658 /* LyricParser.swift in Sources */,
@@ -796,9 +830,11 @@
 				6E5857D32480A6BD00D5CA04 /* YJBannerViewFooter.m in Sources */,
 				6E5857D22480A6BD00D5CA04 /* YJBannerViewCell.m in Sources */,
 				6E5857E22480B2B800D5CA04 /* PushUtil.swift in Sources */,
+				6EBC81E324A87D0E0016154D /* ViewUtil.swift in Sources */,
 				6E89FF0924947586006328D0 /* MainViewController.swift in Sources */,
 				6E07867424A057D800EC8658 /* ZPPlayerLyricLineCell.swift in Sources */,
 				6E1589E7249C55E4007C1BC0 /* MusicPlayListView.swift in Sources */,
+				6EBC81E024A87BB40016154D /* ShareLyricImageController.swift in Sources */,
 				6E980F4C24975ED2001D6F1E /* PlayListManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

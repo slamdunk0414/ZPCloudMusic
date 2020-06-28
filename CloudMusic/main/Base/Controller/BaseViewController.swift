@@ -131,18 +131,12 @@ class BaseViewController: UIViewController {
         func setTitleBarDefault() {
             setTitleBarTransparet()
             
-    //        //还原导航栏透明
-    //        navigationController!.navigationBar.setBackgroundImage(nil, for: .default)
-    //
-    //        //还原导航栏下面的阴影
-    //        navigationController!.navigationBar.shadowImage = nil
-            
             //还原导航栏样式
             navigationController!.navigationBar.barStyle = .default
             
             //设置返回按钮为黑色
             setNavigationBarTintColor(.black)
-            
+            setTitleTextColor(.black)
         }
 
 }

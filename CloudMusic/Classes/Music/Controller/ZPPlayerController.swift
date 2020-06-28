@@ -139,6 +139,19 @@ class ZPPlayerController: BaseViewController {
         
         print("初始化视图")
         initPlayData()
+        
+        //collectionView长按事件
+        let collectionViewLongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(onCollectionViewLongClick(gesture:)))
+        
+        //设置最小按下时间
+        collectionViewLongPressGestureRecognizer.minimumPressDuration = 1.0
+        collectionView.addGestureRecognizer(collectionViewLongPressGestureRecognizer)
+        
+        //歌词长按
+        let onLyricLongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(onLyricLongClick(gesture:)))
+        onLyricLongPressGestureRecognizer.minimumPressDuration = 1.0
+        
+        lyricView.addGestureRecognizer(onLyricLongPressGestureRecognizer)
     }
     
     override func viewDidLayoutSubviews() {
@@ -338,6 +351,46 @@ class ZPPlayerController: BaseViewController {
              self.lyricView.isHidden=true
          }
         
+    }
+    
+    /// 歌词长按事件回调
+    ///
+    /// - Parameter gesture: <#gesture description#>
+    @objc func onLyricLongClick(gesture:UILongPressGestureRecognizer) {
+        //会调用多次
+        //通过如下代码过滤掉多次
+        if gesture.state != .began {
+            return
+        }
+        
+        print("PlayerController onLyricLongClick")
+        
+        if let lyricUrl = playListManager.data?.lrcUrl {
+            
+            let path = Bundle.main.path(forResource: lyricUrl, ofType: "lrc")
+            let lrcString = try! String(contentsOfFile: path!, encoding: .utf8)
+            let lyric = LyricParser.parse(.lrc, lrcString)
+            
+            //启动歌词选择界面
+            SelectLyricController.start(navigationController!, playListManager.data!, lyric)
+        }
+        
+    }
+    
+    /// 封面长按事件
+    ///
+    /// - Parameter gusture: <#gusture description#>
+    @objc func onCollectionViewLongClick(gesture:UILongPressGestureRecognizer) {
+        //会调用多次
+        //通过如下代码过滤掉多次
+        if gesture.state != UIGestureRecognizer.State.began {
+            return
+        }
+        
+        print("PlayerController onCollectionViewLongClick")
+        
+        //启动图片预览界面
+        ImagePreviewController.start(navigationController!, playListManager.data!.banner)
     }
     
     deinit {

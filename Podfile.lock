@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (5.2.1)
+  - ESPullToRefresh (2.9)
   - GKCover (2.5.5)
   - HandyJSON (5.0.1)
   - MBProgressHUD (1.1.0)
@@ -26,8 +27,10 @@ PODS:
   - SDWebImage/Core (5.7.4)
   - SwiftEventBus (5.0.0)
   - SwiftyUserDefaults (4.0.0-alpha.1)
+  - YYText (1.0.7)
 
 DEPENDENCIES:
+  - ESPullToRefresh
   - GKCover
   - HandyJSON
   - MBProgressHUD (= 1.1.0)
@@ -39,13 +42,16 @@ DEPENDENCIES:
   - SDWebImage
   - SwiftEventBus
   - SwiftyUserDefaults (= 4.0.0-alpha.1)
+  - YYText
 
 SPEC REPOS:
   https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
+    - ESPullToRefresh
     - GKCover
     - Realm
     - RealmSwift
     - SwiftEventBus
+    - YYText
   trunk:
     - Alamofire
     - HandyJSON
@@ -59,6 +65,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
+  ESPullToRefresh: ce058a36454a5032519cc9d8b45da217728cf104
   GKCover: 54663b6ee16ea0b4c0e203a0ffd5a0622223af6e
   HandyJSON: d45b8415c501e3affc59ca9762c1197ff0feb646
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
@@ -71,7 +78,8 @@ SPEC CHECKSUMS:
   SDWebImage: 48b88379b798fd1e4298f95bb25d2cdabbf4deb3
   SwiftEventBus: b30f617a6aca5a9336464b4d3f5931034762f2d5
   SwiftyUserDefaults: cebe0ff9472f52699772a514b6f7155861d8069b
+  YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: f243b2548fe5d8e6987b10c991e9d3630f09aae2
+PODFILE CHECKSUM: 05c4d994fe9bde3dcf8dc644b1698c841bcbfd4b
 
 COCOAPODS: 1.9.1

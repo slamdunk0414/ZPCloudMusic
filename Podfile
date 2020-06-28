@@ -14,13 +14,28 @@ target 'CloudMusic' do
   pod 'Moya'
   pod 'RxSwift'
   pod 'RxCocoa'
+  #解析
   pod 'HandyJSON'
+  #网络请求
   pod 'Moya/RxSwift'
+  
+  #图片加载
   pod 'SDWebImage'
+  #数据库
   pod 'RealmSwift'
   
+  #弹窗
   pod 'GKCover'
   
+  # 发布订阅框架
   pod 'SwiftEventBus'
+  
+  # 下拉刷新
+  # https://github.com/eggswift/pull-to-refresh
+  pod "ESPullToRefresh"
+  
+  # 文本可以点击
+  # https://github.com/ibireme/YYText
+  pod 'YYText'
 
 end
