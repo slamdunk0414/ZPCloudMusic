@@ -7,3 +7,5 @@
 #import "MBProgressHUD.h"
 
 #import <SDWebImage/SDWebImage.h>
+
+#import "DownloadManager.h"

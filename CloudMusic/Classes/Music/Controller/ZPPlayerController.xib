@@ -135,7 +135,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gxK-To-rdT" userLabel="Container">
                                     <rect key="frame" x="83" y="0.0" width="82.5" height="60"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T2k-pK-4e4">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T2k-pK-4e4" customClass="ZPPlayerDownloadButton" customModule="CloudMusic" customModuleProvider="target">
                                             <rect key="frame" x="11" y="0.0" width="60" height="60"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="60" id="gn7-jk-4et"/>

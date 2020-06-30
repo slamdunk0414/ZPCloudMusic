@@ -34,7 +34,7 @@ class ZPPlayerController: BaseViewController {
     @IBOutlet weak var btLike: UIButton!
     
     /// 下载按钮
-    @IBOutlet weak var btDownload: UIButton!
+    @IBOutlet weak var btDownload: ZPPlayerDownloadButton!
     
     /// 均衡器按钮
     @IBOutlet weak var btEqualizer: UIButton!
@@ -418,6 +418,9 @@ extension ZPPlayerController{
         
         //展示进度
         showProgress()
+        
+        //确认下载按钮的状态
+        btDownload.songChanged()
     }
     
     func showMusicData(){

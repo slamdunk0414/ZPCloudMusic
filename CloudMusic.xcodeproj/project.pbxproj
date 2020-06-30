@@ -92,6 +92,20 @@
 		6E980F4E2498E2AA001D6F1E /* ZPMusicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E980F4D2498E2A9001D6F1E /* ZPMusicModel.swift */; };
 		6E980F502498F87F001D6F1E /* Appdelegate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E980F4F2498F87F001D6F1E /* Appdelegate+Extension.swift */; };
 		6EAFD50A2491DDF900EDEA72 /* Single+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAFD5092491DDF900EDEA72 /* Single+Extension.swift */; };
+		6EB5E52F24AB31D50065EDE3 /* DatabaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5E51B24AB31D50065EDE3 /* DatabaseController.m */; };
+		6EB5E53024AB31D50065EDE3 /* DownloadTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5E52024AB31D50065EDE3 /* DownloadTask.m */; };
+		6EB5E53124AB31D50065EDE3 /* DownloadThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5E52124AB31D50065EDE3 /* DownloadThread.m */; };
+		6EB5E53224AB31D50065EDE3 /* DownloadConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5E52624AB31D50065EDE3 /* DownloadConfig.m */; };
+		6EB5E53324AB31D50065EDE3 /* DownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5E52A24AB31D50065EDE3 /* DownloadManager.m */; };
+		6EB5E53424AB31D50065EDE3 /* DownloadInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5E52C24AB31D50065EDE3 /* DownloadInfo.m */; };
+		6EB5E53524AB31D50065EDE3 /* DownloadDispatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5E52E24AB31D50065EDE3 /* DownloadDispatch.m */; };
+		6EB5E53E24AB31E70065EDE3 /* PinyinFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5E53724AB31E70065EDE3 /* PinyinFormatter.swift */; };
+		6EB5E53F24AB31E70065EDE3 /* unicode_to_hanyu_pinyin.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6EB5E53924AB31E70065EDE3 /* unicode_to_hanyu_pinyin.txt */; };
+		6EB5E54024AB31E70065EDE3 /* String+HanziPinyin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5E53A24AB31E70065EDE3 /* String+HanziPinyin.swift */; };
+		6EB5E54124AB31E70065EDE3 /* HanziPinyinResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5E53B24AB31E70065EDE3 /* HanziPinyinResource.swift */; };
+		6EB5E54224AB31E70065EDE3 /* HanziPinyin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5E53C24AB31E70065EDE3 /* HanziPinyin.swift */; };
+		6EB5E54324AB31E70065EDE3 /* PinyinOutputFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5E53D24AB31E70065EDE3 /* PinyinOutputFormat.swift */; };
+		6EB5E54524AB323A0065EDE3 /* ZPPlayerDownloadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5E54424AB323A0065EDE3 /* ZPPlayerDownloadButton.swift */; };
 		6EBC81CF24A86FAA0016154D /* ImagePreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBC81CE24A86FAA0016154D /* ImagePreviewController.swift */; };
 		6EBC81D124A86FBF0016154D /* ImagePreviewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EBC81D024A86FBF0016154D /* ImagePreviewController.xib */; };
 		6EBC81D424A873C90016154D /* SelectLyricController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBC81D224A873C90016154D /* SelectLyricController.swift */; };
@@ -202,6 +216,29 @@
 		6E980F4D2498E2A9001D6F1E /* ZPMusicModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPMusicModel.swift; sourceTree = "<group>"; };
 		6E980F4F2498F87F001D6F1E /* Appdelegate+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Appdelegate+Extension.swift"; sourceTree = "<group>"; };
 		6EAFD5092491DDF900EDEA72 /* Single+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Single+Extension.swift"; sourceTree = "<group>"; };
+		6EB5E51B24AB31D50065EDE3 /* DatabaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseController.m; sourceTree = "<group>"; };
+		6EB5E51C24AB31D50065EDE3 /* DatabaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseController.h; sourceTree = "<group>"; };
+		6EB5E51E24AB31D50065EDE3 /* DownloadTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadTask.h; sourceTree = "<group>"; };
+		6EB5E51F24AB31D50065EDE3 /* DownloadThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadThread.h; sourceTree = "<group>"; };
+		6EB5E52024AB31D50065EDE3 /* DownloadTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadTask.m; sourceTree = "<group>"; };
+		6EB5E52124AB31D50065EDE3 /* DownloadThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadThread.m; sourceTree = "<group>"; };
+		6EB5E52324AB31D50065EDE3 /* DownloadLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadLogger.h; sourceTree = "<group>"; };
+		6EB5E52424AB31D50065EDE3 /* DownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadManager.h; sourceTree = "<group>"; };
+		6EB5E52624AB31D50065EDE3 /* DownloadConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadConfig.m; sourceTree = "<group>"; };
+		6EB5E52724AB31D50065EDE3 /* DownloadConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadConfig.h; sourceTree = "<group>"; };
+		6EB5E52824AB31D50065EDE3 /* DownloadDispatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadDispatch.h; sourceTree = "<group>"; };
+		6EB5E52924AB31D50065EDE3 /* CocoaDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaDownloader.h; sourceTree = "<group>"; };
+		6EB5E52A24AB31D50065EDE3 /* DownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadManager.m; sourceTree = "<group>"; };
+		6EB5E52C24AB31D50065EDE3 /* DownloadInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadInfo.m; sourceTree = "<group>"; };
+		6EB5E52D24AB31D50065EDE3 /* DownloadInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadInfo.h; sourceTree = "<group>"; };
+		6EB5E52E24AB31D50065EDE3 /* DownloadDispatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadDispatch.m; sourceTree = "<group>"; };
+		6EB5E53724AB31E70065EDE3 /* PinyinFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinyinFormatter.swift; sourceTree = "<group>"; };
+		6EB5E53924AB31E70065EDE3 /* unicode_to_hanyu_pinyin.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = unicode_to_hanyu_pinyin.txt; sourceTree = "<group>"; };
+		6EB5E53A24AB31E70065EDE3 /* String+HanziPinyin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+HanziPinyin.swift"; sourceTree = "<group>"; };
+		6EB5E53B24AB31E70065EDE3 /* HanziPinyinResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HanziPinyinResource.swift; sourceTree = "<group>"; };
+		6EB5E53C24AB31E70065EDE3 /* HanziPinyin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HanziPinyin.swift; sourceTree = "<group>"; };
+		6EB5E53D24AB31E70065EDE3 /* PinyinOutputFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinyinOutputFormat.swift; sourceTree = "<group>"; };
+		6EB5E54424AB323A0065EDE3 /* ZPPlayerDownloadButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZPPlayerDownloadButton.swift; sourceTree = "<group>"; };
 		6EBC81CE24A86FAA0016154D /* ImagePreviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePreviewController.swift; sourceTree = "<group>"; };
 		6EBC81D024A86FBF0016154D /* ImagePreviewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImagePreviewController.xib; sourceTree = "<group>"; };
 		6EBC81D224A873C90016154D /* SelectLyricController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLyricController.swift; sourceTree = "<group>"; };
@@ -263,6 +300,7 @@
 				6E07867324A057D800EC8658 /* ZPPlayerLyricLineCell.xib */,
 				6EBC81D624A8782F0016154D /* SelectLyricCell.swift */,
 				6EBC81D824A8798E0016154D /* SelectLyricCell.xib */,
+				6EB5E54424AB323A0065EDE3 /* ZPPlayerDownloadButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -351,6 +389,8 @@
 		6E5857B32480A67A00D5CA04 /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				6EB5E53624AB31E70065EDE3 /* HanziPinyin */,
+				6EB5E51924AB31D50065EDE3 /* CocoaDownloader */,
 				6E5857B42480A6BD00D5CA04 /* YJBannerView */,
 			);
 			path = Vender;
@@ -612,6 +652,90 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		6EB5E51924AB31D50065EDE3 /* CocoaDownloader */ = {
+			isa = PBXGroup;
+			children = (
+				6EB5E51A24AB31D50065EDE3 /* Database */,
+				6EB5E51D24AB31D50065EDE3 /* Core */,
+				6EB5E52224AB31D50065EDE3 /* Logger */,
+				6EB5E52424AB31D50065EDE3 /* DownloadManager.h */,
+				6EB5E52524AB31D50065EDE3 /* Config */,
+				6EB5E52824AB31D50065EDE3 /* DownloadDispatch.h */,
+				6EB5E52924AB31D50065EDE3 /* CocoaDownloader.h */,
+				6EB5E52A24AB31D50065EDE3 /* DownloadManager.m */,
+				6EB5E52B24AB31D50065EDE3 /* Model */,
+				6EB5E52E24AB31D50065EDE3 /* DownloadDispatch.m */,
+			);
+			path = CocoaDownloader;
+			sourceTree = "<group>";
+		};
+		6EB5E51A24AB31D50065EDE3 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				6EB5E51B24AB31D50065EDE3 /* DatabaseController.m */,
+				6EB5E51C24AB31D50065EDE3 /* DatabaseController.h */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		6EB5E51D24AB31D50065EDE3 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				6EB5E51E24AB31D50065EDE3 /* DownloadTask.h */,
+				6EB5E51F24AB31D50065EDE3 /* DownloadThread.h */,
+				6EB5E52024AB31D50065EDE3 /* DownloadTask.m */,
+				6EB5E52124AB31D50065EDE3 /* DownloadThread.m */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		6EB5E52224AB31D50065EDE3 /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				6EB5E52324AB31D50065EDE3 /* DownloadLogger.h */,
+			);
+			path = Logger;
+			sourceTree = "<group>";
+		};
+		6EB5E52524AB31D50065EDE3 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				6EB5E52624AB31D50065EDE3 /* DownloadConfig.m */,
+				6EB5E52724AB31D50065EDE3 /* DownloadConfig.h */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		6EB5E52B24AB31D50065EDE3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6EB5E52C24AB31D50065EDE3 /* DownloadInfo.m */,
+				6EB5E52D24AB31D50065EDE3 /* DownloadInfo.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6EB5E53624AB31E70065EDE3 /* HanziPinyin */ = {
+			isa = PBXGroup;
+			children = (
+				6EB5E53724AB31E70065EDE3 /* PinyinFormatter.swift */,
+				6EB5E53824AB31E70065EDE3 /* Resources */,
+				6EB5E53A24AB31E70065EDE3 /* String+HanziPinyin.swift */,
+				6EB5E53B24AB31E70065EDE3 /* HanziPinyinResource.swift */,
+				6EB5E53C24AB31E70065EDE3 /* HanziPinyin.swift */,
+				6EB5E53D24AB31E70065EDE3 /* PinyinOutputFormat.swift */,
+			);
+			path = HanziPinyin;
+			sourceTree = "<group>";
+		};
+		6EB5E53824AB31E70065EDE3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6EB5E53924AB31E70065EDE3 /* unicode_to_hanyu_pinyin.txt */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		A5902DEC3B93AD9CD91564A5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -699,6 +823,7 @@
 				6E07868224A082CB00EC8658 /* 生活因你而火热.lrc in Resources */,
 				6E07866524A0551900EC8658 /* 逆光.lrc in Resources */,
 				6E07867524A057D800EC8658 /* ZPPlayerLyricLineCell.xib in Resources */,
+				6EB5E53F24AB31E70065EDE3 /* unicode_to_hanyu_pinyin.txt in Resources */,
 				6E1589DC249B7D37007C1BC0 /* ZPPlayerController.xib in Resources */,
 				6E07866D24A0563B00EC8658 /* ZPPlayerLyricView.xib in Resources */,
 				6E5857AD24809B4600D5CA04 /* ZPLoginOrRegisterViewController.xib in Resources */,
@@ -788,6 +913,7 @@
 				6EBC81D424A873C90016154D /* SelectLyricController.swift in Sources */,
 				6E89FF142494A388006328D0 /* ZPSimpleMusicPlayerController.swift in Sources */,
 				6E89FF1224949DE8006328D0 /* Song.swift in Sources */,
+				6EB5E52F24AB31D50065EDE3 /* DatabaseController.m in Sources */,
 				6E07867924A05F9500EC8658 /* LyricLine.swift in Sources */,
 				6E5E2273247FB28D00BB79B5 /* ZPSplashViewController.swift in Sources */,
 				6E5857DE2480B13C00D5CA04 /* ZPGuideViewControllerExtention.swift in Sources */,
@@ -797,26 +923,33 @@
 				6E5857E82480B7C200D5CA04 /* PreferenceUtil.swift in Sources */,
 				6E1589DF249B81B6007C1BC0 /* ZPSongRecordCell.swift in Sources */,
 				6E316BC724874B6400FEECC4 /* DetailResponse.swift in Sources */,
+				6EB5E53124AB31D50065EDE3 /* DownloadThread.m in Sources */,
 				6E5857D52480AAD500D5CA04 /* ColorConstant.swift in Sources */,
 				6E980F4E2498E2AA001D6F1E /* ZPMusicModel.swift in Sources */,
 				6E316BC32487489100FEECC4 /* Observable+Extension.swift in Sources */,
 				6E5857CB2480A6BD00D5CA04 /* UIView+YJBannerViewExt.m in Sources */,
+				6EB5E54024AB31E70065EDE3 /* String+HanziPinyin.swift in Sources */,
 				6E5E227D247FE5D200BB79B5 /* Constant.swift in Sources */,
 				6E44E6452488EFB900426463 /* ZPHomeViewController.swift in Sources */,
 				6E316BA024810F7E00FEECC4 /* String+Extension.swift in Sources */,
 				6E1589D4249A48F4007C1BC0 /* DataUtil.swift in Sources */,
 				6EBC81D724A8782F0016154D /* SelectLyricCell.swift in Sources */,
+				6EB5E54224AB31E70065EDE3 /* HanziPinyin.swift in Sources */,
 				6EBC81CF24A86FAA0016154D /* ImagePreviewController.swift in Sources */,
 				6E5E2276247FB48700BB79B5 /* ZPGuideViewController.swift in Sources */,
+				6EB5E54124AB31E70065EDE3 /* HanziPinyinResource.swift in Sources */,
 				6E5857CE2480A6BD00D5CA04 /* YJAbstractDotView.m in Sources */,
 				6E07867E24A05FDC00EC8658 /* LyricParser.swift in Sources */,
 				6E1589EF249C5B00007C1BC0 /* UIKit+Extension.swift in Sources */,
+				6EB5E53224AB31D50065EDE3 /* DownloadConfig.m in Sources */,
 				6E5857CC2480A6BD00D5CA04 /* YJBannerView.m in Sources */,
 				6E316BC524874B2E00FEECC4 /* BaseResponse.swift in Sources */,
 				6E44E6412488EC1000426463 /* Session.swift in Sources */,
 				6E07867724A05F7B00EC8658 /* Lyric.swift in Sources */,
 				6E1589ED249C56DD007C1BC0 /* SongListCell.swift in Sources */,
+				6EB5E53324AB31D50065EDE3 /* DownloadManager.m in Sources */,
 				6E89FF0B24947C5F006328D0 /* SafeFrameUtil.swift in Sources */,
+				6EB5E53024AB31D50065EDE3 /* DownloadTask.m in Sources */,
 				6E316BA62481EE0B00FEECC4 /* CustomNetworkAPI.swift in Sources */,
 				6E5E227A247FDB9B00BB79B5 /* UIView+Extension.swift in Sources */,
 				6E07867F24A05FDC00EC8658 /* LRCLyricParser.swift in Sources */,
@@ -826,12 +959,17 @@
 				6E89FF192494AE70006328D0 /* TimeUtil.swift in Sources */,
 				6E316B9E24810F5A00FEECC4 /* Regex.swift in Sources */,
 				6E980F502498F87F001D6F1E /* Appdelegate+Extension.swift in Sources */,
+				6EB5E53424AB31D50065EDE3 /* DownloadInfo.m in Sources */,
 				6E07866B24A0561000EC8658 /* ZPPlayerLyricView.swift in Sources */,
 				6E5857D32480A6BD00D5CA04 /* YJBannerViewFooter.m in Sources */,
 				6E5857D22480A6BD00D5CA04 /* YJBannerViewCell.m in Sources */,
+				6EB5E54524AB323A0065EDE3 /* ZPPlayerDownloadButton.swift in Sources */,
 				6E5857E22480B2B800D5CA04 /* PushUtil.swift in Sources */,
 				6EBC81E324A87D0E0016154D /* ViewUtil.swift in Sources */,
 				6E89FF0924947586006328D0 /* MainViewController.swift in Sources */,
+				6EB5E53524AB31D50065EDE3 /* DownloadDispatch.m in Sources */,
+				6EB5E54324AB31E70065EDE3 /* PinyinOutputFormat.swift in Sources */,
+				6EB5E53E24AB31E70065EDE3 /* PinyinFormatter.swift in Sources */,
 				6E07867424A057D800EC8658 /* ZPPlayerLyricLineCell.swift in Sources */,
 				6E1589E7249C55E4007C1BC0 /* MusicPlayListView.swift in Sources */,
 				6EBC81E024A87BB40016154D /* ShareLyricImageController.swift in Sources */,
