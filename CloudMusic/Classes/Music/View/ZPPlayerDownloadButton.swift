@@ -131,7 +131,7 @@ class ZPPlayerDownloadButton: UIButton {
         //当然这里很明显的问题是
         //如果多用户都下载一首音乐
         //会导致一首音乐会下载多次
-        let path = "CocoaDownloader/\(PreferenceUtil.userId()!)/\(song.uri!)"
+        let path = "MusicDownloader/\(song.uri!)"
         
         print("PlayerController createDownload:\(path)")
         
