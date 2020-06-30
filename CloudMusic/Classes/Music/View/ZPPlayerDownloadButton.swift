@@ -92,7 +92,7 @@ class ZPPlayerDownloadButton: UIButton {
     
     /// 获取当前下载任务Id
     func getDownloadInfoId() -> String {
-        return "\(PlayListManager.shared().data!.id!))"
+        return "\(PlayListManager.shared().data!.id!)"
     }
     
     ///开始下载
