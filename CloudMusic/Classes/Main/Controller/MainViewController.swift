@@ -20,7 +20,7 @@ class MainViewController: UITabBarController {
         
         let discovery = getNavigationControllerWithChildViewController(ZPHomeViewController(), name: "发现", iconName: "TabDiscovery")
         let video = getNavigationControllerWithChildViewController(ZPHomeViewController(), name: "视频", iconName: "TabVideo")
-        let music = getNavigationControllerWithChildViewController(ZPHomeViewController(), name: "音乐", iconName: "TabMusic")
+        let music = getNavigationControllerWithChildViewController(MeViewController(), name: "音乐", iconName: "TabMusic")
         let friend = getNavigationControllerWithChildViewController(ZPHomeViewController(), name: "好友", iconName: "TabFriend")
         let account = getNavigationControllerWithChildViewController(ZPHomeViewController(), name: "我的", iconName: "TabAccount")
         

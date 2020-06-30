@@ -126,11 +126,7 @@ class ZPPlayerDownloadButton: UIButton {
 
         //计算保存的路径
         //保存路径在Documents目录下
-        //这里要设置相对路径：CocoaDownloader/用户Id/歌曲uri
-        //路径中添加用户Id是实现多用户
-        //当然这里很明显的问题是
-        //如果多用户都下载一首音乐
-        //会导致一首音乐会下载多次
+        //这里要设置相对路径：MusicDownloader/歌曲uri
         let path = "MusicDownloader/\(song.uri!)"
         
         print("PlayerController createDownload:\(path)")

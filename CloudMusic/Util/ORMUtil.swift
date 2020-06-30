@@ -76,7 +76,7 @@ class ORMUtil {
     /// 根据Id查询音乐对象
     func findSongById(_ id:String) -> Song? {
         //创建一个查询条件字符串
-        let whereString = String(format: "sid = '%@'", id)
+        let whereString = String(format: "id = '%@'", id)
         
         let song = database.objects(SongLocal.self).filter(whereString).first
         

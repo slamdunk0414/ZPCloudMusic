@@ -53,6 +53,9 @@
 		6E44E6412488EC1000426463 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E44E6402488EC1000426463 /* Session.swift */; };
 		6E44E6452488EFB900426463 /* ZPHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E44E6432488EFB900426463 /* ZPHomeViewController.swift */; };
 		6E44E6462488EFB900426463 /* ZPHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E44E6442488EFB900426463 /* ZPHomeViewController.xib */; };
+		6E4A884024AB66D9002360CD /* MeTitleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4A883F24AB66D9002360CD /* MeTitleModel.swift */; };
+		6E4A884324AB6C5C002360CD /* LocalMusicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4A884124AB6C5C002360CD /* LocalMusicController.swift */; };
+		6E4A884424AB6C5C002360CD /* LocalMusicController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E4A884224AB6C5C002360CD /* LocalMusicController.xib */; };
 		6E5857AC24809B4600D5CA04 /* ZPLoginOrRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5857AA24809B4600D5CA04 /* ZPLoginOrRegisterViewController.swift */; };
 		6E5857AD24809B4600D5CA04 /* ZPLoginOrRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E5857AB24809B4600D5CA04 /* ZPLoginOrRegisterViewController.xib */; };
 		6E5857CB2480A6BD00D5CA04 /* UIView+YJBannerViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E5857B62480A6BD00D5CA04 /* UIView+YJBannerViewExt.m */; };
@@ -106,6 +109,10 @@
 		6EB5E54224AB31E70065EDE3 /* HanziPinyin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5E53C24AB31E70065EDE3 /* HanziPinyin.swift */; };
 		6EB5E54324AB31E70065EDE3 /* PinyinOutputFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5E53D24AB31E70065EDE3 /* PinyinOutputFormat.swift */; };
 		6EB5E54524AB323A0065EDE3 /* ZPPlayerDownloadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5E54424AB323A0065EDE3 /* ZPPlayerDownloadButton.swift */; };
+		6EB5E54A24AB63340065EDE3 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5E54824AB63340065EDE3 /* MeViewController.swift */; };
+		6EB5E54B24AB63340065EDE3 /* MeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EB5E54924AB63340065EDE3 /* MeViewController.xib */; };
+		6EB5E54E24AB64310065EDE3 /* MeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5E54C24AB64310065EDE3 /* MeTableViewCell.swift */; };
+		6EB5E54F24AB64310065EDE3 /* MeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EB5E54D24AB64310065EDE3 /* MeTableViewCell.xib */; };
 		6EBC81CF24A86FAA0016154D /* ImagePreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBC81CE24A86FAA0016154D /* ImagePreviewController.swift */; };
 		6EBC81D124A86FBF0016154D /* ImagePreviewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EBC81D024A86FBF0016154D /* ImagePreviewController.xib */; };
 		6EBC81D424A873C90016154D /* SelectLyricController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBC81D224A873C90016154D /* SelectLyricController.swift */; };
@@ -166,6 +173,9 @@
 		6E44E6402488EC1000426463 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		6E44E6432488EFB900426463 /* ZPHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZPHomeViewController.swift; sourceTree = "<group>"; };
 		6E44E6442488EFB900426463 /* ZPHomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZPHomeViewController.xib; sourceTree = "<group>"; };
+		6E4A883F24AB66D9002360CD /* MeTitleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeTitleModel.swift; sourceTree = "<group>"; };
+		6E4A884124AB6C5C002360CD /* LocalMusicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalMusicController.swift; sourceTree = "<group>"; };
+		6E4A884224AB6C5C002360CD /* LocalMusicController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocalMusicController.xib; sourceTree = "<group>"; };
 		6E5857AA24809B4600D5CA04 /* ZPLoginOrRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZPLoginOrRegisterViewController.swift; sourceTree = "<group>"; };
 		6E5857AB24809B4600D5CA04 /* ZPLoginOrRegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZPLoginOrRegisterViewController.xib; sourceTree = "<group>"; };
 		6E5857AE24809D8100D5CA04 /* CloudMusic-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CloudMusic-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -239,6 +249,10 @@
 		6EB5E53C24AB31E70065EDE3 /* HanziPinyin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HanziPinyin.swift; sourceTree = "<group>"; };
 		6EB5E53D24AB31E70065EDE3 /* PinyinOutputFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinyinOutputFormat.swift; sourceTree = "<group>"; };
 		6EB5E54424AB323A0065EDE3 /* ZPPlayerDownloadButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZPPlayerDownloadButton.swift; sourceTree = "<group>"; };
+		6EB5E54824AB63340065EDE3 /* MeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
+		6EB5E54924AB63340065EDE3 /* MeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeViewController.xib; sourceTree = "<group>"; };
+		6EB5E54C24AB64310065EDE3 /* MeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeTableViewCell.swift; sourceTree = "<group>"; };
+		6EB5E54D24AB64310065EDE3 /* MeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeTableViewCell.xib; sourceTree = "<group>"; };
 		6EBC81CE24A86FAA0016154D /* ImagePreviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePreviewController.swift; sourceTree = "<group>"; };
 		6EBC81D024A86FBF0016154D /* ImagePreviewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImagePreviewController.xib; sourceTree = "<group>"; };
 		6EBC81D224A873C90016154D /* SelectLyricController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLyricController.swift; sourceTree = "<group>"; };
@@ -372,6 +386,14 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		6E4A883E24AB66C0002360CD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6E4A883F24AB66D9002360CD /* MeTitleModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		6E5857B224809DCA00D5CA04 /* main */ = {
 			isa = PBXGroup;
 			children = (
@@ -463,6 +485,7 @@
 		6E5857D62480B0CF00D5CA04 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				6EB5E54624AB63150065EDE3 /* Me */,
 				6E89FF062494755B006328D0 /* Main */,
 				6E44E6422488EF9E00426463 /* Home */,
 				6E316BA924822B6100FEECC4 /* Music */,
@@ -736,6 +759,36 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		6EB5E54624AB63150065EDE3 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				6E4A883E24AB66C0002360CD /* Model */,
+				6EB5E55024AB65C90065EDE3 /* View */,
+				6EB5E54724AB631D0065EDE3 /* Controller */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		6EB5E54724AB631D0065EDE3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6EB5E54824AB63340065EDE3 /* MeViewController.swift */,
+				6EB5E54924AB63340065EDE3 /* MeViewController.xib */,
+				6E4A884124AB6C5C002360CD /* LocalMusicController.swift */,
+				6E4A884224AB6C5C002360CD /* LocalMusicController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6EB5E55024AB65C90065EDE3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6EB5E54C24AB64310065EDE3 /* MeTableViewCell.swift */,
+				6EB5E54D24AB64310065EDE3 /* MeTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		A5902DEC3B93AD9CD91564A5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -814,6 +867,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EB5E54B24AB63340065EDE3 /* MeViewController.xib in Resources */,
 				6E5E2269247F990D00BB79B5 /* LaunchScreen.storyboard in Resources */,
 				6E1589E3249B9BD1007C1BC0 /* ZPSongRecordCell.xib in Resources */,
 				6EBC81D124A86FBF0016154D /* ImagePreviewController.xib in Resources */,
@@ -827,8 +881,10 @@
 				6E1589DC249B7D37007C1BC0 /* ZPPlayerController.xib in Resources */,
 				6E07866D24A0563B00EC8658 /* ZPPlayerLyricView.xib in Resources */,
 				6E5857AD24809B4600D5CA04 /* ZPLoginOrRegisterViewController.xib in Resources */,
+				6EB5E54F24AB64310065EDE3 /* MeTableViewCell.xib in Resources */,
 				6E07866724A0554000EC8658 /* 开始懂了.lrc in Resources */,
 				6E89FF172494A3D8006328D0 /* ZPSimpleMusicPlayerController.xib in Resources */,
+				6E4A884424AB6C5C002360CD /* LocalMusicController.xib in Resources */,
 				6E1589EC249C56DD007C1BC0 /* SongListCell.xib in Resources */,
 				6E316B962480E69D00FEECC4 /* ZPRegisterViewController.xib in Resources */,
 				6E316B922480E63900FEECC4 /* ZPLoginViewController.xib in Resources */,
@@ -895,6 +951,7 @@
 				6E316B912480E63900FEECC4 /* ZPLoginViewController.swift in Sources */,
 				6E316BCB24874EBA00FEECC4 /* CustomNetworkUtil.swift in Sources */,
 				6E76B2FB24A0B1410031D9CD /* LyricUtil.swift in Sources */,
+				6EB5E54E24AB64310065EDE3 /* MeTableViewCell.swift in Sources */,
 				6E5E227F247FEBCB00BB79B5 /* UIColor+Extension.swift in Sources */,
 				6E5E225D247F990900BB79B5 /* AppDelegate.swift in Sources */,
 				6E316BA22481237400FEECC4 /* ToastUtil.swift in Sources */,
@@ -912,6 +969,7 @@
 				6E316BC924874B7F00FEECC4 /* ListResponse.swift in Sources */,
 				6EBC81D424A873C90016154D /* SelectLyricController.swift in Sources */,
 				6E89FF142494A388006328D0 /* ZPSimpleMusicPlayerController.swift in Sources */,
+				6E4A884024AB66D9002360CD /* MeTitleModel.swift in Sources */,
 				6E89FF1224949DE8006328D0 /* Song.swift in Sources */,
 				6EB5E52F24AB31D50065EDE3 /* DatabaseController.m in Sources */,
 				6E07867924A05F9500EC8658 /* LyricLine.swift in Sources */,
@@ -929,6 +987,7 @@
 				6E316BC32487489100FEECC4 /* Observable+Extension.swift in Sources */,
 				6E5857CB2480A6BD00D5CA04 /* UIView+YJBannerViewExt.m in Sources */,
 				6EB5E54024AB31E70065EDE3 /* String+HanziPinyin.swift in Sources */,
+				6E4A884324AB6C5C002360CD /* LocalMusicController.swift in Sources */,
 				6E5E227D247FE5D200BB79B5 /* Constant.swift in Sources */,
 				6E44E6452488EFB900426463 /* ZPHomeViewController.swift in Sources */,
 				6E316BA024810F7E00FEECC4 /* String+Extension.swift in Sources */,
@@ -969,6 +1028,7 @@
 				6E89FF0924947586006328D0 /* MainViewController.swift in Sources */,
 				6EB5E53524AB31D50065EDE3 /* DownloadDispatch.m in Sources */,
 				6EB5E54324AB31E70065EDE3 /* PinyinOutputFormat.swift in Sources */,
+				6EB5E54A24AB63340065EDE3 /* MeViewController.swift in Sources */,
 				6EB5E53E24AB31E70065EDE3 /* PinyinFormatter.swift in Sources */,
 				6E07867424A057D800EC8658 /* ZPPlayerLyricLineCell.swift in Sources */,
 				6E1589E7249C55E4007C1BC0 /* MusicPlayListView.swift in Sources */,
