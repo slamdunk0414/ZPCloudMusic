@@ -721,10 +721,13 @@ extension ZPPlayerController{
      
      /// 黑胶唱片指针旋转-25度（暂停状态）
      func stopRecordThumbRotate() {
-        
+        self.recordThumb.transform=CGAffineTransform.identity
         print("黑胶唱片指针旋转-25度（暂停状态）")
         UIView.animate(withDuration: 0.5) {
-            self.recordThumb.transform=CGAffineTransform(rotationAngle: -0.4363323)
+            
+            if self.recordThumb.transform == .identity{
+                self.recordThumb.transform=CGAffineTransform(rotationAngle: -0.4363323)
+            }
         }
      }
 }

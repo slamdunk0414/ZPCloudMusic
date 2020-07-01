@@ -10,6 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LocalMusicController" customModule="CloudMusic" customModuleProvider="target">
             <connections>
+                <outlet property="btnDelete" destination="8bg-Eo-n66" id="qRf-B4-F4e"/>
+                <outlet property="btnSelectAll" destination="jWC-qx-00F" id="ZRN-Hm-KsU"/>
+                <outlet property="buttonContainer" destination="QxO-B3-s8E" id="TbO-cd-kVK"/>
                 <outlet property="tableView" destination="me0-yl-ej6" id="L4X-pu-98t"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -19,21 +22,47 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="me0-yl-ej6">
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qr4-dd-HGm">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                    <connections>
-                        <outlet property="dataSource" destination="-1" id="ad6-x2-WFe"/>
-                        <outlet property="delegate" destination="-1" id="NzP-lh-vsV"/>
-                    </connections>
-                </tableView>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="me0-yl-ej6">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="785"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="ad6-x2-WFe"/>
+                                <outlet property="delegate" destination="-1" id="NzP-lh-vsV"/>
+                            </connections>
+                        </tableView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="QxO-B3-s8E">
+                            <rect key="frame" x="0.0" y="785" width="414" height="33"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jWC-qx-00F">
+                                    <rect key="frame" x="0.0" y="0.0" width="207" height="33"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <state key="normal" title="全选"/>
+                                    <connections>
+                                        <action selector="onSelectAllClick:" destination="-1" eventType="touchUpInside" id="gri-Z5-0KV"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8bg-Eo-n66">
+                                    <rect key="frame" x="207" y="0.0" width="207" height="33"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <state key="normal" title="删除"/>
+                                    <connections>
+                                        <action selector="onDeleteClick:" destination="-1" eventType="touchUpInside" id="QZc-LM-oJY"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="me0-yl-ej6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="0Eq-xH-N14"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="me0-yl-ej6" secondAttribute="bottom" id="0W4-hL-9B0"/>
-                <constraint firstItem="me0-yl-ej6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="X1f-dg-y16"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="me0-yl-ej6" secondAttribute="trailing" id="sLx-Db-qOS"/>
+                <constraint firstItem="qr4-dd-HGm" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="1R9-Zf-J8L"/>
+                <constraint firstItem="qr4-dd-HGm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Dvm-cn-rse"/>
+                <constraint firstAttribute="trailing" secondItem="qr4-dd-HGm" secondAttribute="trailing" id="EA5-JA-HYI"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="qr4-dd-HGm" secondAttribute="bottom" id="VLZ-Kh-9i8"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="132" y="123"/>
