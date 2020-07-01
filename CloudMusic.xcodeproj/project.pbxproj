@@ -94,7 +94,12 @@
 		6E980F4C24975ED2001D6F1E /* PlayListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E980F4B24975ED2001D6F1E /* PlayListManager.swift */; };
 		6E980F4E2498E2AA001D6F1E /* ZPMusicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E980F4D2498E2A9001D6F1E /* ZPMusicModel.swift */; };
 		6E980F502498F87F001D6F1E /* Appdelegate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E980F4F2498F87F001D6F1E /* Appdelegate+Extension.swift */; };
+		6EADD15F24AC8FC200CEB77F /* DownloadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EADD15D24AC8FC200CEB77F /* DownloadCell.swift */; };
+		6EADD16024AC8FC200CEB77F /* DownloadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EADD15E24AC8FC200CEB77F /* DownloadCell.xib */; };
+		6EADD16224AC93BF00CEB77F /* FileUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EADD16124AC93BF00CEB77F /* FileUtil.swift */; };
 		6EAFD50A2491DDF900EDEA72 /* Single+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAFD5092491DDF900EDEA72 /* Single+Extension.swift */; };
+		6EB3AD3D24AC8D9F0079C41D /* DownloadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB3AD3B24AC8D9F0079C41D /* DownloadController.swift */; };
+		6EB3AD3E24AC8D9F0079C41D /* DownloadController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EB3AD3C24AC8D9F0079C41D /* DownloadController.xib */; };
 		6EB5E52F24AB31D50065EDE3 /* DatabaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5E51B24AB31D50065EDE3 /* DatabaseController.m */; };
 		6EB5E53024AB31D50065EDE3 /* DownloadTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5E52024AB31D50065EDE3 /* DownloadTask.m */; };
 		6EB5E53124AB31D50065EDE3 /* DownloadThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5E52124AB31D50065EDE3 /* DownloadThread.m */; };
@@ -225,7 +230,12 @@
 		6E980F4B24975ED2001D6F1E /* PlayListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayListManager.swift; sourceTree = "<group>"; };
 		6E980F4D2498E2A9001D6F1E /* ZPMusicModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPMusicModel.swift; sourceTree = "<group>"; };
 		6E980F4F2498F87F001D6F1E /* Appdelegate+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Appdelegate+Extension.swift"; sourceTree = "<group>"; };
+		6EADD15D24AC8FC200CEB77F /* DownloadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadCell.swift; sourceTree = "<group>"; };
+		6EADD15E24AC8FC200CEB77F /* DownloadCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DownloadCell.xib; sourceTree = "<group>"; };
+		6EADD16124AC93BF00CEB77F /* FileUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileUtil.swift; sourceTree = "<group>"; };
 		6EAFD5092491DDF900EDEA72 /* Single+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Single+Extension.swift"; sourceTree = "<group>"; };
+		6EB3AD3B24AC8D9F0079C41D /* DownloadController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadController.swift; sourceTree = "<group>"; };
+		6EB3AD3C24AC8D9F0079C41D /* DownloadController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DownloadController.xib; sourceTree = "<group>"; };
 		6EB5E51B24AB31D50065EDE3 /* DatabaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseController.m; sourceTree = "<group>"; };
 		6EB5E51C24AB31D50065EDE3 /* DatabaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseController.h; sourceTree = "<group>"; };
 		6EB5E51E24AB31D50065EDE3 /* DownloadTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadTask.h; sourceTree = "<group>"; };
@@ -626,6 +636,7 @@
 				6E1589E0249B8347007C1BC0 /* ImageUtil.swift */,
 				6E76B2FA24A0B1410031D9CD /* LyricUtil.swift */,
 				6EBC81E224A87D0E0016154D /* ViewUtil.swift */,
+				6EADD16124AC93BF00CEB77F /* FileUtil.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -776,6 +787,8 @@
 				6EB5E54924AB63340065EDE3 /* MeViewController.xib */,
 				6E4A884124AB6C5C002360CD /* LocalMusicController.swift */,
 				6E4A884224AB6C5C002360CD /* LocalMusicController.xib */,
+				6EB3AD3B24AC8D9F0079C41D /* DownloadController.swift */,
+				6EB3AD3C24AC8D9F0079C41D /* DownloadController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -785,6 +798,8 @@
 			children = (
 				6EB5E54C24AB64310065EDE3 /* MeTableViewCell.swift */,
 				6EB5E54D24AB64310065EDE3 /* MeTableViewCell.xib */,
+				6EADD15D24AC8FC200CEB77F /* DownloadCell.swift */,
+				6EADD15E24AC8FC200CEB77F /* DownloadCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -884,6 +899,7 @@
 				6EB5E54F24AB64310065EDE3 /* MeTableViewCell.xib in Resources */,
 				6E07866724A0554000EC8658 /* 开始懂了.lrc in Resources */,
 				6E89FF172494A3D8006328D0 /* ZPSimpleMusicPlayerController.xib in Resources */,
+				6EADD16024AC8FC200CEB77F /* DownloadCell.xib in Resources */,
 				6E4A884424AB6C5C002360CD /* LocalMusicController.xib in Resources */,
 				6E1589EC249C56DD007C1BC0 /* SongListCell.xib in Resources */,
 				6E316B962480E69D00FEECC4 /* ZPRegisterViewController.xib in Resources */,
@@ -893,6 +909,7 @@
 				6EBC81E124A87BB40016154D /* ShareLyricImageController.xib in Resources */,
 				6E07866924A0556400EC8658 /* 遇见.lrc in Resources */,
 				6E5E2266247F990D00BB79B5 /* Assets.xcassets in Resources */,
+				6EB3AD3E24AC8D9F0079C41D /* DownloadController.xib in Resources */,
 				6EBC81D924A8798E0016154D /* SelectLyricCell.xib in Resources */,
 				6E5E2264247F990900BB79B5 /* Splash.storyboard in Resources */,
 			);
@@ -970,6 +987,7 @@
 				6EBC81D424A873C90016154D /* SelectLyricController.swift in Sources */,
 				6E89FF142494A388006328D0 /* ZPSimpleMusicPlayerController.swift in Sources */,
 				6E4A884024AB66D9002360CD /* MeTitleModel.swift in Sources */,
+				6EB3AD3D24AC8D9F0079C41D /* DownloadController.swift in Sources */,
 				6E89FF1224949DE8006328D0 /* Song.swift in Sources */,
 				6EB5E52F24AB31D50065EDE3 /* DatabaseController.m in Sources */,
 				6E07867924A05F9500EC8658 /* LyricLine.swift in Sources */,
@@ -1015,6 +1033,7 @@
 				6E316B952480E69D00FEECC4 /* ZPRegisterViewController.swift in Sources */,
 				6E1589DB249B7D37007C1BC0 /* ZPPlayerController.swift in Sources */,
 				6E5857E42480B57F00D5CA04 /* DefaultKeys.swift in Sources */,
+				6EADD16224AC93BF00CEB77F /* FileUtil.swift in Sources */,
 				6E89FF192494AE70006328D0 /* TimeUtil.swift in Sources */,
 				6E316B9E24810F5A00FEECC4 /* Regex.swift in Sources */,
 				6E980F502498F87F001D6F1E /* Appdelegate+Extension.swift in Sources */,
@@ -1022,6 +1041,7 @@
 				6E07866B24A0561000EC8658 /* ZPPlayerLyricView.swift in Sources */,
 				6E5857D32480A6BD00D5CA04 /* YJBannerViewFooter.m in Sources */,
 				6E5857D22480A6BD00D5CA04 /* YJBannerViewCell.m in Sources */,
+				6EADD15F24AC8FC200CEB77F /* DownloadCell.swift in Sources */,
 				6EB5E54524AB323A0065EDE3 /* ZPPlayerDownloadButton.swift in Sources */,
 				6E5857E22480B2B800D5CA04 /* PushUtil.swift in Sources */,
 				6EBC81E324A87D0E0016154D /* ViewUtil.swift in Sources */,

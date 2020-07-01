@@ -38,6 +38,8 @@ class MeViewController: BaseViewController {
     
     func pushToDownload(){
         print("跳转下载管理")
+        let controller = DownloadController()
+        navigationController?.pushViewController(controller, animated: true)
     }
 }
 

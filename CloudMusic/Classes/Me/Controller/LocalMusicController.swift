@@ -143,7 +143,7 @@ class LocalMusicController: BaseViewController {
     
     /// 退出编辑模式
     func exitEditMode() {
-        editBarItem.title="批量编辑"
+        editBarItem.title="编辑"
         
         //退出编辑模式
         tableView.setEditing(false, animated: true)
