@@ -69,6 +69,7 @@ class MusicPlayerManager:NSObject {
 
     /// 开启进度回调通知
     func startPublishProgress() {
+//        return
         //判断是否启动了
         if let _  = playTimeObserve {
             //已经启动了
@@ -80,7 +81,6 @@ class MusicPlayerManager:NSObject {
         playTimeObserve = player.addPeriodicTimeObserver(forInterval: CMTime(value: CMTimeValue(1.0), timescale: 3), queue: DispatchQueue.main, using: { time in
 
             //更新媒体控制中心信息
-
             self.updateMediaProgress()
 
             //判断是否有代理
@@ -237,10 +237,6 @@ class MusicPlayerManager:NSObject {
                     
                     //播放
                     player.play()
-
-                    
-                    
-                    
                 }
             }
         }

@@ -152,21 +152,24 @@ class PlayListManager: NSObject {
     func play(_ data:Song) {
         
         self.data = data
+        
+//        musicPlayerManager.play(data)
+        
         //查询是否有下载任务
         let downloadInfo = DownloadManager.sharedInstance().findDownloadInfo("\(data.id!)")
-        
+
         if downloadInfo != nil && downloadInfo.status == .completed  {
             //下载完成了
             data.uri = downloadInfo.absolutePath()
             //播放本地音乐
             musicPlayerManager.play(data)
-            
+
             print("PlayListManager play offline:\(downloadInfo.absolutePath()),\(data.uri)")
         }else {
             //播放在线音乐
 
             musicPlayerManager.play(data)
-            
+
             print("PlayListManager play online:\(data.uri)")
         }
         

@@ -22,6 +22,9 @@ class ZPPlayerController: BaseViewController {
     /// 封面背景
     @IBOutlet weak var ivBackground: UIImageView!
     
+    /// 封面备份 用于图片替换
+    @IBOutlet weak var ivBackground2: UIImageView!
+    
     // MARK: -  黑胶唱片CollectionView
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -429,8 +432,20 @@ extension ZPPlayerController{
         //显示标题
         setTitle("\(data!.title!) - \(data!.singer.nickname!)")
         
-        //显示背景图
-        ivBackground.sd_setImage(with: URL(string: data!.banner), placeholderImage: UIImage(named: "DefaultMusicPlay"), options:.transformAnimatedImage , completed: nil)
+        self.ivBackground.alpha = 1
+        self.ivBackground2.alpha = 0
+        
+        let url = URL(string: data?.banner ?? "")
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            self.ivBackground.alpha = 0
+            self.ivBackground2.alpha = 1
+            self.ivBackground2.sd_setImage(with: url, completed: nil)
+            
+        }) { (animation) in
+            self.ivBackground.sd_setImage(with: url, completed: nil)
+            self.ivBackground.alpha = 1
+        }
     }
     
     func showMusicPlayStatus(){

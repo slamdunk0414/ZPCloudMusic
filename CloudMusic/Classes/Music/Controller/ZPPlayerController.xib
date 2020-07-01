@@ -22,6 +22,7 @@
                 <outlet property="btPrevious" destination="g2W-wB-BYe" id="36f-vc-LgK"/>
                 <outlet property="collectionView" destination="tzh-Lo-zn8" id="w1z-PN-Ifm"/>
                 <outlet property="ivBackground" destination="aCY-M8-fM0" id="73M-XW-eli"/>
+                <outlet property="ivBackground2" destination="x4s-5E-YAY" id="wn4-8q-o5T"/>
                 <outlet property="lbEnd" destination="txz-uc-SdE" id="8od-rg-uFb"/>
                 <outlet property="lbStart" destination="Yhh-ea-3QI" id="Rky-Tl-nWb"/>
                 <outlet property="recordBackgroundBorder" destination="6ZA-Ks-GQt" id="rhz-gY-Sf0"/>
@@ -40,6 +41,11 @@
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DefaultMusicPlay" translatesAutoresizingMaskIntoConstraints="NO" id="aCY-M8-fM0" userLabel="ivBackground">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DefaultMusicPlay" translatesAutoresizingMaskIntoConstraints="NO" id="x4s-5E-YAY" userLabel="ivBackground">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </imageView>
                         <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dqu-JI-QBt">
