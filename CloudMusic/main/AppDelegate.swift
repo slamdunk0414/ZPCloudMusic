@@ -37,5 +37,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         saveLastMusic()
     }
+    
+    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+        return .allButUpsideDown
+    }
 }
 

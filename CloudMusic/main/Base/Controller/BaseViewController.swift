@@ -29,6 +29,8 @@ class BaseViewController: UIViewController {
     func initViews(){
         //设置导航栏返回按钮颜色为黑色
         setNavigationBarTintColor(UIColor.black)
+        
+        view.backgroundColor = .white
     }
     
     func initDatas(){
@@ -50,7 +52,7 @@ class BaseViewController: UIViewController {
     ///
     /// - Parameter color: <#color description#>
     func setNavigationBarTintColor(_ color:UIColor) {
-        navigationController!.navigationBar.tintColor=color
+        navigationController?.navigationBar.tintColor=color
     }
     
     /// 设置导航栏标题文本颜色
@@ -101,7 +103,7 @@ class BaseViewController: UIViewController {
     /// 设置标题栏（导航栏）为透明
     func setTitleBarTransparet() {
         //设置导航栏透明
-        navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         
         //去除导航栏下面的阴影
         navigationController?.navigationBar.shadowImage = UIImage()
@@ -132,11 +134,26 @@ class BaseViewController: UIViewController {
             setTitleBarTransparet()
             
             //还原导航栏样式
-            navigationController!.navigationBar.barStyle = .default
+            navigationController?.navigationBar.barStyle = .default
             
             //设置返回按钮为黑色
             setNavigationBarTintColor(.black)
             setTitleTextColor(.black)
         }
 
+}
+
+
+extension BaseViewController {
+    open override var shouldAutorotate: Bool {
+        return false
+    }
+    
+    open override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
+    }
+    
+    open override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
+        return .portrait
+    }
 }

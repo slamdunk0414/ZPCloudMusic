@@ -31,7 +31,7 @@ class PushUtil{
     }
     
     static func toLogin(){
-        let navi = UINavigationController(rootViewController: ZPLoginOrRegisterViewController())
+        let navi = MainNavigationController(rootViewController: ZPLoginOrRegisterViewController())
         
         self.setRootController(controller:navi)
     }

@@ -19,7 +19,7 @@ class MainViewController: UITabBarController {
     func addChildViewControllers() {
         
         let discovery = getNavigationControllerWithChildViewController(ZPHomeViewController(), name: "发现", iconName: "TabDiscovery")
-        let video = getNavigationControllerWithChildViewController(ZPHomeViewController(), name: "视频", iconName: "TabVideo")
+        let video = getNavigationControllerWithChildViewController(VideoController(), name: "视频", iconName: "TabVideo")
         let music = getNavigationControllerWithChildViewController(MeViewController(), name: "音乐", iconName: "TabMusic")
         let friend = getNavigationControllerWithChildViewController(ZPHomeViewController(), name: "好友", iconName: "TabFriend")
         let account = getNavigationControllerWithChildViewController(ZPHomeViewController(), name: "我的", iconName: "TabAccount")
@@ -40,4 +40,35 @@ class MainViewController: UITabBarController {
         
     }
 
+}
+
+
+extension MainViewController {
+    
+    //这里，如果selectedViewController是navigationController，因为navigationController也是返回它的topViewController的状态，所以最终还是各个viewController自己来控制自己的状态
+    
+    open override var shouldAutorotate: Bool {
+        if let tempViewController = self.selectedViewController {
+            return tempViewController.shouldAutorotate
+        } else {
+            return false
+        }
+    }
+    
+    open override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        if let tempViewController = self.selectedViewController {
+            return tempViewController.supportedInterfaceOrientations
+        } else {
+            return UIInterfaceOrientationMask.portrait
+        }
+    }
+    
+    
+    open override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
+        if let tempViewController = self.selectedViewController {
+            return tempViewController.preferredInterfaceOrientationForPresentation
+        } else {
+            return UIInterfaceOrientation.portrait
+        }
+    }
 }

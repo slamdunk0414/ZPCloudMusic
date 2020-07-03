@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ZPSplashViewController: UIViewController {
+class ZPSplashViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

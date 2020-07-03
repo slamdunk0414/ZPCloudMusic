@@ -31,3 +31,33 @@ extension MainNavigationController{
         
     }
 }
+
+extension MainNavigationController {
+    //这里只需要返回self.topViewController的相应属性，让各个viewController自己控制就行了
+    //present出来的viewController本来就是受自己控制，跟nav无关
+    
+    open override var shouldAutorotate: Bool {
+        if let viewController = self.topViewController {
+            return viewController.shouldAutorotate
+        } else {
+            return false
+        }
+    }
+    
+    open override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        if let viewController = self.topViewController {
+            return viewController.supportedInterfaceOrientations
+        }  else {
+            return .portrait
+        }
+    }
+    
+    
+    open override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
+        if let viewController = self.topViewController {
+            return viewController.preferredInterfaceOrientationForPresentation
+        }  else {
+            return .portrait
+        }
+    }
+}
