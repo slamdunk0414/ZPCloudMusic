@@ -103,6 +103,7 @@ class ZPRegisterViewController: ZPBaseLoginController {
         
         ToastUtil.showLoading("正在注册")
         
+        
         CustomNetworkUtil.shared.createUser(nickname: nickName, phone: phone, email: email, password: password).subscribe({ (response) in
             
             //注册成功后自动登录

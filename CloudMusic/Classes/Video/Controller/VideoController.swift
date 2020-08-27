@@ -44,7 +44,7 @@ class VideoController: BaseViewController {
        let video3 = VideoDetailModel()
        video3.cover = "http://cdnmusic.migu.cn/picture/2019/0514/0907/AL1609221042206684.jpg"
        video3.title = "突然好想你 - 五月天"
-       video3.uri = "http://freevod.nf.migu.cn/VcPZQ1HUH34MG8rHQePf64sVvUjlZ6+pRtg/bt6nqZhMrZzltt0WzKQG+t0n0lQ1J/JwtiVmFaD0jB26ugZDkLsuP+vZOe2Tp7onj+NV42ywpHPIqMdKvzMZsnQFkoU7E9sYY6r0dzrtj66aGDulmPO9M83WGzyS8rGKxPcHRfL6ft959MDkIHicnJMrenR3vMJSn5mS5VuLOxCcqzjPUQ==/699119Y9193.mp4"
+       video3.uri = "http://freevod.nf.migu.cn/VcPZQ1HUH34MG8rHQePf64sVvUjlZ6+pRtg/bt6nqZhMrZzltt0WzKQG+t0n0lQ1J/JwtiVmFaD0jB26ugZDkLsuP+vZOe2Tp7onj+NV42ywpHPIqMdKvzMZsnQFkoU7E9sYY6r0dzrtj66aGDulmPO9M83WGzyS8rGKxPcHRfL6ft959MDkIHicnJMrenR3vMJSn5mS5VuLOxCcqzjPUQ==/699119Y9193.mp4?ec=1&F=050015"
        
        dataArray.append(video3)
     
@@ -53,8 +53,8 @@ class VideoController: BaseViewController {
        ///初始化一些数据 用于调试
        let video4 = VideoDetailModel()
        video4.cover = "https://p2.music.126.net/tlAuA-N6s8rQwd49apZqKg==/109951165069075704.jpg"
-       video4.title = "Billie Jean - Michael Jackson"
-       video4.uri = "http://vodkgeyttp8.vod.126.net/cloudmusic/NTEzMDMzMTE=/058bff39ef94654be617fc47a707cb3c/988bef6cfda908c2fac4857b0d333caf.mp4"
+       video4.title = "Beat it - Michael Jackson"
+       video4.uri = "http://vodkgeyttp8.vod.126.net/cloudmusic/NTEzMDMzMTE=/25eb5e39d261e2d03e2248d42321e03b/c48799f51a4e71644965b625d064df18.mp4?wsSecret=f43ebd4b6e917b8893e67909d33dc2d7&wsTime=1593755062"
        
        dataArray.append(video4)
     

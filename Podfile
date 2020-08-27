@@ -20,6 +20,7 @@ target 'CloudMusic' do
   pod 'Moya/RxSwift'
   
   #图片加载
+  
   pod 'SDWebImage'
   #数据库
   pod 'RealmSwift'

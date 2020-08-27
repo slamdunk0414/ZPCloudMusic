@@ -28,6 +28,8 @@ class MeViewController: BaseViewController {
         }))
         
         tableView.reloadData()
+        
+    
     }
 
     
